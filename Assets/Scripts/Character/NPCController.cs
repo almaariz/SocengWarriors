@@ -5,7 +5,7 @@ using UnityEngine;
 public class NPCController : MonoBehaviour, Interactable 
 { 
  
-    [SerializeField] Dialogue dialogue;
+    [SerializeField] Dialog dialog;
     [SerializeField] List<Vector2> movementPattern;
     [SerializeField] float timeBetweenPattern;
     NPCState state;
@@ -32,15 +32,22 @@ public class NPCController : MonoBehaviour, Interactable
     //     spriteAnimator.HandleUpdate();
     // }
 
-    public void Interact() 
+    public void Interact(Transform initiator) 
     { 
-        StartCoroutine(DialogueManager.Instance.ShowDialog(dialogue));
+        if (state == NPCState.Idle)
+        {
+            state = NPCState.Dialog;
+            character.LookTowards(initiator.position);
+
+            StartCoroutine(DialogManager.Instance.ShowDialog(dialog, () => {
+                idleTimer = 0f;
+                state = NPCState.Idle;
+            }));
+        }
     } 
 
     private void Update()
     {
-        if(DialogueManager.Instance.IsShowing) return;
-
         if (state == NPCState.Idle)
         {
             idleTimer += Time.deltaTime;
@@ -57,12 +64,16 @@ public class NPCController : MonoBehaviour, Interactable
     IEnumerator Walk()
     {
         state = NPCState.Walking;
+
+        var oldPos = transform.position;
     
         yield return character.Move(movementPattern[currentPattern]);
-        currentPattern = (currentPattern + 1) % movementPattern.Count;
+
+        if (transform.position != oldPos)
+            currentPattern = (currentPattern + 1) % movementPattern.Count;
 
         state = NPCState.Idle;
     }
 }
 
-public enum NPCState { Idle, Walking }
+public enum NPCState { Idle, Walking, Dialog }
