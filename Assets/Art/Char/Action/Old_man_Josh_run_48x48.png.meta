@@ -1,79 +1,79 @@
 fileFormatVersion: 2
-guid: 2a7b97807d1f658408a69f3db7a313cb
+guid: 39e99458827448a40a049e3c63ac09a2
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7252319745542758780
-    second: Old_man_Josh_idle_anim_with_can_48x48_0
+      213: -7314119854416619417
+    second: Old_man_Josh_run_48x48_0
   - first:
-      213: -7558425537137703787
-    second: Old_man_Josh_idle_anim_with_can_48x48_1
+      213: 4733858193226117430
+    second: Old_man_Josh_run_48x48_1
   - first:
-      213: -4201916833717584250
-    second: Old_man_Josh_idle_anim_with_can_48x48_2
+      213: -4113463875289088921
+    second: Old_man_Josh_run_48x48_2
   - first:
-      213: 7720331962028862527
-    second: Old_man_Josh_idle_anim_with_can_48x48_3
+      213: 6333852245927274311
+    second: Old_man_Josh_run_48x48_3
   - first:
-      213: 8316970550650170098
-    second: Old_man_Josh_idle_anim_with_can_48x48_4
+      213: 8196513763231332460
+    second: Old_man_Josh_run_48x48_4
   - first:
-      213: 3164067186705389497
-    second: Old_man_Josh_idle_anim_with_can_48x48_5
+      213: -5354802255745978037
+    second: Old_man_Josh_run_48x48_5
   - first:
-      213: -7863930019472681517
-    second: Old_man_Josh_idle_anim_with_can_48x48_6
+      213: 2980513047639476078
+    second: Old_man_Josh_run_48x48_6
   - first:
-      213: -7571771709707029449
-    second: Old_man_Josh_idle_anim_with_can_48x48_7
+      213: 47130514819806373
+    second: Old_man_Josh_run_48x48_7
   - first:
-      213: -7864287134955676171
-    second: Old_man_Josh_idle_anim_with_can_48x48_8
+      213: -8926144603376143730
+    second: Old_man_Josh_run_48x48_8
   - first:
-      213: -2531093089524935443
-    second: Old_man_Josh_idle_anim_with_can_48x48_9
+      213: -3240819365484258721
+    second: Old_man_Josh_run_48x48_9
   - first:
-      213: -1108988119516269238
-    second: Old_man_Josh_idle_anim_with_can_48x48_10
+      213: -8150464373303846862
+    second: Old_man_Josh_run_48x48_10
   - first:
-      213: -9003837099446119194
-    second: Old_man_Josh_idle_anim_with_can_48x48_11
+      213: -1925200190140228457
+    second: Old_man_Josh_run_48x48_11
   - first:
-      213: 5973230798864218042
-    second: Old_man_Josh_idle_anim_with_can_48x48_12
+      213: 7685401640113281884
+    second: Old_man_Josh_run_48x48_12
   - first:
-      213: -5861938450074211275
-    second: Old_man_Josh_idle_anim_with_can_48x48_13
+      213: 8812876743666679754
+    second: Old_man_Josh_run_48x48_13
   - first:
-      213: 514683415652652703
-    second: Old_man_Josh_idle_anim_with_can_48x48_14
+      213: 2436324694224367413
+    second: Old_man_Josh_run_48x48_14
   - first:
-      213: -1852574248206758166
-    second: Old_man_Josh_idle_anim_with_can_48x48_15
+      213: -4914342960481881183
+    second: Old_man_Josh_run_48x48_15
   - first:
-      213: 3300167237840133086
-    second: Old_man_Josh_idle_anim_with_can_48x48_16
+      213: -5993824070865039255
+    second: Old_man_Josh_run_48x48_16
   - first:
-      213: 6216410231653390095
-    second: Old_man_Josh_idle_anim_with_can_48x48_17
+      213: 2401646200319893344
+    second: Old_man_Josh_run_48x48_17
   - first:
-      213: -6300342989169708590
-    second: Old_man_Josh_idle_anim_with_can_48x48_18
+      213: 291723236092485721
+    second: Old_man_Josh_run_48x48_18
   - first:
-      213: -5267583166409239183
-    second: Old_man_Josh_idle_anim_with_can_48x48_19
+      213: 895496348376317605
+    second: Old_man_Josh_run_48x48_19
   - first:
-      213: 1704487892476693403
-    second: Old_man_Josh_idle_anim_with_can_48x48_20
+      213: -3735948742815099075
+    second: Old_man_Josh_run_48x48_20
   - first:
-      213: 5746874597680338248
-    second: Old_man_Josh_idle_anim_with_can_48x48_21
+      213: 2967881555275949714
+    second: Old_man_Josh_run_48x48_21
   - first:
-      213: -5129214368064415747
-    second: Old_man_Josh_idle_anim_with_can_48x48_22
+      213: -725458292190873981
+    second: Old_man_Josh_run_48x48_22
   - first:
-      213: 1923465792850199674
-    second: Old_man_Josh_idle_anim_with_can_48x48_23
+      213: -7442147870571727005
+    second: Old_man_Josh_run_48x48_23
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -175,7 +175,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Old_man_Josh_idle_anim_with_can_48x48_0
+      name: Old_man_Josh_run_48x48_0
       rect:
         serializedVersion: 2
         x: 0
@@ -189,14 +189,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c71a0a6526a65a460800000000000000
-      internalID: 7252319745542758780
+      spriteID: 7689dd88eb60f7a90800000000000000
+      internalID: -7314119854416619417
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Old_man_Josh_idle_anim_with_can_48x48_1
+      name: Old_man_Josh_run_48x48_1
       rect:
         serializedVersion: 2
         x: 48
@@ -210,14 +210,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5948aad25041b1790800000000000000
-      internalID: -7558425537137703787
+      spriteID: 631b05812fa02b140800000000000000
+      internalID: 4733858193226117430
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Old_man_Josh_idle_anim_with_can_48x48_2
+      name: Old_man_Josh_run_48x48_2
       rect:
         serializedVersion: 2
         x: 96
@@ -231,14 +231,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 68e778607eacfa5c0800000000000000
-      internalID: -4201916833717584250
+      spriteID: 76cfdf4466a0ae6c0800000000000000
+      internalID: -4113463875289088921
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Old_man_Josh_idle_anim_with_can_48x48_3
+      name: Old_man_Josh_run_48x48_3
       rect:
         serializedVersion: 2
         x: 144
@@ -252,14 +252,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f3c23d0f301242b60800000000000000
-      internalID: 7720331962028862527
+      spriteID: 7472e4a3f0d56e750800000000000000
+      internalID: 6333852245927274311
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Old_man_Josh_idle_anim_with_can_48x48_4
+      name: Old_man_Josh_run_48x48_4
       rect:
         serializedVersion: 2
         x: 192
@@ -273,14 +273,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2fa63ee86a0db6370800000000000000
-      internalID: 8316970550650170098
+      spriteID: c68f00637dddfb170800000000000000
+      internalID: 8196513763231332460
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Old_man_Josh_idle_anim_with_can_48x48_5
+      name: Old_man_Josh_run_48x48_5
       rect:
         serializedVersion: 2
         x: 240
@@ -294,14 +294,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9b75b05a75609eb20800000000000000
-      internalID: 3164067186705389497
+      spriteID: b41fcc728bbefa5b0800000000000000
+      internalID: -5354802255745978037
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Old_man_Josh_idle_anim_with_can_48x48_6
+      name: Old_man_Josh_run_48x48_6
       rect:
         serializedVersion: 2
         x: 288
@@ -315,14 +315,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3d5dccaef45bdd290800000000000000
-      internalID: -7863930019472681517
+      spriteID: e67c7fc43d8ec5920800000000000000
+      internalID: 2980513047639476078
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Old_man_Josh_idle_anim_with_can_48x48_7
+      name: Old_man_Josh_run_48x48_7
       rect:
         serializedVersion: 2
         x: 336
@@ -336,14 +336,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7347f8a3fb9abe690800000000000000
-      internalID: -7571771709707029449
+      spriteID: 5a47ae914f077a000800000000000000
+      internalID: 47130514819806373
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Old_man_Josh_idle_anim_with_can_48x48_8
+      name: Old_man_Josh_run_48x48_8
       rect:
         serializedVersion: 2
         x: 384
@@ -357,14 +357,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5fdda4d74807cd290800000000000000
-      internalID: -7864287134955676171
+      spriteID: e82bef5a6c6ff1480800000000000000
+      internalID: -8926144603376143730
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Old_man_Josh_idle_anim_with_can_48x48_9
+      name: Old_man_Josh_run_48x48_9
       rect:
         serializedVersion: 2
         x: 432
@@ -378,14 +378,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: de49b61de30cfdcd0800000000000000
-      internalID: -2531093089524935443
+      spriteID: f5a9a1b25fb4603d0800000000000000
+      internalID: -3240819365484258721
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Old_man_Josh_idle_anim_with_can_48x48_10
+      name: Old_man_Josh_run_48x48_10
       rect:
         serializedVersion: 2
         x: 480
@@ -399,14 +399,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a45ba145e251c90f0800000000000000
-      internalID: -1108988119516269238
+      spriteID: 2385fb2e5dbb3ee80800000000000000
+      internalID: -8150464373303846862
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Old_man_Josh_idle_anim_with_can_48x48_11
+      name: Old_man_Josh_run_48x48_11
       rect:
         serializedVersion: 2
         x: 528
@@ -420,14 +420,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6e4d708ccd1fb0380800000000000000
-      internalID: -9003837099446119194
+      spriteID: 79c5d2190a05845e0800000000000000
+      internalID: -1925200190140228457
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Old_man_Josh_idle_anim_with_can_48x48_12
+      name: Old_man_Josh_run_48x48_12
       rect:
         serializedVersion: 2
         x: 576
@@ -441,14 +441,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ab779b793cd25e250800000000000000
-      internalID: 5973230798864218042
+      spriteID: c5b182b921808aa60800000000000000
+      internalID: 7685401640113281884
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Old_man_Josh_idle_anim_with_can_48x48_13
+      name: Old_man_Josh_run_48x48_13
       rect:
         serializedVersion: 2
         x: 624
@@ -462,14 +462,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 53c6f1c990636aea0800000000000000
-      internalID: -5861938450074211275
+      spriteID: acfbd8ba4b0ad4a70800000000000000
+      internalID: 8812876743666679754
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Old_man_Josh_idle_anim_with_can_48x48_14
+      name: Old_man_Josh_run_48x48_14
       rect:
         serializedVersion: 2
         x: 672
@@ -483,14 +483,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f96d2c1f6d5842700800000000000000
-      internalID: 514683415652652703
+      spriteID: 53f61c4b6609fc120800000000000000
+      internalID: 2436324694224367413
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Old_man_Josh_idle_anim_with_can_48x48_15
+      name: Old_man_Josh_run_48x48_15
       rect:
         serializedVersion: 2
         x: 720
@@ -504,14 +504,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: aee899f59855a46e0800000000000000
-      internalID: -1852574248206758166
+      spriteID: 1a339006d1fbccbb0800000000000000
+      internalID: -4914342960481881183
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Old_man_Josh_idle_anim_with_can_48x48_16
+      name: Old_man_Josh_run_48x48_16
       rect:
         serializedVersion: 2
         x: 768
@@ -525,14 +525,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: edbd7d62e9c8ccd20800000000000000
-      internalID: 3300167237840133086
+      spriteID: 96057e1a3c8a1dca0800000000000000
+      internalID: -5993824070865039255
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Old_man_Josh_idle_anim_with_can_48x48_17
+      name: Old_man_Josh_run_48x48_17
       rect:
         serializedVersion: 2
         x: 816
@@ -546,14 +546,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f07ddc37b20254650800000000000000
-      internalID: 6216410231653390095
+      spriteID: 06fdb36ae7c545120800000000000000
+      internalID: 2401646200319893344
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Old_man_Josh_idle_anim_with_can_48x48_18
+      name: Old_man_Josh_run_48x48_18
       rect:
         serializedVersion: 2
         x: 864
@@ -567,14 +567,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2d1ba679e6fa098a0800000000000000
-      internalID: -6300342989169708590
+      spriteID: 9502504dcb86c0400800000000000000
+      internalID: 291723236092485721
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Old_man_Josh_idle_anim_with_can_48x48_19
+      name: Old_man_Josh_run_48x48_19
       rect:
         serializedVersion: 2
         x: 912
@@ -588,14 +588,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 175995dd409c5e6b0800000000000000
-      internalID: -5267583166409239183
+      spriteID: 5ae31ae2f217d6c00800000000000000
+      internalID: 895496348376317605
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Old_man_Josh_idle_anim_with_can_48x48_20
+      name: Old_man_Josh_run_48x48_20
       rect:
         serializedVersion: 2
         x: 960
@@ -609,14 +609,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b9b070b15be87a710800000000000000
-      internalID: 1704487892476693403
+      spriteID: d37507d896e372cc0800000000000000
+      internalID: -3735948742815099075
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Old_man_Josh_idle_anim_with_can_48x48_21
+      name: Old_man_Josh_run_48x48_21
       rect:
         serializedVersion: 2
         x: 1008
@@ -630,14 +630,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 845d3739ffff0cf40800000000000000
-      internalID: 5746874597680338248
+      spriteID: 29628adcc88003920800000000000000
+      internalID: 2967881555275949714
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Old_man_Josh_idle_anim_with_can_48x48_22
+      name: Old_man_Josh_run_48x48_22
       rect:
         serializedVersion: 2
         x: 1056
@@ -651,14 +651,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: df7d0be35be51d8b0800000000000000
-      internalID: -5129214368064415747
+      spriteID: 386f992e687aee5f0800000000000000
+      internalID: -725458292190873981
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Old_man_Josh_idle_anim_with_can_48x48_23
+      name: Old_man_Josh_run_48x48_23
       rect:
         serializedVersion: 2
         x: 1104
@@ -672,8 +672,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a74837892f581ba10800000000000000
-      internalID: 1923465792850199674
+      spriteID: 36774a021fd28b890800000000000000
+      internalID: -7442147870571727005
       vertices: []
       indices: 
       edges: []
