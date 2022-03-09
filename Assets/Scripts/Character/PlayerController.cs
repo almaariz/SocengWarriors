@@ -1,9 +1,11 @@
+using System;
 using System.Collections; 
 using System.Collections.Generic; 
 using UnityEngine; 
  
 public class PlayerController : MonoBehaviour 
 { 
+    public event Action<Collider2D> OnImpostorView;
     private Vector2 input; 
     private Character character;
  
@@ -23,8 +25,8 @@ public class PlayerController : MonoBehaviour
             if (input.x != 0) input.y = 0; 
  
             if (input != Vector2.zero) 
-            { 
-                StartCoroutine(character.Move(input));
+            {  
+                StartCoroutine(character.Move(input, OnMoveOver));
             } 
         } 
 
@@ -47,4 +49,19 @@ public class PlayerController : MonoBehaviour
             collider.GetComponent<Interactable>()?.Interact(transform); 
         } 
     } 
+
+    private void OnMoveOver()
+    {
+        CheckIfInImpostorView();
+    }
+
+    private void CheckIfInImpostorView()
+    {
+        var collider = Physics2D.OverlapCircle(transform.position, 0.2f, GameLayers.Instance.FovLayer);
+        if (collider != null)
+        {
+            character.aanimator.IsMoving = false;
+            OnImpostorView?.Invoke(collider);
+        }
+    }
 }

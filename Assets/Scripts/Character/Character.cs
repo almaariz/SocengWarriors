@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,11 +9,12 @@ public class Character : MonoBehaviour
 
     public bool IsMoving { get; private set; }
     CharacterAnimator animator;
+    Action onMoveOver;
     private void Awake()
     {
         animator = GetComponent<CharacterAnimator>();
     }
-    public IEnumerator Move(Vector2 moveVec) 
+    public IEnumerator Move(Vector2 moveVec, Action onMoveOver=null) 
     { 
         animator.MoveX = Mathf.Clamp(moveVec.x, -1f, 1f); 
         animator.MoveY = Mathf.Clamp(moveVec.y, -1f, 1f); 
@@ -34,6 +36,8 @@ public class Character : MonoBehaviour
         transform.position = targetPos; 
  
         IsMoving = false; 
+
+        onMoveOver?.Invoke();
     } 
 
     public void HandleUpdate()

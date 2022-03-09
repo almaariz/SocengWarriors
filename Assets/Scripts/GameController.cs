@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum GameState { FreeRoam, Dialog }
+public enum GameState { FreeRoam, Dialog, Cutscene }
 
 public class GameController : MonoBehaviour
 { 
@@ -12,6 +12,16 @@ public class GameController : MonoBehaviour
  
     private void Start() 
     { 
+        playerController.OnImpostorView += (Collider2D impostorCollider) =>
+        {
+            var impostor = impostorCollider.GetComponentInParent<ImpostorController>();
+            if (impostor != null)
+            {
+                state = GameState.Cutscene;
+                StartCoroutine(impostor.TriggerCall(playerController));
+            }
+        };
+
         DialogManager.Instance.onShowDialog += () => 
         { 
             state = GameState.Dialog; 
