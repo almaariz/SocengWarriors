@@ -18,6 +18,11 @@ public class ImpostorController : MonoBehaviour
         SetFovRotation(character.aanimator.DefaultDirection);
     }
 
+    private void Update()
+    {
+        character.HandleUpdate();
+    }
+
     public IEnumerator TriggerCall(PlayerController player)
     {
         var diff = player.transform.position - transform.position;

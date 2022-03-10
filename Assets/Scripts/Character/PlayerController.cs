@@ -5,7 +5,8 @@ using UnityEngine;
  
 public class PlayerController : MonoBehaviour 
 { 
-    public event Action<Collider2D> OnImpostorView;
+    [SerializeField] string pname;
+    [SerializeField] Sprite sprite;
     private Vector2 input; 
     private Character character;
  
@@ -41,8 +42,6 @@ public class PlayerController : MonoBehaviour
         var facingDir = new Vector3(character.aanimator.MoveX, character.aanimator.MoveY); 
         var interactPos = transform.position + facingDir; 
  
-        //Debug.DrawLine(transform.position, interactPos, Color.green, 0.5f); 
- 
         var collider = Physics2D.OverlapCircle(interactPos, 0.3f, GameLayers.Instance.InteractableLayer); 
         if (collider != null) 
         { 
@@ -52,16 +51,26 @@ public class PlayerController : MonoBehaviour
 
     private void OnMoveOver()
     {
-        CheckIfInImpostorView();
-    }
+        var colliders = Physics2D.OverlapCircleAll(transform.position - new Vector3(0, character.OffsetY), 0.2f, GameLayers.Instance.TriggerableLayers);
 
-    private void CheckIfInImpostorView()
-    {
-        var collider = Physics2D.OverlapCircle(transform.position, 0.2f, GameLayers.Instance.FovLayer);
-        if (collider != null)
+        foreach (var collider in colliders)
         {
-            character.aanimator.IsMoving = false;
-            OnImpostorView?.Invoke(collider);
+            var triggerable = collider.GetComponent<IPlayerTriggerable>();
+            if (triggerable != null)
+            {
+                triggerable.OnPlayerTriggered(this);
+                break;
+            }
         }
     }
+
+    public string Pname {
+        get => Pname;
+    }
+
+    public Sprite Sprite {
+        get => sprite;
+    }
+
+    public Character Character => character;
 }
