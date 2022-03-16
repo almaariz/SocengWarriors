@@ -6,6 +6,7 @@ public class ImpostorFov : MonoBehaviour, IPlayerTriggerable
 {
     public void OnPlayerTriggered(PlayerController player)
     {
+        player.Character.aanimator.IsMoving = false;
         GameController.Instance.OnImpostorView(GetComponentInParent<ImpostorController>());
     }
 }
