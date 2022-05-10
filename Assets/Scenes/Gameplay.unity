@@ -176,7 +176,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1698901728127316908, guid: ddc0475d168f2354cb8ac66a6ba56fcc, type: 3}
       propertyPath: m_Name
-      value: NorthEast
+      value: QPQPlaza
       objectReference: {fileID: 0}
     - target: {fileID: 1698901728127316910, guid: ddc0475d168f2354cb8ac66a6ba56fcc, type: 3}
       propertyPath: m_Size.y
@@ -264,7 +264,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1698901728127316908, guid: ddc0475d168f2354cb8ac66a6ba56fcc, type: 3}
       propertyPath: m_Name
-      value: SouthEast
+      value: TailgatingPlaza
       objectReference: {fileID: 0}
     - target: {fileID: 1698901728127316910, guid: ddc0475d168f2354cb8ac66a6ba56fcc, type: 3}
       propertyPath: m_Size.y
@@ -352,7 +352,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1698901728127316908, guid: ddc0475d168f2354cb8ac66a6ba56fcc, type: 3}
       propertyPath: m_Name
-      value: Eastern
+      value: PretextingPlaza
       objectReference: {fileID: 0}
     - target: {fileID: 1698901728127316910, guid: ddc0475d168f2354cb8ac66a6ba56fcc, type: 3}
       propertyPath: m_Size.y
@@ -549,7 +549,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1698901728127316908, guid: ddc0475d168f2354cb8ac66a6ba56fcc, type: 3}
       propertyPath: m_Name
-      value: Northern
+      value: DTPlaza
       objectReference: {fileID: 0}
     - target: {fileID: 1698901728127316910, guid: ddc0475d168f2354cb8ac66a6ba56fcc, type: 3}
       propertyPath: m_Size.y
@@ -630,7 +630,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1698901728127316908, guid: ddc0475d168f2354cb8ac66a6ba56fcc, type: 3}
       propertyPath: m_Name
-      value: SouthWest
+      value: PhisingPlaza
       objectReference: {fileID: 0}
     - target: {fileID: 1698901728127316910, guid: ddc0475d168f2354cb8ac66a6ba56fcc, type: 3}
       propertyPath: m_Size.y
@@ -878,7 +878,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1698901728127316908, guid: ddc0475d168f2354cb8ac66a6ba56fcc, type: 3}
       propertyPath: m_Name
-      value: Western
+      value: SSPlaza
       objectReference: {fileID: 0}
     - target: {fileID: 1698901728127316910, guid: ddc0475d168f2354cb8ac66a6ba56fcc, type: 3}
       propertyPath: m_Size.y
@@ -992,7 +992,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1698901728127316908, guid: ddc0475d168f2354cb8ac66a6ba56fcc, type: 3}
       propertyPath: m_Name
-      value: NorthWest
+      value: DumpsterDPlaza
       objectReference: {fileID: 0}
     - target: {fileID: 1698901728127316910, guid: ddc0475d168f2354cb8ac66a6ba56fcc, type: 3}
       propertyPath: m_Size.y

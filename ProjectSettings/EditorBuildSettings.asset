@@ -15,24 +15,24 @@ EditorBuildSettings:
     path: Assets/Scenes/House1.unity
     guid: 32fe051a3d6d90f43ad11a7f4bf3b019
   - enabled: 1
-    path: Assets/Scenes/SouthWest.unity
+    path: Assets/Scenes/PhisingPlaza.unity
     guid: 0bd2875bb1a7ebd4eb3f602f6a13ed5f
   - enabled: 1
-    path: Assets/Scenes/Western.unity
+    path: Assets/Scenes/SSPlaza.unity
     guid: ecd1812873aceb847bc7c730a7c81456
   - enabled: 1
-    path: Assets/Scenes/NorthWest.unity
+    path: Assets/Scenes/DumpsterDPlaza.unity
     guid: 3aa3f3db63836c4408112c7e08c50478
   - enabled: 1
-    path: Assets/Scenes/Northern.unity
+    path: Assets/Scenes/DTPlaza.unity
     guid: 59b564fc9c958674e9cb8a431ddedf40
   - enabled: 1
-    path: Assets/Scenes/NorthEast.unity
+    path: Assets/Scenes/QPQPlaza.unity
     guid: f4f691f0fcec7fe45978eb357f93141b
   - enabled: 1
-    path: Assets/Scenes/Eastern.unity
+    path: Assets/Scenes/PretextingPlaza.unity
     guid: 7ebfdcb3a9bb948438c15eb7030608d2
   - enabled: 1
-    path: Assets/Scenes/SouthEast.unity
+    path: Assets/Scenes/TailgatingPlaza.unity
     guid: af99132b40561064b9cf2aad165d8672
   m_configObjects: {}
