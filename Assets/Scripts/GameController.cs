@@ -1,75 +1,81 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public enum GameState { FreeRoam, Dialog, Cutscene, Paused }
 
 public class GameController : MonoBehaviour
-{ 
-    [SerializeField] PlayerController playerController;
- 
-    GameState state; 
+{
+  [SerializeField] PlayerController playerController;
 
-    GameState stateBeforePause;
+  public int miniGameDone { get; set; }
 
-    public SceneDetails CurrentScene { get; private set; }
-    public SceneDetails PrevScene { get; private set; }
+  [SerializeField] Text miniGameDonerText;
 
-    public static GameController Instance { get; private set; }
+  GameState state;
 
-    private void Awake()
+  GameState stateBeforePause;
+
+  public SceneDetails CurrentScene { get; private set; }
+  public SceneDetails PrevScene { get; private set; }
+
+  public static GameController Instance { get; private set; }
+
+  private void Awake()
+  {
+    Instance = this;
+  }
+
+  private void Start()
+  {
+    DialogManager.Instance.onShowDialog += () =>
     {
-        Instance = this;
-    }
- 
-    private void Start() 
-    { 
-        DialogManager.Instance.onShowDialog += () => 
-        { 
-            state = GameState.Dialog; 
-        }; 
+      state = GameState.Dialog;
+    };
 
-        DialogManager.Instance.onCloseDialog += () => 
-        { 
-            if(state == GameState.Dialog)
-                state = GameState.FreeRoam; 
-        }; 
-    } 
- 
-    public void PauseGame(bool pause)
+    DialogManager.Instance.onCloseDialog += () =>
     {
-        if (pause)
-        {
-            stateBeforePause = state;
-            state = GameState.Paused;
-        }
-        else
-        {
-            state = stateBeforePause;
-        }
-    }
+      if (state == GameState.Dialog)
+        state = GameState.FreeRoam;
+    };
+  }
 
-    private void Update() 
-    { 
-        if (state == GameState.FreeRoam) 
-        { 
-            playerController.HandleUpdate();
-        } 
-        else if (state == GameState.Dialog) 
-        { 
-            DialogManager.Instance.HandleUpdate(); 
-        } 
-    } 
-
-    public void SetCurrentScene(SceneDetails currScene)
+  public void PauseGame(bool pause)
+  {
+    if (pause)
     {
-        PrevScene = CurrentScene;
-        CurrentScene = currScene;
+      stateBeforePause = state;
+      state = GameState.Paused;
     }
-
-    public void OnImpostorView(ImpostorController impostor)
+    else
     {
-        state = GameState.Cutscene;
-        StartCoroutine(impostor.TriggerCall(playerController));
+      state = stateBeforePause;
     }
+  }
+
+  private void Update()
+  {
+    if (state == GameState.FreeRoam)
+    {
+      playerController.HandleUpdate();
+    }
+    else if (state == GameState.Dialog)
+    {
+      DialogManager.Instance.HandleUpdate();
+    }
+    miniGameDonerText.text = "Mini Games Completed = " + miniGameDone;
+  }
+
+  public void SetCurrentScene(SceneDetails currScene)
+  {
+    PrevScene = CurrentScene;
+    CurrentScene = currScene;
+  }
+
+  public void OnImpostorView(ImpostorController impostor)
+  {
+    state = GameState.Cutscene;
+    StartCoroutine(impostor.TriggerCall(playerController));
+  }
 }
