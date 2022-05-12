@@ -40,4 +40,9 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
             
         }
 
+        public void OnTriggerEnter2D(Collider2D collider)
+        {
+            Debug.Log(gameObject.name + " Collided");
+        }
+
     }
