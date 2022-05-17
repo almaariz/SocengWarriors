@@ -47,10 +47,12 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
+    flipGreenChannel: 0
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -89,6 +91,7 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  swizzle: 50462976
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -328,9 +331,18 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      Adam_phone_48x48_2: 4763131052182402145
+      Adam_phone_48x48_3: -703329316743503324
+      Adam_phone_48x48_4: -4978708700310309950
+      Adam_phone_48x48_1: 5214665308670242931
+      Adam_phone_48x48_0: -4533471267273558564
+      Adam_phone_48x48_7: 5615416625804993619
+      Adam_phone_48x48_5: -5091269571593622131
+      Adam_phone_48x48_8: -4914844962643193785
+      Adam_phone_48x48_6: 4801142460236591884
   spritePackingTag: 
   pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 

@@ -92,10 +92,12 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
+    flipGreenChannel: 0
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -134,6 +136,7 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  swizzle: 50462976
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -688,9 +691,33 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      Old_man_Josh_idle_anim_with_can_48x48_16: 3300167237840133086
+      Old_man_Josh_idle_anim_with_can_48x48_4: 8316970550650170098
+      Old_man_Josh_idle_anim_with_can_48x48_8: -7864287134955676171
+      Old_man_Josh_idle_anim_with_can_48x48_10: -1108988119516269238
+      Old_man_Josh_idle_anim_with_can_48x48_5: 3164067186705389497
+      Old_man_Josh_idle_anim_with_can_48x48_13: -5861938450074211275
+      Old_man_Josh_idle_anim_with_can_48x48_21: 5746874597680338248
+      Old_man_Josh_idle_anim_with_can_48x48_14: 514683415652652703
+      Old_man_Josh_idle_anim_with_can_48x48_22: -5129214368064415747
+      Old_man_Josh_idle_anim_with_can_48x48_15: -1852574248206758166
+      Old_man_Josh_idle_anim_with_can_48x48_9: -2531093089524935443
+      Old_man_Josh_idle_anim_with_can_48x48_7: -7571771709707029449
+      Old_man_Josh_idle_anim_with_can_48x48_18: -6300342989169708590
+      Old_man_Josh_idle_anim_with_can_48x48_6: -7863930019472681517
+      Old_man_Josh_idle_anim_with_can_48x48_19: -5267583166409239183
+      Old_man_Josh_idle_anim_with_can_48x48_2: -4201916833717584250
+      Old_man_Josh_idle_anim_with_can_48x48_17: 6216410231653390095
+      Old_man_Josh_idle_anim_with_can_48x48_0: 7252319745542758780
+      Old_man_Josh_idle_anim_with_can_48x48_3: 7720331962028862527
+      Old_man_Josh_idle_anim_with_can_48x48_12: 5973230798864218042
+      Old_man_Josh_idle_anim_with_can_48x48_1: -7558425537137703787
+      Old_man_Josh_idle_anim_with_can_48x48_20: 1704487892476693403
+      Old_man_Josh_idle_anim_with_can_48x48_11: -9003837099446119194
+      Old_man_Josh_idle_anim_with_can_48x48_23: 1923465792850199674
   spritePackingTag: 
   pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 

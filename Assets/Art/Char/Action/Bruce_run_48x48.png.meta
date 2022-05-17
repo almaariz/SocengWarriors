@@ -92,10 +92,12 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
+    flipGreenChannel: 0
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -134,6 +136,7 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  swizzle: 50462976
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -688,9 +691,33 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      Bruce_run_48x48_19: -6894089497020603527
+      Bruce_run_48x48_0: -7111416121676955686
+      Bruce_run_48x48_4: -7402410570727688081
+      Bruce_run_48x48_20: 8237467660567190617
+      Bruce_run_48x48_13: 7554717755782215134
+      Bruce_run_48x48_10: 6464093811046935485
+      Bruce_run_48x48_23: -1161285271214300188
+      Bruce_run_48x48_17: 8601116888969248714
+      Bruce_run_48x48_2: 5175501616332310834
+      Bruce_run_48x48_5: -733123536315021459
+      Bruce_run_48x48_8: -7726072228056387734
+      Bruce_run_48x48_3: 6714747709250195473
+      Bruce_run_48x48_7: -7854623968783768846
+      Bruce_run_48x48_11: -5473604381420401460
+      Bruce_run_48x48_21: 567446630070960324
+      Bruce_run_48x48_15: -4616068480669764486
+      Bruce_run_48x48_1: -1984744841239877750
+      Bruce_run_48x48_12: 6985656228359268589
+      Bruce_run_48x48_22: 8403089184318702242
+      Bruce_run_48x48_9: -3149524656980822724
+      Bruce_run_48x48_16: 6535924921316739536
+      Bruce_run_48x48_6: 6368436195039438123
+      Bruce_run_48x48_18: 1339305550595949003
+      Bruce_run_48x48_14: 1185900359147826997
   spritePackingTag: 
   pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 
