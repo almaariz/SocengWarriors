@@ -395,10 +395,12 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
+    flipGreenChannel: 0
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -437,6 +439,7 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  swizzle: 50462976
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -3112,9 +3115,134 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      Japanese_Home_1_Layer_2_48x48_73: -6370600820497574055
+      Japanese_Home_1_Layer_2_48x48_79: 329471597113708002
+      Japanese_Home_1_Layer_2_48x48_48: 1435514102145526379
+      Japanese_Home_1_Layer_2_48x48_18: 3612957311133990640
+      Japanese_Home_1_Layer_2_48x48_31: 3938350208098059429
+      Japanese_Home_1_Layer_2_48x48_74: -7217520643605429336
+      Japanese_Home_1_Layer_2_48x48_88: -8083290889862798166
+      Japanese_Home_1_Layer_2_48x48_14: -1661685490348661581
+      Japanese_Home_1_Layer_2_48x48_80: 4472223273579490376
+      Japanese_Home_1_Layer_2_48x48_46: 7505976110717569118
+      Japanese_Home_1_Layer_2_48x48_27: -828146518468721771
+      Japanese_Home_1_Layer_2_48x48_83: -3517528102306480879
+      Japanese_Home_1_Layer_2_48x48_25: 4477503770362130667
+      Japanese_Home_1_Layer_2_48x48_8: -986266986012654271
+      Japanese_Home_1_Layer_2_48x48_61: 4664012892579562272
+      Japanese_Home_1_Layer_2_48x48_104: 8207228912346981154
+      Japanese_Home_1_Layer_2_48x48_116: 180558886458358631
+      Japanese_Home_1_Layer_2_48x48_76: -2463509575717737019
+      Japanese_Home_1_Layer_2_48x48_124: -1515395438466621995
+      Japanese_Home_1_Layer_2_48x48_60: -5116217187117222759
+      Japanese_Home_1_Layer_2_48x48_64: 5809949044754443783
+      Japanese_Home_1_Layer_2_48x48_115: 7253144380377805757
+      Japanese_Home_1_Layer_2_48x48_12: 8786395354903287020
+      Japanese_Home_1_Layer_2_48x48_99: 2671578256044746258
+      Japanese_Home_1_Layer_2_48x48_121: 1460111666489063834
+      Japanese_Home_1_Layer_2_48x48_123: -2164156606031977693
+      Japanese_Home_1_Layer_2_48x48_54: 7636097878705816181
+      Japanese_Home_1_Layer_2_48x48_19: -6101197745622590482
+      Japanese_Home_1_Layer_2_48x48_37: -1007998213551183785
+      Japanese_Home_1_Layer_2_48x48_36: 7437911912970203826
+      Japanese_Home_1_Layer_2_48x48_91: 2863070418334899713
+      Japanese_Home_1_Layer_2_48x48_93: 1625341539755024448
+      Japanese_Home_1_Layer_2_48x48_50: -1886504408848969725
+      Japanese_Home_1_Layer_2_48x48_107: 5203032875425778624
+      Japanese_Home_1_Layer_2_48x48_28: 2665583587637877489
+      Japanese_Home_1_Layer_2_48x48_3: 8037381802715742453
+      Japanese_Home_1_Layer_2_48x48_118: 306639521141015838
+      Japanese_Home_1_Layer_2_48x48_7: 3404447546062125605
+      Japanese_Home_1_Layer_2_48x48_66: 7426585832949377227
+      Japanese_Home_1_Layer_2_48x48_85: 2827850868448187471
+      Japanese_Home_1_Layer_2_48x48_70: -4567120424571249590
+      Japanese_Home_1_Layer_2_48x48_101: 725985404781754898
+      Japanese_Home_1_Layer_2_48x48_113: -7055255658912235224
+      Japanese_Home_1_Layer_2_48x48_15: 3306631237365345769
+      Japanese_Home_1_Layer_2_48x48_40: -2600904427852828994
+      Japanese_Home_1_Layer_2_48x48_89: -462563314788829778
+      Japanese_Home_1_Layer_2_48x48_84: 1136999312147820286
+      Japanese_Home_1_Layer_2_48x48_20: 2578253137155440103
+      Japanese_Home_1_Layer_2_48x48_63: -6803182335171402997
+      Japanese_Home_1_Layer_2_48x48_5: 4172866685594523882
+      Japanese_Home_1_Layer_2_48x48_77: 4751193929831479863
+      Japanese_Home_1_Layer_2_48x48_120: -1080735729103470809
+      Japanese_Home_1_Layer_2_48x48_39: -165023943075912139
+      Japanese_Home_1_Layer_2_48x48_69: 7268055694445672718
+      Japanese_Home_1_Layer_2_48x48_112: -6844821871986161373
+      Japanese_Home_1_Layer_2_48x48_29: -1660316605649074202
+      Japanese_Home_1_Layer_2_48x48_55: -2219588619384543874
+      Japanese_Home_1_Layer_2_48x48_105: 8827667642946452154
+      Japanese_Home_1_Layer_2_48x48_72: 44388276471228299
+      Japanese_Home_1_Layer_2_48x48_9: -384023933005673379
+      Japanese_Home_1_Layer_2_48x48_53: 1227990458970057191
+      Japanese_Home_1_Layer_2_48x48_102: -985561489152886960
+      Japanese_Home_1_Layer_2_48x48_51: -3287653994055788951
+      Japanese_Home_1_Layer_2_48x48_17: -383732555131235741
+      Japanese_Home_1_Layer_2_48x48_86: -6577008177429517321
+      Japanese_Home_1_Layer_2_48x48_109: 6107229883458010056
+      Japanese_Home_1_Layer_2_48x48_38: 246259294580301333
+      Japanese_Home_1_Layer_2_48x48_52: -8875682212244957588
+      Japanese_Home_1_Layer_2_48x48_57: 4933501211161831876
+      Japanese_Home_1_Layer_2_48x48_95: -4168599242681483430
+      Japanese_Home_1_Layer_2_48x48_6: -7149837392203767734
+      Japanese_Home_1_Layer_2_48x48_45: -5021068532215644292
+      Japanese_Home_1_Layer_2_48x48_103: 8803342152376038492
+      Japanese_Home_1_Layer_2_48x48_49: -3717408941482302806
+      Japanese_Home_1_Layer_2_48x48_122: 9149982721020224858
+      Japanese_Home_1_Layer_2_48x48_1: 3343961682506968438
+      Japanese_Home_1_Layer_2_48x48_22: -1260938967481611135
+      Japanese_Home_1_Layer_2_48x48_97: -1097017644441361511
+      Japanese_Home_1_Layer_2_48x48_30: 9197977889641202253
+      Japanese_Home_1_Layer_2_48x48_35: 6422336911223963095
+      Japanese_Home_1_Layer_2_48x48_108: -5545885491939560980
+      Japanese_Home_1_Layer_2_48x48_34: 8085475735605284300
+      Japanese_Home_1_Layer_2_48x48_43: 5012914491564904541
+      Japanese_Home_1_Layer_2_48x48_23: -4470257076372933313
+      Japanese_Home_1_Layer_2_48x48_67: 3917686245695596363
+      Japanese_Home_1_Layer_2_48x48_114: -3689517957955502082
+      Japanese_Home_1_Layer_2_48x48_65: 2530268241475527779
+      Japanese_Home_1_Layer_2_48x48_81: -3849385285741032917
+      Japanese_Home_1_Layer_2_48x48_24: -7355090131552573778
+      Japanese_Home_1_Layer_2_48x48_21: -4249605258278570814
+      Japanese_Home_1_Layer_2_48x48_78: 3470257689848067085
+      Japanese_Home_1_Layer_2_48x48_33: 3110230880841743769
+      Japanese_Home_1_Layer_2_48x48_90: 1543252495434815091
+      Japanese_Home_1_Layer_2_48x48_11: -202354231135603297
+      Japanese_Home_1_Layer_2_48x48_96: -400768019176940860
+      Japanese_Home_1_Layer_2_48x48_94: 5807257146851385228
+      Japanese_Home_1_Layer_2_48x48_44: -8249863120635472454
+      Japanese_Home_1_Layer_2_48x48_10: 1074670135392036196
+      Japanese_Home_1_Layer_2_48x48_119: 4829926710627992435
+      Japanese_Home_1_Layer_2_48x48_32: 3162415878378364690
+      Japanese_Home_1_Layer_2_48x48_59: 7910997508883054883
+      Japanese_Home_1_Layer_2_48x48_98: -3596056628645769983
+      Japanese_Home_1_Layer_2_48x48_47: -2986756802598327489
+      Japanese_Home_1_Layer_2_48x48_42: 2346975565104075074
+      Japanese_Home_1_Layer_2_48x48_92: 4653391810625653934
+      Japanese_Home_1_Layer_2_48x48_87: 6893266634831154471
+      Japanese_Home_1_Layer_2_48x48_16: 2912147430982971246
+      Japanese_Home_1_Layer_2_48x48_110: 4702793693651987711
+      Japanese_Home_1_Layer_2_48x48_58: -6325816270038644301
+      Japanese_Home_1_Layer_2_48x48_68: -5089003382230134749
+      Japanese_Home_1_Layer_2_48x48_26: -1711496591717159559
+      Japanese_Home_1_Layer_2_48x48_2: 5730636726570664801
+      Japanese_Home_1_Layer_2_48x48_41: -4885624409811034457
+      Japanese_Home_1_Layer_2_48x48_13: 5643183549966074283
+      Japanese_Home_1_Layer_2_48x48_106: -6630162988822381817
+      Japanese_Home_1_Layer_2_48x48_0: -1826612616303200076
+      Japanese_Home_1_Layer_2_48x48_56: 2658651012577094638
+      Japanese_Home_1_Layer_2_48x48_62: -7978549030633297162
+      Japanese_Home_1_Layer_2_48x48_82: 592884860434600374
+      Japanese_Home_1_Layer_2_48x48_4: -4453618439665921841
+      Japanese_Home_1_Layer_2_48x48_75: 3315728030293323769
+      Japanese_Home_1_Layer_2_48x48_71: -3163587310730547296
+      Japanese_Home_1_Layer_2_48x48_111: 6419766157614982709
+      Japanese_Home_1_Layer_2_48x48_100: -4232376436586997598
+      Japanese_Home_1_Layer_2_48x48_117: -947989579685165026
   spritePackingTag: 
   pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 

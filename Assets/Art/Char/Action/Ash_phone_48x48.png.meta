@@ -47,10 +47,12 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
+    flipGreenChannel: 0
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -89,6 +91,7 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  swizzle: 50462976
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -328,9 +331,18 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      Ash_phone_48x48_8: -5681552389925607043
+      Ash_phone_48x48_3: -1937284937346752546
+      Ash_phone_48x48_5: 5938067952443588945
+      Ash_phone_48x48_0: 1588324469871743995
+      Ash_phone_48x48_6: -5515746684917853987
+      Ash_phone_48x48_7: 4750377522611222526
+      Ash_phone_48x48_2: 4615814102537636870
+      Ash_phone_48x48_4: -1575599806674005569
+      Ash_phone_48x48_1: 7505650519143526638
   spritePackingTag: 
   pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 

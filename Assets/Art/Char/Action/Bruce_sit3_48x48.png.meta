@@ -56,10 +56,12 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
+    flipGreenChannel: 0
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -98,6 +100,7 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  swizzle: 50462976
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -400,9 +403,21 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      Bruce_sit3_48x48_8: 8716113546096383257
+      Bruce_sit3_48x48_10: -561061810097094188
+      Bruce_sit3_48x48_2: -2183109893971590874
+      Bruce_sit3_48x48_7: 4771346078840731791
+      Bruce_sit3_48x48_6: -6327275996798480428
+      Bruce_sit3_48x48_11: 1914489167963514544
+      Bruce_sit3_48x48_4: 2744717822520384031
+      Bruce_sit3_48x48_3: 9132720331271891385
+      Bruce_sit3_48x48_0: 4020849618774060698
+      Bruce_sit3_48x48_5: -2837824359681857115
+      Bruce_sit3_48x48_1: 5992657455359867922
+      Bruce_sit3_48x48_9: 2707538136974224805
   spritePackingTag: 
   pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 
