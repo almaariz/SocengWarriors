@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class DumpsterDocument : MonoBehaviour, IPointerEnterHandler
+public class DumpsterDocument : MonoBehaviour
 {
     [SerializeField] Vector2 targetPosition;
     [SerializeField] int moveSpeed;
@@ -29,7 +29,12 @@ public class DumpsterDocument : MonoBehaviour, IPointerEnterHandler
     void OnTriggerEnter2D(Collider2D collider)
     {
         Debug.Log(gameObject.name + " Collided");
-        if (collider.tag == "TrashCan")
+        if (collider.tag == "Blade")
+        {
+            Debug.Log("cut");
+            Destroy(gameObject);
+        }
+        else if (collider.tag == "TrashCan")
         {
             Debug.Log("trashed");
             Destroy(gameObject);
@@ -42,8 +47,8 @@ public class DumpsterDocument : MonoBehaviour, IPointerEnterHandler
     //     Destroy(gameObject);
     // }
 
-    public void OnPointerEnter(PointerEventData eventData)
-    {
-        print("OnMouseEnter");
-    }
+    // public void OnPointerEnter(PointerEventData eventData)
+    // {
+    //     print("OnMouseEnter");
+    // }
 }

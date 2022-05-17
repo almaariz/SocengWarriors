@@ -51,7 +51,6 @@ public class MoveSystem : MonoBehaviour, IBeginDragHandler, IDragHandler,IEndDra
         {
             transform.localPosition = correctForm.transform.localPosition;
             npc.CorrectAnswer();
-            Debug.Log("Manggil correct answer");
         }
         else
             transform.localPosition = orginalPosition;
