@@ -6,6 +6,7 @@ public class MoveSystem : MonoBehaviour, IBeginDragHandler, IDragHandler,IEndDra
     private Vector2 lastMousePosition;
     private float x, y, z;
     public GameObject correctForm;
+    public NPCShoulderSurfing npc;
 
     public bool blockX, blockY, blockZ;
 
@@ -49,6 +50,7 @@ public class MoveSystem : MonoBehaviour, IBeginDragHandler, IDragHandler,IEndDra
         if (distance < jarak)
         {
             transform.localPosition = correctForm.transform.localPosition;
+            npc.CorrectAnswer();
             Debug.Log("Manggil correct answer");
         }
         else
