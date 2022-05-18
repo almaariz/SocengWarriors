@@ -21,13 +21,13 @@ EditorBuildSettings:
     path: Assets/_Scenes/PhisingPlaza.unity
     guid: 0bd2875bb1a7ebd4eb3f602f6a13ed5f
   - enabled: 1
-    path: Assets/_Scenes/SSPlaza.unity
+    path: Assets/_Scenes/SSurfingPlaza.unity
     guid: ecd1812873aceb847bc7c730a7c81456
   - enabled: 1
     path: Assets/_Scenes/DumpsterDPlaza.unity
     guid: 3aa3f3db63836c4408112c7e08c50478
   - enabled: 1
-    path: Assets/_Scenes/DTPlaza.unity
+    path: Assets/_Scenes/DTheftPlaza.unity
     guid: 59b564fc9c958674e9cb8a431ddedf40
   - enabled: 1
     path: Assets/_Scenes/QPQPlaza.unity

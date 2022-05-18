@@ -416,19 +416,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 202769638}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 2040965242}
-        m_TargetAssemblyTypeName: NPCShoulderSurfing, Assembly-CSharp
-        m_MethodName: CorrectAnswer
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &202769638
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -548,19 +536,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 236705938}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 2040965242}
-        m_TargetAssemblyTypeName: NPCShoulderSurfing, Assembly-CSharp
-        m_MethodName: CorrectAnswer
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &236705938
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1524,19 +1500,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1012230147}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 2040965242}
-        m_TargetAssemblyTypeName: NPCShoulderSurfing, Assembly-CSharp
-        m_MethodName: CorrectAnswer
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1012230147
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1656,19 +1620,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1047107172}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 2040965242}
-        m_TargetAssemblyTypeName: NPCShoulderSurfing, Assembly-CSharp
-        m_MethodName: CorrectAnswer
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1047107172
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1890,19 +1842,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1182230822}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 2040965242}
-        m_TargetAssemblyTypeName: NPCShoulderSurfing, Assembly-CSharp
-        m_MethodName: CorrectAnswer
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1182230822
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2022,19 +1962,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1192187888}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 2040965242}
-        m_TargetAssemblyTypeName: NPCShoulderSurfing, Assembly-CSharp
-        m_MethodName: CorrectAnswer
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1192187888
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7739,19 +7667,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1587885250}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 2040965242}
-        m_TargetAssemblyTypeName: NPCShoulderSurfing, Assembly-CSharp
-        m_MethodName: CorrectAnswer
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1587885250
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7871,19 +7787,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1599480513}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 2040965242}
-        m_TargetAssemblyTypeName: NPCShoulderSurfing, Assembly-CSharp
-        m_MethodName: CorrectAnswer
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1599480513
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8171,19 +8075,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1779982704}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 2040965242}
-        m_TargetAssemblyTypeName: NPCShoulderSurfing, Assembly-CSharp
-        m_MethodName: CorrectAnswer
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1779982704
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8303,19 +8195,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1833350742}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 2040965242}
-        m_TargetAssemblyTypeName: NPCShoulderSurfing, Assembly-CSharp
-        m_MethodName: CorrectAnswer
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1833350742
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class NPCPretexting : NPCController
 {
-    public GameObject canvas;
+  public GameObject canvas;
   bool isPlaying = false;
   bool isAnswered = false;
 

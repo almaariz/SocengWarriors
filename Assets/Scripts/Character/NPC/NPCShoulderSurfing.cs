@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class NPCShoulderSurfing : NPCController
 {
-    public GameObject canvas;
+  public GameObject canvas;
   bool isPlaying = false;
   bool isAnswered = false;
 

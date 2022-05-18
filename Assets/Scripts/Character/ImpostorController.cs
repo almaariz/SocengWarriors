@@ -16,6 +16,7 @@ public class ImpostorController : MonoBehaviour
     private void Start()
     {
         SetFovRotation(character.aanimator.DefaultDirection);
+        CheckStatus();
     }
 
     private void Update()
@@ -35,8 +36,18 @@ public class ImpostorController : MonoBehaviour
         {
             
         }));
+        GameController.Instance.DTheftDone=2;
+        GameController.Instance.DTheftStatus=false;
+        Debug.Log("Paket sampai salah");
     }
     
+    public void CheckStatus()
+    {
+        if(GameController.Instance.DTheftStatus==true)
+        {
+            GameController.Instance.DTheftDone=2;
+        }
+    }
     public void SetFovRotation(FacingDirection dir)
     {
         float angle = 0f;
