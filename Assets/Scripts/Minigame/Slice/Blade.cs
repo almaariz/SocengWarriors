@@ -60,6 +60,7 @@ public class Blade : MonoBehaviour {
 	{
 		isCutting = true;
 		currentBladeTrail = Instantiate(bladeTrailPrefab, transform);
+		currentBladeTrail.transform.SetParent(GameObject.FindGameObjectWithTag("Canvas").transform,false);
 		previousPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 		circleCollider.enabled = false;
 	}

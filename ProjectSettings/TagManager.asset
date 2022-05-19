@@ -6,6 +6,10 @@ TagManager:
   tags:
   - TrashCan
   - Cut
+  - Blade
+  - Canvas
+  - Officer
+  - Tailgater
   layers:
   - Default
   - TransparentFX
@@ -51,4 +55,10 @@ TagManager:
     locked: 0
   - name: Player
     uniqueID: 3456463543
+    locked: 0
+  - name: Door
+    uniqueID: 2385779167
+    locked: 0
+  - name: Officer
+    uniqueID: 1817536651
     locked: 0

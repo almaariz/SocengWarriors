@@ -33,7 +33,7 @@ public class PlayerController : MonoBehaviour
 
         character.HandleUpdate();
 
-        if (Input.GetKeyDown(KeyCode.Z)) 
+        if (Input.GetKeyDown(KeyCode.Space)) 
             Interact(); 
     }
  

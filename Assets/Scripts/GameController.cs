@@ -12,8 +12,6 @@ public class GameController : MonoBehaviour
   public int miniGameDone { get; set; }
 
   [SerializeField] Text miniGameDonerText;
-  [SerializeField] Text statusText;
-  [SerializeField] Text DonerText;
   public int DTheftDone { get; set; }
   public bool DTheftStatus { get; set; }
 
@@ -69,8 +67,6 @@ public class GameController : MonoBehaviour
       DialogManager.Instance.HandleUpdate();
     }
     miniGameDonerText.text = "Mini Games Completed = " + miniGameDone;
-    statusText.text = "Status " + DTheftStatus;
-    DonerText.text = "Done " + DTheftDone;
   }
 
   public void SetCurrentScene(SceneDetails currScene)

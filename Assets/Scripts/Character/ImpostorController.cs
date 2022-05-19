@@ -16,12 +16,12 @@ public class ImpostorController : MonoBehaviour
     private void Start()
     {
         SetFovRotation(character.aanimator.DefaultDirection);
-        CheckStatus();
     }
 
     private void Update()
     {
         character.HandleUpdate();
+        CheckStatus();
     }
 
     public IEnumerator TriggerCall(PlayerController player)
@@ -38,15 +38,18 @@ public class ImpostorController : MonoBehaviour
         }));
         GameController.Instance.DTheftDone=2;
         GameController.Instance.DTheftStatus=false;
-        Debug.Log("Paket sampai salah");
+        yield return character.Move(-1*moveVec);
     }
     
     public void CheckStatus()
     {
-        if(GameController.Instance.DTheftStatus==true)
+        if(GameController.Instance.DTheftStatus)
         {
+            fov.SetActive(true);
             GameController.Instance.DTheftDone=2;
         }
+        else
+            fov.SetActive(false);
     }
     public void SetFovRotation(FacingDirection dir)
     {

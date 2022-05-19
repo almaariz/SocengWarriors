@@ -17,7 +17,6 @@ public class NPCDTheft1 : NPCController
     {
         if (GameController.Instance.DTheftDone == 0)
         {
-            Debug.Log("antar paket");
             isPlaying = false;
             canvas.SetActive(false);
             GameController.Instance.DTheftStatus=true;
@@ -80,23 +79,26 @@ public class NPCDTheft1 : NPCController
 
     public override void Interact(Transform initiator)
     {
-        if (!isPlaying)
+        if(!GameController.Instance.DTheftStatus)
         {
-            if (state == NPCState.Idle)
+            if (!isPlaying)
             {
-            state = NPCState.Dialog;
-            character.LookTowards(initiator.position);
-
-            StartCoroutine(DialogManager.Instance.ShowDialog(dialog, () =>
-            {
-                if (!isAnswered)
+                if (state == NPCState.Idle)
                 {
-                isPlaying = true;
-                canvas.SetActive(true);
+                state = NPCState.Dialog;
+                character.LookTowards(initiator.position);
+
+                StartCoroutine(DialogManager.Instance.ShowDialog(dialog, () =>
+                {
+                    if (!isAnswered)
+                    {
+                    isPlaying = true;
+                    canvas.SetActive(true);
+                    }
+                    idleTimer = 0f;
+                    state = NPCState.Idle;
+                }));
                 }
-                idleTimer = 0f;
-                state = NPCState.Idle;
-            }));
             }
         }
     }
