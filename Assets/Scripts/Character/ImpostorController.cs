@@ -2,11 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ImpostorController : MonoBehaviour
+public class ImpostorController : NPCController
 {
-    [SerializeField] Dialog dialog;
     [SerializeField] GameObject fov;
-    Character character;
 
     private void Awake()
     {
@@ -18,9 +16,8 @@ public class ImpostorController : MonoBehaviour
         SetFovRotation(character.aanimator.DefaultDirection);
     }
 
-    private void Update()
+    private void HandleUpdate()
     {
-        character.HandleUpdate();
         CheckStatus();
     }
 
@@ -34,11 +31,15 @@ public class ImpostorController : MonoBehaviour
 
         StartCoroutine(DialogManager.Instance.ShowDialog(dialog, () =>
         {
-            
+            idleTimer = 0f;
+            state = NPCState.Idle;
         }));
         GameController.Instance.DTheftDone=2;
         GameController.Instance.DTheftStatus=false;
+        
         yield return character.Move(-1*moveVec);
+        
+        character.aanimator.SetFacingDirection(character.aanimator.DefaultDirection);
     }
     
     public void CheckStatus()

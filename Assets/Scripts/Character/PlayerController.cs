@@ -31,7 +31,7 @@ public class PlayerController : MonoBehaviour
             } 
         } 
 
-        character.HandleUpdate();
+        character.Update();
 
         if (Input.GetKeyDown(KeyCode.Space)) 
             Interact(); 

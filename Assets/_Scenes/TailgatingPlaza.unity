@@ -6699,6 +6699,12 @@ MonoBehaviour:
   dialog:
     lines:
     - Hallo, kau pasti orang yang mengantarkan paket dari Alex
+  movementPattern:
+  - {x: 2, y: 0}
+  - {x: 0, y: 2}
+  - {x: -2, y: 0}
+  - {x: 0, y: -2}
+  timeBetweenPattern: 3
   fov: {fileID: 622517966}
 --- !u!114 &1600204151
 MonoBehaviour:
@@ -6757,7 +6763,7 @@ MonoBehaviour:
   - {fileID: -7360718930075927385, guid: f16ced69fda2c4e499711d9ed2fd7d0b, type: 3}
   - {fileID: 2667659339050000464, guid: f16ced69fda2c4e499711d9ed2fd7d0b, type: 3}
   - {fileID: -7808598729135433682, guid: f16ced69fda2c4e499711d9ed2fd7d0b, type: 3}
-  defaultDirection: 0
+  defaultDirection: 1
 --- !u!61 &1600204153
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7258,7 +7264,6 @@ MonoBehaviour:
   timeBetweenPattern: 3
   canvas: {fileID: 1723529367}
   spawnerPrefab: {fileID: 5866603464203685044, guid: 64c1fc54bd5da314793deafdc6b17407, type: 3}
-  spawner: {fileID: 0}
   score: 0
 --- !u!114 &2040965240
 MonoBehaviour:

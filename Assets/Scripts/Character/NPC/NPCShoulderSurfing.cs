@@ -10,8 +10,9 @@ public class NPCShoulderSurfing : NPCController
   bool isAnswered = false;
 
   // Start is called before the first frame update
-  void Start()
+  void Update()
   {
+      
   }
 
   public void WrongAnswer()
@@ -72,6 +73,7 @@ public class NPCShoulderSurfing : NPCController
         {
           if (!isAnswered)
           {
+            GameController.Instance.PauseGame(true);
             isPlaying = true;
             canvas.SetActive(true);
           }

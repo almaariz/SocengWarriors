@@ -6,16 +6,10 @@ public class NPCTailgating : NPCController
 {
     public GameObject canvas;
     public GameObject spawnerPrefab;
-    public GameObject spawner;
+    GameObject spawner;
     bool isPlaying = false;
     bool isAnswered = false;
     public int score;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
     public void WrongAnswer(bool tailgater)
     {
@@ -85,6 +79,7 @@ public class NPCTailgating : NPCController
             {
             if (!isAnswered)
             {
+                GameController.Instance.PauseGame(true);
                 isPlaying = true;
                 canvas.SetActive(true);
                 spawner = Instantiate(spawnerPrefab, new Vector2(0,0), Quaternion.identity);

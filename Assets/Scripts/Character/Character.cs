@@ -51,7 +51,7 @@ public class Character : MonoBehaviour
     onMoveOver?.Invoke();
   }
 
-  public void HandleUpdate()
+  public void Update()
   {
     animator.IsMoving = IsMoving;
   }

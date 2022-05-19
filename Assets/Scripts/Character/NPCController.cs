@@ -59,7 +59,7 @@ public class NPCController : MonoBehaviour, Interactable
           StartCoroutine(Walk());
       }
     }
-    character.HandleUpdate();
+    character.Update();
   }
 
   IEnumerator Walk()

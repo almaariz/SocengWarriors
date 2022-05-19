@@ -412,7 +412,13 @@ MonoBehaviour:
     di gedung sebelah tenggara
 
 
-    tolong antarkan ya'
+    tolong antarkan ya
+
+
+    kembali lagi kesini
+
+    jika
+    kau sudah mengantarkannya'
 --- !u!222 &902391513
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6689,6 +6695,12 @@ MonoBehaviour:
   dialog:
     lines:
     - Hallo, kau pasti orang yang mengantarkan paket dari Alex
+  movementPattern:
+  - {x: 0, y: 1}
+  - {x: 1, y: 0}
+  - {x: 0, y: -1}
+  - {x: -1, y: 0}
+  timeBetweenPattern: 3
   fov: {fileID: 1114635249}
 --- !u!114 &2007416806
 MonoBehaviour:

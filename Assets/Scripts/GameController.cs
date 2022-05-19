@@ -55,6 +55,17 @@ public class GameController : MonoBehaviour
       state = stateBeforePause;
     }
   }
+  public void PlayingGame(bool play)
+  {
+    if (play)
+    {
+      state = GameState.Paused;
+    }
+    else
+    {
+      state = GameState.FreeRoam;
+    }
+  }
 
   private void Update()
   {

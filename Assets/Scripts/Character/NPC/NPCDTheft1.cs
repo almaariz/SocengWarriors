@@ -9,12 +9,14 @@ public class NPCDTheft1 : NPCController
     bool isAnswered = false;
 
   // Start is called before the first frame update
-    void Start()
+    void Update()
     {
+        
     }
 
     public void CheckStatus()
     {
+        GameController.Instance.PlayingGame(false);
         if (GameController.Instance.DTheftDone == 0)
         {
             isPlaying = false;
@@ -92,8 +94,9 @@ public class NPCDTheft1 : NPCController
                 {
                     if (!isAnswered)
                     {
-                    isPlaying = true;
-                    canvas.SetActive(true);
+                        GameController.Instance.PlayingGame(true);
+                        isPlaying = true;
+                        canvas.SetActive(true);
                     }
                     idleTimer = 0f;
                     state = NPCState.Idle;
