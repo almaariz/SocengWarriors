@@ -77,6 +77,7 @@ public class NPCDTheft1 : NPCController
         lines.Add("Barang aman sampai tujuan");
         dialog.setLines(lines);
     }));
+    GameController.Instance.badge4status = true;
     }
 
     public override void Interact(Transform initiator)

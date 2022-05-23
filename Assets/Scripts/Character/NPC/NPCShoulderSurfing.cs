@@ -77,6 +77,7 @@ public class NPCShoulderSurfing : NPCController
       lines.Add("Saldo alhamdulillah aman");
       dialog.setLines(lines);
     }));
+    GameController.Instance.badge2status = true;
   }
 
   public override void Interact(Transform initiator)

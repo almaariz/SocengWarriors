@@ -65,6 +65,7 @@ public class NPCTailgating : NPCController
         lines.Add("kantor aman");
         dialog.setLines(lines);
         }));
+        GameController.Instance.badge7status = true;
     }
 
     public override void Interact(Transform initiator)

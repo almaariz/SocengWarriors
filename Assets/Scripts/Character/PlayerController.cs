@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] Sprite sprite;
     private Vector2 input; 
     private Character character;
+    bool keyAButton;
  
     private void Awake() 
     { 
@@ -19,8 +20,8 @@ public class PlayerController : MonoBehaviour
     { 
         if (!character.IsMoving) 
         { 
-            input.x = Input.GetAxisRaw("Horizontal"); 
-            input.y = Input.GetAxisRaw("Vertical"); 
+            input.x = SimpleInput.GetAxisRaw("Horizontal"); 
+            input.y = SimpleInput.GetAxisRaw("Vertical"); 
  
             //remove diagonal movement 
             if (input.x != 0) input.y = 0; 
@@ -33,7 +34,8 @@ public class PlayerController : MonoBehaviour
 
         character.Update();
 
-        if (Input.GetKeyDown(KeyCode.Space)) 
+        // keyAButton = Input.GetKeyDown(KeyCode.Space);
+        if (keyAButton)
             Interact(); 
     }
  
@@ -73,4 +75,16 @@ public class PlayerController : MonoBehaviour
     }
 
     public Character Character => character;
+
+    public void MobileAWrapper()
+    {
+        StartCoroutine(ButtonA());
+    }
+
+    private IEnumerator ButtonA()
+    {
+        keyAButton = true;
+        yield return new WaitForSeconds(0.01f);
+        keyAButton = false;
+    }
 }

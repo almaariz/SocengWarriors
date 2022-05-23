@@ -11,7 +11,9 @@ public class GameController : MonoBehaviour
 
   public int miniGameDone { get; set; }
 
-  [SerializeField] Text miniGameDonerText;
+  // [SerializeField] Text miniGameDonerText;
+  public bool badge1status, badge2status, badge3status, badge4status, badge5status, badge6status, badge7status;
+  public GameObject badge1, badge2, badge3, badge4, badge5, badge6, badge7;
   public int DTheftDone { get; set; }
   public bool DTheftStatus { get; set; }
 
@@ -25,6 +27,7 @@ public class GameController : MonoBehaviour
   public static GameController Instance { get; private set; }
 
   public GameObject canvas, backButton, pauseButton, text;
+
 
   private void Awake()
   {
@@ -87,7 +90,8 @@ public class GameController : MonoBehaviour
     {
       DialogManager.Instance.HandleUpdate();
     }
-    miniGameDonerText.text = "Mini Games Completed = " + miniGameDone;
+    // miniGameDonerText.text = "Mini Games Completed = " + miniGameDone;
+    CheckBadgeStatus();
   }
 
   public void SetCurrentScene(SceneDetails currScene)
@@ -100,5 +104,23 @@ public class GameController : MonoBehaviour
   {
     state = GameState.Cutscene;
     StartCoroutine(impostor.TriggerCall(playerController));
+  }
+
+  void CheckBadgeStatus()
+  {
+    if (badge1status)
+      badge1.SetActive(true);
+    if(badge2status)
+      badge2.SetActive(true);
+    if(badge3status)
+      badge3.SetActive(true);
+    if(badge4status)
+      badge4.SetActive(true);
+    if(badge5status)
+      badge5.SetActive(true);
+    if(badge6status)
+      badge6.SetActive(true);
+    if(badge7status)
+      badge7.SetActive(true);
   }
 }

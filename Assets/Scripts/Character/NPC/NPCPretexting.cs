@@ -58,6 +58,7 @@ public class NPCPretexting : NPCController
       lines.Add("Udah ketangkep si penipu");
       dialog.setLines(lines);
     }));
+    GameController.Instance.badge6status = true;
   }
 
   public override void Interact(Transform initiator)

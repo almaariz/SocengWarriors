@@ -9,6 +9,7 @@ public class DialogManager : MonoBehaviour
     [SerializeField] GameObject dialogBox; 
     [SerializeField] Text dialogText; 
     [SerializeField] int letterPerSecond; 
+    bool keyAButton;
  
     public event Action onShowDialog; 
     public event Action onCloseDialog; 
@@ -42,7 +43,7 @@ public class DialogManager : MonoBehaviour
  
     public void HandleUpdate() 
     { 
-        if(Input.GetKeyDown(KeyCode.Space) && !isTyping) 
+        if(keyAButton && !isTyping) 
         { 
             ++currentLine; 
             if (currentLine < dialog.Lines.Count) 
@@ -71,4 +72,16 @@ public class DialogManager : MonoBehaviour
         } 
         isTyping = false; 
     } 
+
+    public void MobileAWrapper()
+    {
+        StartCoroutine(ButtonA());
+    }
+
+    private IEnumerator ButtonA()
+    {
+        keyAButton = true;
+        yield return new WaitForSeconds(1f / letterPerSecond);
+        keyAButton = false;
+    }
 }

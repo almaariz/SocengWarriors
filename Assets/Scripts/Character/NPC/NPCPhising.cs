@@ -58,6 +58,7 @@ public class NPCPhising : NPCController
       lines.Add("Duit alhamdulillah aman");
       dialog.setLines(lines);
     }));
+    GameController.Instance.badge1status = true;
   }
 
   public override void Interact(Transform initiator)
