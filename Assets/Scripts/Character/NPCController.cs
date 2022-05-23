@@ -49,15 +49,17 @@ public class NPCController : MonoBehaviour, Interactable
 
   private void Update()
   {
+    if (DialogManager.Instance.IsShowing) return;
+
     if (state == NPCState.Idle)
     {
-      idleTimer += Time.deltaTime;
-      if (idleTimer > timeBetweenPattern)
-      {
-        idleTimer = 0f;
-        if (movementPattern.Count > 0)
-          StartCoroutine(Walk());
-      }
+        idleTimer += Time.deltaTime;
+        if (idleTimer > timeBetweenPattern)
+        {
+          idleTimer = 0f;
+          if (movementPattern.Count > 0)
+            StartCoroutine(Walk());
+        }
     }
     character.Update();
   }

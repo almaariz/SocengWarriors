@@ -2,12 +2,14 @@ using System.Xml.Serialization;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class NPCShoulderSurfing : NPCController
 {
   public GameObject canvas;
   bool isPlaying = false;
   bool isAnswered = false;
+  [SerializeField] Text pinText;
 
   // Start is called before the first frame update
   void Update()
@@ -15,13 +17,21 @@ public class NPCShoulderSurfing : NPCController
       
   }
 
-  public void WrongAnswer()
+  public void WrongAnswer(bool enter)
   {
     isPlaying = false;
     isAnswered = true;
     List<string> lines = new List<string>();
-    lines.Add("Tidaaak");
-    lines.Add("Pin atm ku hilang");
+    if (enter)
+    {
+      lines.Add("Tidaaak");
+      lines.Add("Pin atm ku hilang");
+    }
+    else
+    {
+      lines.Add("Ayolah");
+      lines.Add("Aku ga akan nyuri");
+    }
 
     dialog.setLines(lines);
     canvas.SetActive(false);
@@ -31,8 +41,17 @@ public class NPCShoulderSurfing : NPCController
       state = NPCState.Idle;
       isAnswered = false;
       List<string> lines = new List<string>();
+
+      if (enter)
+      {
       lines.Add("Lebih hati-hati bre");
       lines.Add("Ayo ke atm lagi");
+      }
+      else
+      {
+        lines.Add("Ayo kau masih ingatkan?");
+        lines.Add("177013");
+      }
       dialog.setLines(lines);
     }));
   }
@@ -73,7 +92,7 @@ public class NPCShoulderSurfing : NPCController
         {
           if (!isAnswered)
           {
-            GameController.Instance.PauseGame(true);
+            GameController.Instance.PlayingGame(true);
             isPlaying = true;
             canvas.SetActive(true);
           }
@@ -83,5 +102,15 @@ public class NPCShoulderSurfing : NPCController
       }
     }
 
+  }
+
+  public void Button(int i)
+  {
+      pinText.text +=  i.ToString();
+  }
+
+  public void ClearText()
+  {
+    pinText.text = "";
   }
 }

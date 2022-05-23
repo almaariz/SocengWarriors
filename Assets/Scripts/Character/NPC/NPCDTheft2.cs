@@ -4,10 +4,6 @@ using UnityEngine;
 
 public class NPCDTheft2 : NPCController
 {
-    void Update()
-    {
-        
-    }
     public override void Interact(Transform initiator)
     {
         if(GameController.Instance.DTheftStatus)

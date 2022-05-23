@@ -24,6 +24,8 @@ public class GameController : MonoBehaviour
 
   public static GameController Instance { get; private set; }
 
+  public GameObject canvas, backButton, pauseButton, text;
+
   private void Awake()
   {
     Instance = this;
@@ -49,9 +51,17 @@ public class GameController : MonoBehaviour
     {
       stateBeforePause = state;
       state = GameState.Paused;
+      canvas.SetActive(true);
+      pauseButton.SetActive(false);
+      backButton.SetActive(true);
+      text.SetActive(false);
     }
     else
     {
+      canvas.SetActive(false);
+      pauseButton.SetActive(true);
+      backButton.SetActive(false);
+      text.SetActive(true);
       state = stateBeforePause;
     }
   }

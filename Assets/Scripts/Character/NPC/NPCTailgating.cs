@@ -41,6 +41,7 @@ public class NPCTailgating : NPCController
         dialog.setLines(lines);
         }));
         Destroy(spawner);
+        score = 0;
     }
 
     public void CorrectAnswer()
@@ -79,7 +80,7 @@ public class NPCTailgating : NPCController
             {
             if (!isAnswered)
             {
-                GameController.Instance.PauseGame(true);
+                GameController.Instance.PlayingGame(true);
                 isPlaying = true;
                 canvas.SetActive(true);
                 spawner = Instantiate(spawnerPrefab, new Vector2(0,0), Quaternion.identity);

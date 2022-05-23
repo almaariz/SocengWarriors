@@ -73,7 +73,7 @@ public class NPCPretexting : NPCController
         {
           if (!isAnswered)
           {
-            GameController.Instance.PauseGame(true);
+            GameController.Instance.PlayingGame(true);
             isPlaying = true;
             canvas.SetActive(true);
           }
