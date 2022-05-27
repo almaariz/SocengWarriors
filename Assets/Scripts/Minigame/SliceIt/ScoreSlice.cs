@@ -16,10 +16,10 @@ public class ScoreSlice : MonoBehaviour
     void Update()
     {
         scoreText.text = "Score : " + npc.score.ToString();
-        if (npc.score == 30)
+        if (npc.score >= 50)
             npc.CorrectAnswer();
         else if(npc.score < 0)
-            npc.WrongAnswer(false);
+            npc.WrongAnswer();
     }
 
     void OnTriggerEnter2D(Collider2D target)

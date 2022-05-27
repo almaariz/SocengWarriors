@@ -26,7 +26,7 @@ public class GameController : MonoBehaviour
 
   public static GameController Instance { get; private set; }
 
-  public GameObject canvas, backButton, pauseButton, text;
+  public GameObject canvas, backButton, pauseButton;
 
 
   private void Awake()
@@ -57,14 +57,14 @@ public class GameController : MonoBehaviour
       canvas.SetActive(true);
       pauseButton.SetActive(false);
       backButton.SetActive(true);
-      text.SetActive(false);
+      // text.SetActive(false);
     }
     else
     {
       canvas.SetActive(false);
       pauseButton.SetActive(true);
       backButton.SetActive(false);
-      text.SetActive(true);
+      // text.SetActive(true);
       state = stateBeforePause;
     }
   }
@@ -85,11 +85,21 @@ public class GameController : MonoBehaviour
     if (state == GameState.FreeRoam)
     {
       playerController.HandleUpdate();
+      
+      if (Input.GetKeyDown(KeyCode.S))
+      {
+        SavingSystem.i.Save("saveSlot1");
+      }
+      if (Input.GetKeyDown(KeyCode.L))
+      {
+        SavingSystem.i.Load("saveSlot1");
+      }
     }
     else if (state == GameState.Dialog)
     {
       DialogManager.Instance.HandleUpdate();
     }
+
     // miniGameDonerText.text = "Mini Games Completed = " + miniGameDone;
     CheckBadgeStatus();
   }

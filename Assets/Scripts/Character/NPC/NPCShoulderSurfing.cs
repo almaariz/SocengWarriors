@@ -10,12 +10,7 @@ public class NPCShoulderSurfing : NPCController
   bool isPlaying = false;
   bool isAnswered = false;
   [SerializeField] Text pinText;
-
-  // Start is called before the first frame update
-  void Update()
-  {
-      
-  }
+  int isDone = 0;
 
   public void WrongAnswer(bool enter)
   {
@@ -26,34 +21,31 @@ public class NPCShoulderSurfing : NPCController
     {
       lines.Add("Tidaaak");
       lines.Add("Pin atm ku hilang");
+      dialog.setLines(lines);
     }
     else
     {
-      lines.Add("Ayolah");
-      lines.Add("Aku ga akan nyuri");
+      lines.Add("Waduh");
+      lines.Add("Tidak mau ya");
+      dialog.setLines(lines);
     }
 
-    dialog.setLines(lines);
     canvas.SetActive(false);
-    StartCoroutine(DialogManager.Instance.ShowDialog(dialog, () =>
-    {
-      idleTimer = 0f;
-      state = NPCState.Idle;
-      isAnswered = false;
-      List<string> lines = new List<string>();
+    StartCoroutine(DialogManager.Instance.ShowDialog(dialog));
 
-      if (enter)
-      {
-      lines.Add("Lebih hati-hati bre");
-      lines.Add("Ayo ke atm lagi");
-      }
-      else
-      {
-        lines.Add("Ayo kau masih ingatkan?");
-        lines.Add("177013");
-      }
-      dialog.setLines(lines);
-    }));
+    idleTimer = 0f;
+    state = NPCState.Idle;
+    isAnswered = false;
+
+    if (enter)
+    {
+      isDone = 1;
+    }
+    else
+    {
+      isDone = 2;
+    }
+    ClearText();
   }
 
   public void CorrectAnswer()
@@ -61,27 +53,26 @@ public class NPCShoulderSurfing : NPCController
     isPlaying = false;
     isAnswered = true;
     List<string> lines = new List<string>();
-    lines.Add("Widih bener");
-    lines.Add("Mantap");
+    lines.Add("Benar sekali");
+    lines.Add("Orang lain jadi tidak bisa melihat apa yang kita masukkan");
 
     GameController.Instance.miniGameDone += 1;
 
     dialog.setLines(lines);
     canvas.SetActive(false);
-    StartCoroutine(DialogManager.Instance.ShowDialog(dialog, () =>
-    {
-      idleTimer = 0f;
-      state = NPCState.Idle;
-      List<string> lines = new List<string>();
-      lines.Add("Tengkyu bre");
-      lines.Add("Saldo alhamdulillah aman");
-      dialog.setLines(lines);
-    }));
+
+    StartCoroutine(DialogManager.Instance.ShowDialog(dialog));
+
+    idleTimer = 0f;
+    state = NPCState.Idle;
+    isDone = 3;
+
     GameController.Instance.badge2status = true;
   }
 
-  public override void Interact(Transform initiator)
+  public override IEnumerator Interact(Transform initiator)
   {
+    CheckDialog(isDone);
     if (!isPlaying)
     {
       if (state == NPCState.Idle)
@@ -89,20 +80,19 @@ public class NPCShoulderSurfing : NPCController
         state = NPCState.Dialog;
         character.LookTowards(initiator.position);
 
-        StartCoroutine(DialogManager.Instance.ShowDialog(dialog, () =>
+        yield return DialogManager.Instance.ShowDialog(dialog);
+        if (!isAnswered)
         {
-          if (!isAnswered)
-          {
-            GameController.Instance.PlayingGame(true);
-            isPlaying = true;
-            canvas.SetActive(true);
-          }
-          idleTimer = 0f;
-          state = NPCState.Idle;
-        }));
+          GameController.Instance.PlayingGame(true);
+          isPlaying = true;
+          canvas.SetActive(true);
+        }
+        idleTimer = 0f;
+        state = NPCState.Idle;
       }
     }
-
+    else
+      yield return null;
   }
 
   public void Button(int i)
@@ -113,5 +103,27 @@ public class NPCShoulderSurfing : NPCController
   public void ClearText()
   {
     pinText.text = "";
+  }
+  public void CheckDialog(int done)
+  {
+    List<string> lines = new List<string>();
+    if(done == 1)
+    {
+      lines.Add("Lebih hati-hati bre");
+      lines.Add("Ayo ke atm lagi");
+      dialog.setLines(lines);
+    }
+    else if (done == 2)
+    {
+      lines.Add("Ayo kau masih ingatkan?");
+      lines.Add("177013");
+      dialog.setLines(lines);
+    }
+    else if (done == 3)
+    {
+      lines.Add("Terima kasih");
+      lines.Add("Berkatmu saldoku aman");
+      dialog.setLines(lines);
+    }
   }
 }

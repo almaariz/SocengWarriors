@@ -8,33 +8,23 @@ public class NPCPretexting : NPCController
   public GameObject canvas;
   bool isPlaying = false;
   bool isAnswered = false;
-
-  // Start is called before the first frame update
-  void Update()
-  {
-      
-  }
+  int isDone = 0;
 
   public void WrongAnswer()
   {
     isPlaying = false;
     isAnswered = true;
     List<string> lines = new List<string>();
-    lines.Add("Orang yang salah");
-    lines.Add("Penipu lolos");
+    lines.Add("Ternyata bukan temanku");
+    lines.Add("Bagaimana ini");
 
     dialog.setLines(lines);
     canvas.SetActive(false);
-    StartCoroutine(DialogManager.Instance.ShowDialog(dialog, () =>
-    {
-      idleTimer = 0f;
-      state = NPCState.Idle;
-      isAnswered = false;
-      List<string> lines = new List<string>();
-      lines.Add("Belom nyerah??");
-      lines.Add("Ayo cari lagi");
-      dialog.setLines(lines);
-    }));
+    StartCoroutine(DialogManager.Instance.ShowDialog(dialog));
+    idleTimer = 0f;
+    state = NPCState.Idle;
+    isAnswered = false;
+    isDone = 1;
   }
 
   public void CorrectAnswer()
@@ -42,27 +32,26 @@ public class NPCPretexting : NPCController
     isPlaying = false;
     isAnswered = true;
     List<string> lines = new List<string>();
-    lines.Add("Widih bener");
-    lines.Add("Mantap");
+    lines.Add("Wah, kau benar");
+    lines.Add("Dia ternyata penipu");
 
     GameController.Instance.miniGameDone += 1;
 
     dialog.setLines(lines);
     canvas.SetActive(false);
-    StartCoroutine(DialogManager.Instance.ShowDialog(dialog, () =>
-    {
-      idleTimer = 0f;
-      state = NPCState.Idle;
-      List<string> lines = new List<string>();
-      lines.Add("Tengkyu bre");
-      lines.Add("Udah ketangkep si penipu");
-      dialog.setLines(lines);
-    }));
+
+    StartCoroutine(DialogManager.Instance.ShowDialog(dialog));
+
+    idleTimer = 0f;
+    state = NPCState.Idle;
+    isDone = 2;
+      
     GameController.Instance.badge6status = true;
   }
 
-  public override void Interact(Transform initiator)
+  public override IEnumerator Interact(Transform initiator)
   {
+    CheckDialog(isDone);
     if (!isPlaying)
     {
       if (state == NPCState.Idle)
@@ -70,19 +59,33 @@ public class NPCPretexting : NPCController
         state = NPCState.Dialog;
         character.LookTowards(initiator.position);
 
-        StartCoroutine(DialogManager.Instance.ShowDialog(dialog, () =>
+        yield return DialogManager.Instance.ShowDialog(dialog);
+
+        if (!isAnswered)
         {
-          if (!isAnswered)
-          {
-            GameController.Instance.PlayingGame(true);
-            isPlaying = true;
-            canvas.SetActive(true);
-          }
-          idleTimer = 0f;
-          state = NPCState.Idle;
-        }));
+          GameController.Instance.PlayingGame(true);
+          isPlaying = true;
+          canvas.SetActive(true);
+        }
+        idleTimer = 0f;
+        state = NPCState.Idle;
       }
     }
-
+  }
+  public void CheckDialog(int done)
+  {
+    List<string> lines = new List<string>();
+    if(done == 1)
+    {
+      lines.Add("Ada yang meneleponku lagi");
+      lines.Add("Aku tidak yakin dia temanku");
+      dialog.setLines(lines);
+    }
+    else if (done == 2)
+    {
+      lines.Add("Terima kasih");
+      lines.Add("Aku akan berhati-hati jika ada yang menelepon lagi");
+      dialog.setLines(lines);
+    }
   }
 }

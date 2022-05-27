@@ -1629,6 +1629,7 @@ GameObject:
   - component: {fileID: 946044974}
   - component: {fileID: 946044973}
   - component: {fileID: 946044972}
+  - component: {fileID: 946044975}
   m_Layer: 8
   m_Name: SolidObjects
   m_TagString: Untagged
@@ -4147,6 +4148,17 @@ TilemapCollider2D:
   m_Offset: {x: 0, y: 0}
   m_MaximumTileChangeCount: 1000
   m_ExtrusionFactor: 0.00001
+--- !u!210 &946044975
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 946044968}
+  m_Enabled: 1
+  m_SortingLayerID: -838503753
+  m_SortingLayer: 3
+  m_SortingOrder: 0
 --- !u!1 &951068675
 GameObject:
   m_ObjectHideFlags: 0

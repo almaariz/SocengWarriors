@@ -4,32 +4,31 @@ using UnityEngine;
 
 public class NPCDTheft2 : NPCController
 {
-    public override void Interact(Transform initiator)
+    int isDone = 0;
+    public override IEnumerator Interact(Transform initiator)
     {
+        CheckDialog(isDone);
         if(GameController.Instance.DTheftStatus)
         {
             if (state == NPCState.Idle)
             {
-            state = NPCState.Dialog;
-            character.LookTowards(initiator.position);
-            
-            List<string> lines = new List<string>();
-            lines.Add("Oh pengantar barang dari Alex");
-            lines.Add("Sangkyu bor");
-            dialog.setLines(lines);
+                state = NPCState.Dialog;
+                character.LookTowards(initiator.position);
+                
+                List<string> lines = new List<string>();
+                lines.Add("Oh pengantar barang dari Alex");
+                lines.Add("Sangkyu bor");
+                dialog.setLines(lines);
 
-            StartCoroutine(DialogManager.Instance.ShowDialog(dialog, () =>
-            {
+                yield return DialogManager.Instance.ShowDialog(dialog);
+
                 idleTimer = 0f;
                 state = NPCState.Idle;
-                List<string> lines = new List<string>();
-                lines.Add("Hello");
-                lines.Add("Namaku Bob");
-                dialog.setLines(lines);
-            }));
+                isDone = 1;
+
+                GameController.Instance.DTheftDone = 1;
+                GameController.Instance.DTheftStatus = false;
             }
-            GameController.Instance.DTheftDone = 1;
-            GameController.Instance.DTheftStatus = false;
         }
         else
         {
@@ -38,12 +37,20 @@ public class NPCDTheft2 : NPCController
             state = NPCState.Dialog;
             character.LookTowards(initiator.position);
 
-            StartCoroutine(DialogManager.Instance.ShowDialog(dialog, () =>
-            {
-                idleTimer = 0f;
-                state = NPCState.Idle;
-            }));
+            yield return DialogManager.Instance.ShowDialog(dialog);
+            idleTimer = 0f;
+            state = NPCState.Idle;
             }
+        }
+    }
+    public void CheckDialog(int done)
+    {
+        List<string> lines = new List<string>();
+        if(done == 1)
+        {
+            lines.Add("Hello");
+            lines.Add("Namaku Bob");
+            dialog.setLines(lines);
         }
     }
 }

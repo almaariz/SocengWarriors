@@ -15,6 +15,7 @@ public class LineGenerator : MonoBehaviour
 
 	Vector2 previousPosition;
     GameObject newLine;
+    public bool sign;
 
     void Start ()
 	{
@@ -43,6 +44,10 @@ public class LineGenerator : MonoBehaviour
 		{
 			UpdateCut();
 		}
+        if (sign)
+        {
+            circleCollider.enabled = false;
+        }
     }
     
     void UpdateCut ()
@@ -54,6 +59,7 @@ public class LineGenerator : MonoBehaviour
 	}
     void StartSign ()
 	{
+        sign = false;
 		isCutting = true;
 		newLine = Instantiate(linePrefab);
         activeLine = newLine.GetComponent<Lines>();
@@ -71,6 +77,6 @@ public class LineGenerator : MonoBehaviour
 
     public void DestroyLine()
     {
-        Destroy(newLine);
+        Destroy(GameObject.FindWithTag("Blade"));
     }
 }

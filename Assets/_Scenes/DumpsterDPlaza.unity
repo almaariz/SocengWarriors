@@ -8685,8 +8685,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialog:
     lines:
-    - Bantu aku hancurkan ini
-    - Ayo sini
+    - Bisakah kau membantuku??
+    - Buanglah beberapa dokumen ini ke tempat sampah
   movementPattern: []
   timeBetweenPattern: 3
   canvas: {fileID: 278164426}

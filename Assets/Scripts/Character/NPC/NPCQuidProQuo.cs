@@ -4,33 +4,30 @@ using UnityEngine;
 
 public class NPCQuidProQuo : NPCController
 {
-    public GameObject canvas;
+    public GameObject canvas, canvas2;
     bool isPlaying = false;
     bool isAnswered = false;
-    public int score;
     public bool isSigned;
+    int isDone = 0;
+    int noSign = 0;
 
     public void WrongAnswer()
     {
         isPlaying = false;
         isAnswered = true;
+        
         List<string> lines = new List<string>();
-        lines.Add("Wah pegawai banyak yang komplen karena dicegat");
-        lines.Add("Payah");
-
+        lines.Add("Oke, terima kasih");
+        lines.Add("Wahaha...");
         dialog.setLines(lines);
-        canvas.SetActive(false);
-        StartCoroutine(DialogManager.Instance.ShowDialog(dialog, () =>
-        {
+        
+
+        canvas2.SetActive(false);
+        StartCoroutine(DialogManager.Instance.ShowDialog(dialog));
         idleTimer = 0f;
         state = NPCState.Idle;
         isAnswered = false;
-        List<string> lines = new List<string>();
-        lines.Add("Jaga lagi lah kuy");
-        lines.Add("Gas");
-        dialog.setLines(lines);
-        }));
-        score = 0;
+        isDone = 1;
     }
 
     public void CorrectAnswer()
@@ -38,26 +35,21 @@ public class NPCQuidProQuo : NPCController
         isPlaying = false;
         isAnswered = true;
         List<string> lines = new List<string>();
-        lines.Add("Widih mantap");
-        lines.Add("Ga ada orang luar masuk");
+        lines.Add("Kamu yakin sekali, bagus, jangan sampai kau memberikan informasimu untuk sesuatu yang tidak pasti");
+        lines.Add("Dengan tidak mudah percaya, kamu bisa terhindar dari serangan quid pro quo");
 
         GameController.Instance.miniGameDone += 1;
 
         dialog.setLines(lines);
-        canvas.SetActive(false);
-        StartCoroutine(DialogManager.Instance.ShowDialog(dialog, () =>
-        {
+        StartCoroutine(DialogManager.Instance.ShowDialog(dialog));
         idleTimer = 0f;
         state = NPCState.Idle;
-        List<string> lines = new List<string>();
-        lines.Add("Tengkyu bre");
-        lines.Add("kantor aman");
-        dialog.setLines(lines);
-        }));
-        GameController.Instance.badge3status = true;
+        isDone = 2;
+        GameController.Instance.badge5status = true;
     }
-    public override void Interact(Transform initiator)
+    public override IEnumerator Interact(Transform initiator)
     {
+        CheckDialog(isDone);
         if (!isPlaying)
         {
             if (state == NPCState.Idle)
@@ -65,19 +57,73 @@ public class NPCQuidProQuo : NPCController
             state = NPCState.Dialog;
             character.LookTowards(initiator.position);
 
-            StartCoroutine(DialogManager.Instance.ShowDialog(dialog, () =>
+            yield return DialogManager.Instance.ShowDialog(dialog);
+
+            if (!isAnswered)
             {
-                if (!isAnswered)
-                {
-                GameController.Instance.PlayingGame(true);
-                isPlaying = true;
-                isSigned = false;
-                canvas.SetActive(true);
-                }
-                idleTimer = 0f;
-                state = NPCState.Idle;
-            }));
+            GameController.Instance.PlayingGame(true);
+            isPlaying = true;
+            isSigned = false;
+            canvas.SetActive(true);
             }
+            idleTimer = 0f;
+            state = NPCState.Idle;
+            }
+        }
+    }
+    public void CheckDialog(int done)
+    {
+        List<string> lines = new List<string>();
+        if(done == 1)
+        {
+            lines.Add("Ohiya aku lupa, tolong tanda tangani lagi");
+            lines.Add("Nanti aku kasih badge");
+            dialog.setLines(lines);
+        }
+        else if (done == 2)
+        {
+            lines.Add("Selamat untuk badgemu");
+            lines.Add("Selalu berhati-hati dan jangan mudah percaya");
+            dialog.setLines(lines);
+        }
+        else if(done == 3)
+        {
+            lines.Add("Ini kesempatanmu sekarang");
+            lines.Add("Yakin gamau?");
+            dialog.setLines(lines);
+        }
+    }
+
+    public void signYes()
+    {
+        canvas2.SetActive(true);
+        canvas.SetActive(false);
+    }
+
+    public void signNo()
+    {
+        if(noSign < 5)
+        {
+            canvas.SetActive(false);
+            isPlaying = false;
+            isAnswered = true;
+            List<string> lines = new List<string>();
+            lines.Add("Kalau tidak mau tidak apa apa");
+            lines.Add("Jangan menyesal ya");
+            dialog.setLines(lines);
+            StartCoroutine(DialogManager.Instance.ShowDialog(dialog));
+
+            canvas.SetActive(false);
+            idleTimer = 0f;
+            state = NPCState.Idle;
+            isAnswered = false;
+            isDone = 3;
+            noSign++;
+        }
+        else
+        {
+            canvas.SetActive(false);
+            CorrectAnswer();
         }
     }
 }

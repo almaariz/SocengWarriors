@@ -53,5 +53,5 @@ MonoBehaviour:
   - {fileID: 6577790800731445631, guid: cf0b0f88be027ae40a64631bd51476e0, type: 3}
   - {fileID: 3920925333141990960, guid: add70dd85f7e4874ab2cafdd94353f09, type: 3}
   tailgater: {fileID: 5390066598399428197, guid: cdbe2816837966d44b4398f05d6cb163, type: 3}
-  xBound: 870
+  xBound: 500
   yBound: 1000

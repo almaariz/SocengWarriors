@@ -47,4 +47,10 @@ public class SceneDetails : MonoBehaviour
             IsLoaded = false;
         }
     }
+
+    // List<SavableEntity> GetSavableEntities()
+    // {
+    //     var currScene = SceneManager.GetSceneByName(gameObject.name);
+    //     var savableEntities = FindObjectOfType<SavableEntity>().Where(x => x.gameObject.scene == currScene).ToList();
+    // }
 }

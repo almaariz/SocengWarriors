@@ -4221,12 +4221,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3078f8b8ca36b1f459fa029be143d0d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fov: {fileID: 1146188745}
   dialog:
     lines:
     - Hallo, kau pasti orang yang mengantarkan paket dari Alex
-  movementPattern: []
-  timeBetweenPattern: 0
-  fov: {fileID: 1146188745}
 --- !u!61 &1373922212
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9913,8 +9911,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialog:
     lines:
-    - Hello!! anak muda
-    - Bisakah kau membantuku?
+    - Hello!! warriors
+    - Selamat datang, sudah lama kami menantikanmu
+    - Sebentar lagi, data-data kami akan dicuri
+    - Tolong kamii
+    - Jika kau bingung apa yang kau harus lakukan, cobalah mengobrol dengan orang-orang
   movementPattern: []
   timeBetweenPattern: 3
 --- !u!114 &2040965240

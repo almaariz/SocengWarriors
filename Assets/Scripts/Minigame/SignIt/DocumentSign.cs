@@ -31,6 +31,8 @@ public class DocumentSign : MonoBehaviour
         if(target.tag == "Blade")
         {
             npc.isSigned = true;
+            LG.sign = true;
+            DestroyWithTag ("Line");
         }
     }
     void OnTriggerExit2D(Collider2D target)
@@ -41,5 +43,12 @@ public class DocumentSign : MonoBehaviour
     {
         if(npc.isSigned)
             npc.WrongAnswer();
+    }
+    void DestroyWithTag (string destroyTag)
+    {
+        GameObject[] destroyObject;
+        destroyObject = GameObject.FindGameObjectsWithTag(destroyTag);
+        foreach (GameObject oneObject in destroyObject)
+            Destroy (oneObject);
     }
 }

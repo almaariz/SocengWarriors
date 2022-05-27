@@ -10,6 +10,7 @@ public class NPCTailgating : NPCController
     bool isPlaying = false;
     bool isAnswered = false;
     public int score;
+    int isDone = 0;
 
     public void WrongAnswer(bool tailgater)
     {
@@ -19,27 +20,26 @@ public class NPCTailgating : NPCController
 
         if(tailgater)
         {
-            lines.Add("Wah kamu biarin orang luar masuk");
+            lines.Add("Wah, kamu biarin orang luar masuk");
             lines.Add("Payah");
+            dialog.setLines(lines);
         }
         else
         {
             lines.Add("Wah pegawai banyak yang komplen karena dicegat");
             lines.Add("Payah");
+            dialog.setLines(lines);
         }
 
-        dialog.setLines(lines);
         canvas.SetActive(false);
-        StartCoroutine(DialogManager.Instance.ShowDialog(dialog, () =>
-        {
+
+        StartCoroutine(DialogManager.Instance.ShowDialog(dialog));
+
         idleTimer = 0f;
         state = NPCState.Idle;
         isAnswered = false;
-        List<string> lines = new List<string>();
-        lines.Add("Jaga lagi lah kuy");
-        lines.Add("Gas");
-        dialog.setLines(lines);
-        }));
+        isDone = 1;
+
         Destroy(spawner);
         score = 0;
     }
@@ -56,20 +56,19 @@ public class NPCTailgating : NPCController
 
         dialog.setLines(lines);
         canvas.SetActive(false);
-        StartCoroutine(DialogManager.Instance.ShowDialog(dialog, () =>
-        {
+
+        StartCoroutine(DialogManager.Instance.ShowDialog(dialog));
+
         idleTimer = 0f;
         state = NPCState.Idle;
-        List<string> lines = new List<string>();
-        lines.Add("Tengkyu bre");
-        lines.Add("kantor aman");
-        dialog.setLines(lines);
-        }));
+        isDone = 2;
+
         GameController.Instance.badge7status = true;
     }
 
-    public override void Interact(Transform initiator)
+    public override IEnumerator Interact(Transform initiator)
     {
+        CheckDialog(isDone);
         if (!isPlaying)
         {
         if (state == NPCState.Idle)
@@ -77,8 +76,7 @@ public class NPCTailgating : NPCController
             state = NPCState.Dialog;
             character.LookTowards(initiator.position);
 
-            StartCoroutine(DialogManager.Instance.ShowDialog(dialog, () =>
-            {
+            yield return DialogManager.Instance.ShowDialog(dialog);
             if (!isAnswered)
             {
                 GameController.Instance.PlayingGame(true);
@@ -89,7 +87,6 @@ public class NPCTailgating : NPCController
             }
             idleTimer = 0f;
             state = NPCState.Idle;
-            }));
         }
         }
     }
@@ -100,5 +97,21 @@ public class NPCTailgating : NPCController
             score++;
         else
             score--;
+    }
+    public void CheckDialog(int done)
+    {
+        List<string> lines = new List<string>();
+        if(done == 1)
+        {
+            lines.Add("Ayo bantu aku jaga lagi");
+            lines.Add("C'mon");
+            dialog.setLines(lines);
+        }
+        else if (done == 2)
+        {
+            lines.Add("Terima kasih banyak");
+            lines.Add("Kita harus berhati-hati terhadap orang luar yang mencoba masuk");
+            dialog.setLines(lines);
+        }
     }
 }

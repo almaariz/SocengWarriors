@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic; 
 using UnityEngine; 
  
-public class PlayerController : MonoBehaviour 
+public class PlayerController : MonoBehaviour, ISavable
 { 
     [SerializeField] string pname;
     [SerializeField] Sprite sprite;
@@ -36,10 +36,10 @@ public class PlayerController : MonoBehaviour
 
         // keyAButton = Input.GetKeyDown(KeyCode.Space);
         if (keyAButton)
-            Interact(); 
+            StartCoroutine(Interact()); 
     }
  
-    void Interact() 
+    public IEnumerator Interact() 
     { 
         var facingDir = new Vector3(character.aanimator.MoveX, character.aanimator.MoveY); 
         var interactPos = transform.position + facingDir; 
@@ -47,7 +47,7 @@ public class PlayerController : MonoBehaviour
         var collider = Physics2D.OverlapCircle(interactPos, 0.3f, GameLayers.Instance.InteractableLayer); 
         if (collider != null) 
         { 
-            collider.GetComponent<Interactable>()?.Interact(transform); 
+            yield return collider.GetComponent<Interactable>()?.Interact(transform); 
         } 
     } 
 
@@ -64,6 +64,18 @@ public class PlayerController : MonoBehaviour
                 break;
             }
         }
+    }
+
+    public object CaptureState()
+    {
+        float[] position = new float[] {transform.position.x, transform.position.y};
+        return position;
+    }
+
+    public void RestoreState(object state)
+    {
+        var position = (float[])state;
+        transform.position = new Vector3(position[0], position[1]);
     }
 
     public string Pname {
@@ -87,4 +99,5 @@ public class PlayerController : MonoBehaviour
         yield return new WaitForSeconds(0.01f);
         keyAButton = false;
     }
+    
 }

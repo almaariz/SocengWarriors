@@ -8,33 +8,25 @@ public class NPCPhising : NPCController
   public GameObject canvas;
   bool isPlaying = false;
   bool isAnswered = false;
-
-  // Start is called before the first frame update
-  void Update()
-  {
-      
-  }
+  int isDone = 0;
 
   public void WrongAnswer()
   {
     isPlaying = false;
     isAnswered = true;
     List<string> lines = new List<string>();
-    lines.Add("Wah kamu kena tipu bre");
-    lines.Add("Mampus");
+    lines.Add("Wah ternyata itu hanya penipuan");
+    lines.Add("Huhuhu");
 
     dialog.setLines(lines);
     canvas.SetActive(false);
-    StartCoroutine(DialogManager.Instance.ShowDialog(dialog, () =>
-    {
-      idleTimer = 0f;
-      state = NPCState.Idle;
-      isAnswered = false;
-      List<string> lines = new List<string>();
-      lines.Add("Nyoba lagi ga bre");
-      lines.Add("Nih hp baru");
-      dialog.setLines(lines);
-    }));
+
+    StartCoroutine(DialogManager.Instance.ShowDialog(dialog));
+
+    idleTimer = 0f;
+    state = NPCState.Idle;
+    isAnswered = false;
+    isDone = 1;
   }
 
   public void CorrectAnswer()
@@ -42,27 +34,23 @@ public class NPCPhising : NPCController
     isPlaying = false;
     isAnswered = true;
     List<string> lines = new List<string>();
-    lines.Add("Widih bener");
-    lines.Add("Mantap");
+    lines.Add("Wah mantap");
+    lines.Add("Jadi dengan mengabaikan pesan tersebut kita bisa terhindar dari serangan phising ya");
 
     GameController.Instance.miniGameDone += 1;
 
     dialog.setLines(lines);
     canvas.SetActive(false);
-    StartCoroutine(DialogManager.Instance.ShowDialog(dialog, () =>
-    {
-      idleTimer = 0f;
-      state = NPCState.Idle;
-      List<string> lines = new List<string>();
-      lines.Add("Tengkyu bre");
-      lines.Add("Duit alhamdulillah aman");
-      dialog.setLines(lines);
-    }));
+    StartCoroutine(DialogManager.Instance.ShowDialog(dialog));
+    idleTimer = 0f;
+    state = NPCState.Idle;
+    isDone = 2;
     GameController.Instance.badge1status = true;
   }
 
-  public override void Interact(Transform initiator)
+  public override IEnumerator Interact(Transform initiator)
   {
+    CheckDialog(isDone);
     if (!isPlaying)
     {
       if (state == NPCState.Idle)
@@ -70,18 +58,33 @@ public class NPCPhising : NPCController
         state = NPCState.Dialog;
         character.LookTowards(initiator.position);
 
-        StartCoroutine(DialogManager.Instance.ShowDialog(dialog, () =>
+        yield return DialogManager.Instance.ShowDialog(dialog);
+        if (!isAnswered)
         {
-          if (!isAnswered)
-          {
-            GameController.Instance.PlayingGame(true);
-            isPlaying = true;
-            canvas.SetActive(true);
-          }
-          idleTimer = 0f;
-          state = NPCState.Idle;
-        }));
+          GameController.Instance.PlayingGame(true);
+          isPlaying = true;
+          canvas.SetActive(true);
+        }
+        idleTimer = 0f;
+        state = NPCState.Idle;
+        yield break;
       }
+    }
+  }
+  public void CheckDialog(int done)
+  {
+    List<string> lines = new List<string>();
+    if(done == 1)
+    {
+      lines.Add("Bagaimana ini");
+      lines.Add("Apa yang harus kulakukan dengan ini??");
+      dialog.setLines(lines);
+    }
+    else if (done == 2)
+    {
+      lines.Add("Terima kasih");
+      lines.Add("Berkatmu aku tidak tertipu dengan serangan phising");
+      dialog.setLines(lines);
     }
   }
 }

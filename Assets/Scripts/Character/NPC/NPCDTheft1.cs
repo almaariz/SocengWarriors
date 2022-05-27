@@ -7,12 +7,7 @@ public class NPCDTheft1 : NPCController
     public GameObject canvas;
     bool isPlaying = false;
     bool isAnswered = false;
-
-  // Start is called before the first frame update
-    void Update()
-    {
-        
-    }
+    int isDone = 0;
 
     public void CheckStatus()
     {
@@ -39,20 +34,17 @@ public class NPCDTheft1 : NPCController
     isAnswered = true;
     List<string> lines = new List<string>();
     lines.Add("*diam... memalingkan muka*");
-    lines.Add("*sepertinya salah orang, mungkin pastikan lagi paket sampai*");
+    lines.Add("*kecewa karena paket tidak sampai*");
 
     dialog.setLines(lines);
     canvas.SetActive(false);
-    StartCoroutine(DialogManager.Instance.ShowDialog(dialog, () =>
-    {
-        idleTimer = 0f;
-        state = NPCState.Idle;
-        isAnswered = false;
-        List<string> lines = new List<string>();
-        lines.Add("*isyarat tangan*");
-        lines.Add("*memberikan kertas*");
-        dialog.setLines(lines);
-    }));
+
+    StartCoroutine(DialogManager.Instance.ShowDialog(dialog));
+    idleTimer = 0f;
+    state = NPCState.Idle;
+    isAnswered = false;
+    isDone = 1;
+
     GameController.Instance.DTheftDone=0;
     }
 
@@ -61,27 +53,24 @@ public class NPCDTheft1 : NPCController
     isPlaying = false;
     isAnswered = true;
     List<string> lines = new List<string>();
-    lines.Add("Widih dah nyampe barangnya");
-    lines.Add("Mantap");
+    lines.Add("Mantap, dengan memastikan orang yang mendapatkan barang");
+    lines.Add("Kita bisa terhindar dari serangan diversion theft");
 
     GameController.Instance.miniGameDone += 1;
 
     dialog.setLines(lines);
     canvas.SetActive(false);
-    StartCoroutine(DialogManager.Instance.ShowDialog(dialog, () =>
-    {
-        idleTimer = 0f;
-        state = NPCState.Idle;
-        List<string> lines = new List<string>();
-        lines.Add("Tengkyu bre");
-        lines.Add("Barang aman sampai tujuan");
-        dialog.setLines(lines);
-    }));
+    StartCoroutine(DialogManager.Instance.ShowDialog(dialog));
+    idleTimer = 0f;
+    state = NPCState.Idle;
+    isDone = 2;
+
     GameController.Instance.badge4status = true;
     }
 
-    public override void Interact(Transform initiator)
+    public override IEnumerator Interact(Transform initiator)
     {
+        CheckDialog(isDone);
         if(!GameController.Instance.DTheftStatus)
         {
             if (!isPlaying)
@@ -91,19 +80,34 @@ public class NPCDTheft1 : NPCController
                 state = NPCState.Dialog;
                 character.LookTowards(initiator.position);
 
-                StartCoroutine(DialogManager.Instance.ShowDialog(dialog, () =>
+                yield return DialogManager.Instance.ShowDialog(dialog);
+                
+                if (!isAnswered)
                 {
-                    if (!isAnswered)
-                    {
-                        GameController.Instance.PlayingGame(true);
-                        isPlaying = true;
-                        canvas.SetActive(true);
-                    }
-                    idleTimer = 0f;
-                    state = NPCState.Idle;
-                }));
+                    GameController.Instance.PlayingGame(true);
+                    isPlaying = true;
+                    canvas.SetActive(true);
+                }
+                idleTimer = 0f;
+                state = NPCState.Idle;                
                 }
             }
+        }
+    }
+    public void CheckDialog(int done)
+    {
+        List<string> lines = new List<string>();
+        if(done == 1)
+        {
+        lines.Add("*isyarat tangan*");
+        lines.Add("*memberikan kertas*");
+        dialog.setLines(lines);
+        }
+        else if (done == 2)
+        {
+        lines.Add("Terima kasih");
+        lines.Add("Selalu berhati-hati saat mengirim ataupun menerima barang");
+        dialog.setLines(lines);
         }
     }
 }
