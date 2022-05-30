@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class SceneDetails : MonoBehaviour
 {
     [SerializeField] List<SceneDetails> connectedScenes;
+    [SerializeField] AudioClip sceneMusic;
     public bool IsLoaded { get; private set; }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -14,6 +15,9 @@ public class SceneDetails : MonoBehaviour
         {
             LoadScene(); 
             GameController.Instance.SetCurrentScene(this);
+
+            if (sceneMusic != null)
+                AudioManager.i.PlayMusic(sceneMusic, fade: true);
 
             foreach (var scene in connectedScenes)
             {

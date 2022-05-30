@@ -14,6 +14,7 @@ public class NPCTailgating : NPCController
 
     public void WrongAnswer(bool tailgater)
     {
+        AudioManager.i.PlaySfx(AudioManager.AudioId.WrongAnswer, pauseMusic:true);
         isPlaying = false;
         isAnswered = true;
         List<string> lines = new List<string>();
@@ -46,6 +47,7 @@ public class NPCTailgating : NPCController
 
     public void CorrectAnswer()
     {
+        AudioManager.i.PlaySfx(AudioManager.AudioId.CorrectAnswer, pauseMusic:true);
         isPlaying = false;
         isAnswered = true;
         List<string> lines = new List<string>();

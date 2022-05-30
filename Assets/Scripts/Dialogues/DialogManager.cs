@@ -35,6 +35,7 @@ public class DialogManager : MonoBehaviour
 
         foreach (var line in dialog.Lines)
         {
+            AudioManager.i.PlaySfx(AudioManager.AudioId.UISelect);
             yield return TypeDialog(line);
             yield return new WaitUntil(() => keyAButton);
         }
@@ -55,6 +56,8 @@ public class DialogManager : MonoBehaviour
         IsShowing = true;
 
         dialogBox.SetActive(true);
+
+        AudioManager.i.PlaySfx(AudioManager.AudioId.UISelect);
 
         yield return TypeDialog(text);
 
@@ -83,7 +86,7 @@ public class DialogManager : MonoBehaviour
  
     public void HandleUpdate() 
     { 
-
+        
     } 
  
     public IEnumerator TypeDialog(string line) 

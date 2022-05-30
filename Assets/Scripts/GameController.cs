@@ -28,6 +28,8 @@ public class GameController : MonoBehaviour
 
   public GameObject canvas, backButton, pauseButton;
 
+  public AudioClip winningMusic;
+
 
   private void Awake()
   {
@@ -98,6 +100,11 @@ public class GameController : MonoBehaviour
     else if (state == GameState.Dialog)
     {
       DialogManager.Instance.HandleUpdate();
+    }
+    if (miniGameDone == 7)
+    {
+      AudioManager.i.PlayMusic(winningMusic, fade: true);
+      state = GameState.Paused;
     }
 
     // miniGameDonerText.text = "Mini Games Completed = " + miniGameDone;

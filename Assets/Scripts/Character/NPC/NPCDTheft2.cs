@@ -16,8 +16,8 @@ public class NPCDTheft2 : NPCController
                 character.LookTowards(initiator.position);
                 
                 List<string> lines = new List<string>();
-                lines.Add("Oh pengantar barang dari Alex");
-                lines.Add("Sangkyu bor");
+                lines.Add("Oh pengantar barang dari Alex, terima kasih");
+                lines.Add("Tolong sampaikan salamku ya");
                 dialog.setLines(lines);
 
                 yield return DialogManager.Instance.ShowDialog(dialog);

@@ -14,6 +14,7 @@ public class NPCShoulderSurfing : NPCController
 
   public void WrongAnswer(bool enter)
   {
+    AudioManager.i.PlaySfx(AudioManager.AudioId.WrongAnswer, pauseMusic:true);
     isPlaying = false;
     isAnswered = true;
     List<string> lines = new List<string>();
@@ -50,6 +51,7 @@ public class NPCShoulderSurfing : NPCController
 
   public void CorrectAnswer()
   {
+    AudioManager.i.PlaySfx(AudioManager.AudioId.CorrectAnswer, pauseMusic:true);
     isPlaying = false;
     isAnswered = true;
     List<string> lines = new List<string>();

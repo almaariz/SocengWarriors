@@ -17,14 +17,17 @@ public class NPCDTheft1 : NPCController
             isPlaying = false;
             canvas.SetActive(false);
             GameController.Instance.DTheftStatus=true;
+            AudioManager.i.PlaySfx(AudioManager.AudioId.PlayGame, pauseMusic:true);
         }
         else if (GameController.Instance.DTheftDone == 1)
         {
             CorrectAnswer();
+            AudioManager.i.PlaySfx(AudioManager.AudioId.CorrectAnswer, pauseMusic:true);
         }
         else if (GameController.Instance.DTheftDone == 2)
         {
             WrongAnswer();
+            AudioManager.i.PlaySfx(AudioManager.AudioId.WrongAnswer, pauseMusic:true);
         }
     }
 
@@ -87,6 +90,7 @@ public class NPCDTheft1 : NPCController
                     GameController.Instance.PlayingGame(true);
                     isPlaying = true;
                     canvas.SetActive(true);
+                    AudioManager.i.PlaySfx(AudioManager.AudioId.UISelect, pauseMusic:true);
                 }
                 idleTimer = 0f;
                 state = NPCState.Idle;                

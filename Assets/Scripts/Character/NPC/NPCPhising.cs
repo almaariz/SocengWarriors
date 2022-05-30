@@ -12,6 +12,7 @@ public class NPCPhising : NPCController
 
   public void WrongAnswer()
   {
+    AudioManager.i.PlaySfx(AudioManager.AudioId.WrongAnswer,pauseMusic:true);
     isPlaying = false;
     isAnswered = true;
     List<string> lines = new List<string>();
@@ -31,6 +32,7 @@ public class NPCPhising : NPCController
 
   public void CorrectAnswer()
   {
+    AudioManager.i.PlaySfx(AudioManager.AudioId.CorrectAnswer, pauseMusic:true);
     isPlaying = false;
     isAnswered = true;
     List<string> lines = new List<string>();
@@ -64,6 +66,7 @@ public class NPCPhising : NPCController
           GameController.Instance.PlayingGame(true);
           isPlaying = true;
           canvas.SetActive(true);
+          AudioManager.i.PlaySfx(AudioManager.AudioId.PlayGame, pauseMusic:true);
         }
         idleTimer = 0f;
         state = NPCState.Idle;

@@ -15,6 +15,7 @@ public class NPCDumpsterDiving : NPCController
 
   public void WrongAnswer()
   {
+    AudioManager.i.PlaySfx(AudioManager.AudioId.WrongAnswer, pauseMusic:true);
     isPlaying = false;
     isAnswered = true;
     List<string> lines = new List<string>();
@@ -36,6 +37,7 @@ public class NPCDumpsterDiving : NPCController
 
   public void CorrectAnswer()
   {
+    AudioManager.i.PlaySfx(AudioManager.AudioId.CorrectAnswer, pauseMusic:true);
     isPlaying = false;
     isAnswered = true;
     List<string> lines = new List<string>();
