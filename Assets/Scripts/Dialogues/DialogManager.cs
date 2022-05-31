@@ -24,7 +24,7 @@ public class DialogManager : MonoBehaviour
 
     public bool IsShowing { get; private set;}
  
-    public IEnumerator ShowDialog(Dialog dialog, List<string> choices=null, Action<int> onChoiceSelected=null) 
+    public IEnumerator ShowDialog(Dialog dialog, List<string> choices=null, Action<int> onChoiceSelected=null, bool getBadge=false) 
     { 
         yield return new WaitForEndOfFrame(); 
  
@@ -48,6 +48,8 @@ public class DialogManager : MonoBehaviour
         dialogBox.SetActive(false);
         IsShowing = false;
         onCloseDialog?.Invoke();
+        if(getBadge)
+            AudioManager.i.PlaySfx(AudioManager.AudioId.GetBadge);
     } 
 
     public IEnumerator ShowDialogText(string text, bool WaitForInput=true, bool autoClose=true, List<string> choices=null, Action<int> onChoiceSelected=null)

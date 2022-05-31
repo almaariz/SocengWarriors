@@ -28,6 +28,7 @@ public class NPCDTheft2 : NPCController
 
                 GameController.Instance.DTheftDone = 1;
                 GameController.Instance.DTheftStatus = false;
+                AudioManager.i.PlaySfx(AudioManager.AudioId.Complete);
             }
         }
         else

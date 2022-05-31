@@ -43,7 +43,7 @@ public class NPCPhising : NPCController
 
     dialog.setLines(lines);
     canvas.SetActive(false);
-    StartCoroutine(DialogManager.Instance.ShowDialog(dialog));
+    StartCoroutine(DialogManager.Instance.ShowDialog(dialog,getBadge:true));
     idleTimer = 0f;
     state = NPCState.Idle;
     isDone = 2;
