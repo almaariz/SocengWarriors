@@ -87,7 +87,7 @@ public class AudioManager : MonoBehaviour
         musicPlayer.DOFade(originalMusicVol, fadeDuration);
     }
 
-    public enum AudioId {UISelect, CorrectAnswer, WrongAnswer, GetBadge, PlayGame, StartGame, Slice, Complete, Dump}
+    public enum AudioId {UISelect, CorrectAnswer, WrongAnswer, GetBadge, PlayGame, StartGame, Slice, Complete, Dump, GameEnd}
 
     [System.Serializable]
     public class AudioData

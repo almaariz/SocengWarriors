@@ -1433,7 +1433,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1315308915
 GameObject:
@@ -2238,6 +2238,8 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: 49bad27b8d771514594ec0f6bbdd2a99, type: 3}
   - id: 5
     clip: {fileID: 8300000, guid: a145feb18a02eae4e98e9bcb2551e930, type: 3}
+  - id: 9
+    clip: {fileID: 8300000, guid: 1eafea768611e1643ba1b96eb4c32997, type: 3}
   musicPlayer: {fileID: 744700400}
   sfxPlayer: {fileID: 1315308916}
   fadeDuration: 0.75
@@ -2255,7 +2257,7 @@ Transform:
   - {fileID: 744700401}
   - {fileID: 1315308917}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2139260494
 GameObject:

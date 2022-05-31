@@ -33,6 +33,8 @@ public class GameController : MonoBehaviour
   public Animator transitionAnim;
   public int sceneIndex;
 
+  public float waitTime = 5f;
+
 
   private void Awake()
   {
@@ -51,6 +53,7 @@ public class GameController : MonoBehaviour
       if (state == GameState.Dialog)
         state = GameState.FreeRoam;
     };
+    miniGameDone = 6;
   }
 
   public void PauseGame(bool pause)
@@ -107,8 +110,6 @@ public class GameController : MonoBehaviour
     if (miniGameDone == 7)
     {
       AudioManager.i.PlayMusic(winningMusic, fade: true);
-      state = GameState.Paused;
-      endingScene.SetActive(true);
       StartCoroutine(LoadScene());
     }
 
@@ -147,8 +148,24 @@ public class GameController : MonoBehaviour
   }
   IEnumerator LoadScene()
     {
+        if(waitTime == 0)
+      {
         transitionAnim.SetTrigger("end");
-        yield return new WaitForSeconds(192f);
-        SceneManager.LoadSceneAsync(sceneBuildIndex:sceneIndex);
+        yield return new WaitForSeconds(1.5f);
+        Application.Quit();
+        yield break;
+      }
+      else
+      {
+        state = GameState.Paused;
+        yield return new WaitForSeconds(waitTime);
+        // AudioManager.i.PlaySfx(AudioManager.AudioId.GameEnd);
+        endingScene.SetActive(true);
+        yield break;
+      }
+    }
+
+    public void SkipCredit(){
+      waitTime = 0f;
     }
 }

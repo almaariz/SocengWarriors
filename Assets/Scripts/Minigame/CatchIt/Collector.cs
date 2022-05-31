@@ -11,8 +11,12 @@ public class Collector : MonoBehaviour
         {
             npc.ScoreCount(false);
             Destroy(target.gameObject);
+            AudioManager.i.PlaySfx(AudioManager.AudioId.Dump);
         }
         else if (target.tag == "Tailgater")
+        {
             Destroy(target.gameObject);
+            AudioManager.i.PlaySfx(AudioManager.AudioId.Slice);
+        }
     }
 }

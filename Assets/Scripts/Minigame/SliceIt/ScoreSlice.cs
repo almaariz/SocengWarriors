@@ -28,23 +28,26 @@ public class ScoreSlice : MonoBehaviour
         {
             Destroy(target.gameObject);
             npc.ScoreCount(true, 1);
+            AudioManager.i.PlaySfx(AudioManager.AudioId.Slice);
         }
         else if(target.tag == "Doc2")
         {
             Destroy(target.gameObject);
             npc.ScoreCount(true, 2);
+            AudioManager.i.PlaySfx(AudioManager.AudioId.Slice);
         }
         else if(target.tag == "Doc3")
         {
             Destroy(target.gameObject);
             npc.ScoreCount(true, 3);
+            AudioManager.i.PlaySfx(AudioManager.AudioId.Slice);
         }
         else if(target.tag == "Doc4")
         {
             Destroy(target.gameObject);
             npc.ScoreCount(true, 4);
+            AudioManager.i.PlaySfx(AudioManager.AudioId.Slice);
         }
-        AudioManager.i.PlaySfx(AudioManager.AudioId.Slice, pauseMusic:true);
     }
     void OnTriggerExit2D(Collider2D target)
     {

@@ -33,7 +33,7 @@ public class ScoreController : MonoBehaviour
         {
             Destroy(target.gameObject);
             npc.ScoreCount(true);
-            AudioManager.i.PlaySfx(AudioManager.AudioId.Dump, pauseMusic:true);
+            AudioManager.i.PlaySfx(AudioManager.AudioId.Dump);
         }
     }
     void OnTriggerExit2D(Collider2D target)

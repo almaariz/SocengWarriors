@@ -11,22 +11,25 @@ public class TrashCan : MonoBehaviour
         {
             npc.ScoreCount(false, 1);
             Destroy(target.gameObject);
+            AudioManager.i.PlaySfx(AudioManager.AudioId.Dump);
         }
         else if (target.tag == "Doc2")
         {
             npc.ScoreCount(false, 2);
             Destroy(target.gameObject);
+            AudioManager.i.PlaySfx(AudioManager.AudioId.Dump);
         }
         else if (target.tag == "Doc3")
         {
             npc.ScoreCount(false, 3);
             Destroy(target.gameObject);
+            AudioManager.i.PlaySfx(AudioManager.AudioId.Dump);
         }
         else if (target.tag == "Doc4")
         {
             npc.ScoreCount(false, 4);
             Destroy(target.gameObject);
+            AudioManager.i.PlaySfx(AudioManager.AudioId.Dump);
         }
-        AudioManager.i.PlaySfx(AudioManager.AudioId.Dump, pauseMusic:true);
     }
 }
