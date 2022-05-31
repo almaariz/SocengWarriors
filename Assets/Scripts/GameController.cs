@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public enum GameState { FreeRoam, Dialog, Cutscene, Paused }
 
@@ -26,9 +27,11 @@ public class GameController : MonoBehaviour
 
   public static GameController Instance { get; private set; }
 
-  public GameObject canvas, backButton, pauseButton;
+  public GameObject canvas, backButton, pauseButton, endingScene;
 
   public AudioClip winningMusic;
+  public Animator transitionAnim;
+  public int sceneIndex;
 
 
   private void Awake()
@@ -105,6 +108,8 @@ public class GameController : MonoBehaviour
     {
       AudioManager.i.PlayMusic(winningMusic, fade: true);
       state = GameState.Paused;
+      endingScene.SetActive(true);
+      StartCoroutine(LoadScene());
     }
 
     // miniGameDonerText.text = "Mini Games Completed = " + miniGameDone;
@@ -140,4 +145,10 @@ public class GameController : MonoBehaviour
     if(badge7status)
       badge7.SetActive(true);
   }
+  IEnumerator LoadScene()
+    {
+        transitionAnim.SetTrigger("end");
+        yield return new WaitForSeconds(192f);
+        SceneManager.LoadSceneAsync(sceneBuildIndex:sceneIndex);
+    }
 }

@@ -37,13 +37,13 @@ public class NPCQuidProQuo : NPCController
         isPlaying = false;
         isAnswered = true;
         List<string> lines = new List<string>();
-        lines.Add("Kamu yakin sekali, bagus, jangan sampai kau memberikan informasimu untuk sesuatu yang tidak pasti");
+        lines.Add("Aku suka keteguhanmu, jangan sampai kau memberikan informasi untuk sesuatu yang tidak pasti");
         lines.Add("Dengan tidak mudah percaya, kamu bisa terhindar dari serangan quid pro quo");
 
         GameController.Instance.miniGameDone += 1;
 
         dialog.setLines(lines);
-        StartCoroutine(DialogManager.Instance.ShowDialog(dialog));
+        StartCoroutine(DialogManager.Instance.ShowDialog(dialog,getBadge:true));
         idleTimer = 0f;
         state = NPCState.Idle;
         isDone = 2;

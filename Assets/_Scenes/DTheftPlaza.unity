@@ -379,7 +379,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkDownSprites:
-  - {fileID: 2675662255992217703, guid: 102a65b7aae7f5a46825e34953840b4e, type: 3}
+  - {fileID: 4919871423167899801, guid: 3e5a973e606d04844a53ea089a437604, type: 3}
   - {fileID: 291723236092485721, guid: 39e99458827448a40a049e3c63ac09a2, type: 3}
   - {fileID: 895496348376317605, guid: 39e99458827448a40a049e3c63ac09a2, type: 3}
   - {fileID: -3735948742815099075, guid: 39e99458827448a40a049e3c63ac09a2, type: 3}
@@ -387,7 +387,7 @@ MonoBehaviour:
   - {fileID: -725458292190873981, guid: 39e99458827448a40a049e3c63ac09a2, type: 3}
   - {fileID: -7442147870571727005, guid: 39e99458827448a40a049e3c63ac09a2, type: 3}
   walkUpSprites:
-  - {fileID: -2649458728819362770, guid: 102a65b7aae7f5a46825e34953840b4e, type: 3}
+  - {fileID: -8607669474745585618, guid: 3e5a973e606d04844a53ea089a437604, type: 3}
   - {fileID: 2980513047639476078, guid: 39e99458827448a40a049e3c63ac09a2, type: 3}
   - {fileID: 47130514819806373, guid: 39e99458827448a40a049e3c63ac09a2, type: 3}
   - {fileID: -8926144603376143730, guid: 39e99458827448a40a049e3c63ac09a2, type: 3}
@@ -395,7 +395,7 @@ MonoBehaviour:
   - {fileID: -8150464373303846862, guid: 39e99458827448a40a049e3c63ac09a2, type: 3}
   - {fileID: -1925200190140228457, guid: 39e99458827448a40a049e3c63ac09a2, type: 3}
   walkRightSprites:
-  - {fileID: -3876990486210377973, guid: 102a65b7aae7f5a46825e34953840b4e, type: 3}
+  - {fileID: -8856688988219380863, guid: 3e5a973e606d04844a53ea089a437604, type: 3}
   - {fileID: -7314119854416619417, guid: 39e99458827448a40a049e3c63ac09a2, type: 3}
   - {fileID: 4733858193226117430, guid: 39e99458827448a40a049e3c63ac09a2, type: 3}
   - {fileID: -4113463875289088921, guid: 39e99458827448a40a049e3c63ac09a2, type: 3}
@@ -403,7 +403,7 @@ MonoBehaviour:
   - {fileID: 8196513763231332460, guid: 39e99458827448a40a049e3c63ac09a2, type: 3}
   - {fileID: -5354802255745978037, guid: 39e99458827448a40a049e3c63ac09a2, type: 3}
   walkLeftSprites:
-  - {fileID: -6098694761347750324, guid: 102a65b7aae7f5a46825e34953840b4e, type: 3}
+  - {fileID: 6917460791092393630, guid: 3e5a973e606d04844a53ea089a437604, type: 3}
   - {fileID: 7685401640113281884, guid: 39e99458827448a40a049e3c63ac09a2, type: 3}
   - {fileID: 8812876743666679754, guid: 39e99458827448a40a049e3c63ac09a2, type: 3}
   - {fileID: 2436324694224367413, guid: 39e99458827448a40a049e3c63ac09a2, type: 3}
@@ -425,8 +425,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialog:
     lines:
-    - Jangan sampai informasi penting menyebar
-    - Apalagi kalau karena kelalaian kita
+    - Punteun...
+    - Paket...
   movementPattern: []
   timeBetweenPattern: 3
 --- !u!61 &146202684
@@ -446,7 +446,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 2}
+    oldSize: {x: 1.000286, y: 2}
     newSize: {x: 1, y: 2}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -516,7 +516,7 @@ SpriteRenderer:
   m_SortingLayerID: -838503753
   m_SortingLayer: 3
   m_SortingOrder: 0
-  m_Sprite: {fileID: 2675662255992217703, guid: 102a65b7aae7f5a46825e34953840b4e, type: 3}
+  m_Sprite: {fileID: 4919871423167899801, guid: 3e5a973e606d04844a53ea089a437604, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -535,7 +535,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 146202680}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.5, y: 43.8, z: 0}
+  m_LocalPosition: {x: 0, y: 44, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -893,7 +893,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkDownSprites:
-  - {fileID: 2675662255992217703, guid: 102a65b7aae7f5a46825e34953840b4e, type: 3}
+  - {fileID: -7532408524478769097, guid: e3d09d7468c32a342bf2bfa4d2d3a6c4, type: 3}
   - {fileID: 291723236092485721, guid: 39e99458827448a40a049e3c63ac09a2, type: 3}
   - {fileID: 895496348376317605, guid: 39e99458827448a40a049e3c63ac09a2, type: 3}
   - {fileID: -3735948742815099075, guid: 39e99458827448a40a049e3c63ac09a2, type: 3}
@@ -901,7 +901,7 @@ MonoBehaviour:
   - {fileID: -725458292190873981, guid: 39e99458827448a40a049e3c63ac09a2, type: 3}
   - {fileID: -7442147870571727005, guid: 39e99458827448a40a049e3c63ac09a2, type: 3}
   walkUpSprites:
-  - {fileID: -2649458728819362770, guid: 102a65b7aae7f5a46825e34953840b4e, type: 3}
+  - {fileID: 3122839382753860139, guid: e3d09d7468c32a342bf2bfa4d2d3a6c4, type: 3}
   - {fileID: 2980513047639476078, guid: 39e99458827448a40a049e3c63ac09a2, type: 3}
   - {fileID: 47130514819806373, guid: 39e99458827448a40a049e3c63ac09a2, type: 3}
   - {fileID: -8926144603376143730, guid: 39e99458827448a40a049e3c63ac09a2, type: 3}
@@ -909,7 +909,7 @@ MonoBehaviour:
   - {fileID: -8150464373303846862, guid: 39e99458827448a40a049e3c63ac09a2, type: 3}
   - {fileID: -1925200190140228457, guid: 39e99458827448a40a049e3c63ac09a2, type: 3}
   walkRightSprites:
-  - {fileID: -3876990486210377973, guid: 102a65b7aae7f5a46825e34953840b4e, type: 3}
+  - {fileID: -3641386739095694838, guid: e3d09d7468c32a342bf2bfa4d2d3a6c4, type: 3}
   - {fileID: -7314119854416619417, guid: 39e99458827448a40a049e3c63ac09a2, type: 3}
   - {fileID: 4733858193226117430, guid: 39e99458827448a40a049e3c63ac09a2, type: 3}
   - {fileID: -4113463875289088921, guid: 39e99458827448a40a049e3c63ac09a2, type: 3}
@@ -917,7 +917,7 @@ MonoBehaviour:
   - {fileID: 8196513763231332460, guid: 39e99458827448a40a049e3c63ac09a2, type: 3}
   - {fileID: -5354802255745978037, guid: 39e99458827448a40a049e3c63ac09a2, type: 3}
   walkLeftSprites:
-  - {fileID: -6098694761347750324, guid: 102a65b7aae7f5a46825e34953840b4e, type: 3}
+  - {fileID: 7115987546684826241, guid: e3d09d7468c32a342bf2bfa4d2d3a6c4, type: 3}
   - {fileID: 7685401640113281884, guid: 39e99458827448a40a049e3c63ac09a2, type: 3}
   - {fileID: 8812876743666679754, guid: 39e99458827448a40a049e3c63ac09a2, type: 3}
   - {fileID: 2436324694224367413, guid: 39e99458827448a40a049e3c63ac09a2, type: 3}
@@ -939,8 +939,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialog:
     lines:
-    - Sini kuberi tahu
-    - Saat ini kau bisa mendapatkan informasi dari mana saja dan kapan saja
+    - Kau tidak akan percaya
+    - Kemarin aku dicegat oleh orang aneh
   movementPattern: []
   timeBetweenPattern: 3
 --- !u!61 &925872389
@@ -1030,7 +1030,7 @@ SpriteRenderer:
   m_SortingLayerID: -838503753
   m_SortingLayer: 3
   m_SortingOrder: 0
-  m_Sprite: {fileID: 2675662255992217703, guid: 102a65b7aae7f5a46825e34953840b4e, type: 3}
+  m_Sprite: {fileID: -7532408524478769097, guid: e3d09d7468c32a342bf2bfa4d2d3a6c4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1049,7 +1049,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 925872385}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.5, y: 43.8, z: 0}
+  m_LocalPosition: {x: -5, y: 38, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2441,7 +2441,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkDownSprites:
-  - {fileID: 2675662255992217703, guid: 102a65b7aae7f5a46825e34953840b4e, type: 3}
+  - {fileID: 190138620645722413, guid: 4886f75396e6c494f8914ed33c77406f, type: 3}
   - {fileID: 291723236092485721, guid: 39e99458827448a40a049e3c63ac09a2, type: 3}
   - {fileID: 895496348376317605, guid: 39e99458827448a40a049e3c63ac09a2, type: 3}
   - {fileID: -3735948742815099075, guid: 39e99458827448a40a049e3c63ac09a2, type: 3}
@@ -2449,7 +2449,7 @@ MonoBehaviour:
   - {fileID: -725458292190873981, guid: 39e99458827448a40a049e3c63ac09a2, type: 3}
   - {fileID: -7442147870571727005, guid: 39e99458827448a40a049e3c63ac09a2, type: 3}
   walkUpSprites:
-  - {fileID: -2649458728819362770, guid: 102a65b7aae7f5a46825e34953840b4e, type: 3}
+  - {fileID: 8503100137478508703, guid: 4886f75396e6c494f8914ed33c77406f, type: 3}
   - {fileID: 2980513047639476078, guid: 39e99458827448a40a049e3c63ac09a2, type: 3}
   - {fileID: 47130514819806373, guid: 39e99458827448a40a049e3c63ac09a2, type: 3}
   - {fileID: -8926144603376143730, guid: 39e99458827448a40a049e3c63ac09a2, type: 3}
@@ -2457,7 +2457,7 @@ MonoBehaviour:
   - {fileID: -8150464373303846862, guid: 39e99458827448a40a049e3c63ac09a2, type: 3}
   - {fileID: -1925200190140228457, guid: 39e99458827448a40a049e3c63ac09a2, type: 3}
   walkRightSprites:
-  - {fileID: -3876990486210377973, guid: 102a65b7aae7f5a46825e34953840b4e, type: 3}
+  - {fileID: 1067453631971247468, guid: 4886f75396e6c494f8914ed33c77406f, type: 3}
   - {fileID: -7314119854416619417, guid: 39e99458827448a40a049e3c63ac09a2, type: 3}
   - {fileID: 4733858193226117430, guid: 39e99458827448a40a049e3c63ac09a2, type: 3}
   - {fileID: -4113463875289088921, guid: 39e99458827448a40a049e3c63ac09a2, type: 3}
@@ -2465,7 +2465,7 @@ MonoBehaviour:
   - {fileID: 8196513763231332460, guid: 39e99458827448a40a049e3c63ac09a2, type: 3}
   - {fileID: -5354802255745978037, guid: 39e99458827448a40a049e3c63ac09a2, type: 3}
   walkLeftSprites:
-  - {fileID: -6098694761347750324, guid: 102a65b7aae7f5a46825e34953840b4e, type: 3}
+  - {fileID: -3530310079997983407, guid: 4886f75396e6c494f8914ed33c77406f, type: 3}
   - {fileID: 7685401640113281884, guid: 39e99458827448a40a049e3c63ac09a2, type: 3}
   - {fileID: 8812876743666679754, guid: 39e99458827448a40a049e3c63ac09a2, type: 3}
   - {fileID: 2436324694224367413, guid: 39e99458827448a40a049e3c63ac09a2, type: 3}
@@ -2487,8 +2487,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialog:
     lines:
-    - ...
-    - '*Mengorek tempat sampah*'
+    - Seseorang mengirimku paket
+    - Aku akan membukanya di rumah xixixi
   movementPattern: []
   timeBetweenPattern: 3
 --- !u!61 &957632373
@@ -2578,7 +2578,7 @@ SpriteRenderer:
   m_SortingLayerID: -838503753
   m_SortingLayer: 3
   m_SortingOrder: 0
-  m_Sprite: {fileID: 2675662255992217703, guid: 102a65b7aae7f5a46825e34953840b4e, type: 3}
+  m_Sprite: {fileID: 190138620645722413, guid: 4886f75396e6c494f8914ed33c77406f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2597,7 +2597,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 957632369}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.5, y: 43.8, z: 0}
+  m_LocalPosition: {x: -12, y: 48, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -8177,7 +8177,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkDownSprites:
-  - {fileID: 2675662255992217703, guid: 102a65b7aae7f5a46825e34953840b4e, type: 3}
+  - {fileID: 4878639138975288802, guid: 1996ca5ccf284aa4abe2832361ced999, type: 3}
   - {fileID: 291723236092485721, guid: 39e99458827448a40a049e3c63ac09a2, type: 3}
   - {fileID: 895496348376317605, guid: 39e99458827448a40a049e3c63ac09a2, type: 3}
   - {fileID: -3735948742815099075, guid: 39e99458827448a40a049e3c63ac09a2, type: 3}
@@ -8185,7 +8185,7 @@ MonoBehaviour:
   - {fileID: -725458292190873981, guid: 39e99458827448a40a049e3c63ac09a2, type: 3}
   - {fileID: -7442147870571727005, guid: 39e99458827448a40a049e3c63ac09a2, type: 3}
   walkUpSprites:
-  - {fileID: -2649458728819362770, guid: 102a65b7aae7f5a46825e34953840b4e, type: 3}
+  - {fileID: -1742726726308945099, guid: 1996ca5ccf284aa4abe2832361ced999, type: 3}
   - {fileID: 2980513047639476078, guid: 39e99458827448a40a049e3c63ac09a2, type: 3}
   - {fileID: 47130514819806373, guid: 39e99458827448a40a049e3c63ac09a2, type: 3}
   - {fileID: -8926144603376143730, guid: 39e99458827448a40a049e3c63ac09a2, type: 3}
@@ -8193,7 +8193,7 @@ MonoBehaviour:
   - {fileID: -8150464373303846862, guid: 39e99458827448a40a049e3c63ac09a2, type: 3}
   - {fileID: -1925200190140228457, guid: 39e99458827448a40a049e3c63ac09a2, type: 3}
   walkRightSprites:
-  - {fileID: -3876990486210377973, guid: 102a65b7aae7f5a46825e34953840b4e, type: 3}
+  - {fileID: -1046244749160542889, guid: 1996ca5ccf284aa4abe2832361ced999, type: 3}
   - {fileID: -7314119854416619417, guid: 39e99458827448a40a049e3c63ac09a2, type: 3}
   - {fileID: 4733858193226117430, guid: 39e99458827448a40a049e3c63ac09a2, type: 3}
   - {fileID: -4113463875289088921, guid: 39e99458827448a40a049e3c63ac09a2, type: 3}
@@ -8201,7 +8201,7 @@ MonoBehaviour:
   - {fileID: 8196513763231332460, guid: 39e99458827448a40a049e3c63ac09a2, type: 3}
   - {fileID: -5354802255745978037, guid: 39e99458827448a40a049e3c63ac09a2, type: 3}
   walkLeftSprites:
-  - {fileID: -6098694761347750324, guid: 102a65b7aae7f5a46825e34953840b4e, type: 3}
+  - {fileID: -1305188047786157906, guid: 1996ca5ccf284aa4abe2832361ced999, type: 3}
   - {fileID: 7685401640113281884, guid: 39e99458827448a40a049e3c63ac09a2, type: 3}
   - {fileID: 8812876743666679754, guid: 39e99458827448a40a049e3c63ac09a2, type: 3}
   - {fileID: 2436324694224367413, guid: 39e99458827448a40a049e3c63ac09a2, type: 3}
@@ -8223,8 +8223,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialog:
     lines:
-    - Kau lihat orang di samping kerangka gedung
-    - Mungkin dia butuh bantuan
+    - Aku tidak tahu apa yang dilakukan wanita itu
+    - Dia hanya berdiri disana dan tidak berkata-kata, mungkin kau bisa coba mengobrol
+      dengannya
   movementPattern: []
   timeBetweenPattern: 3
 --- !u!61 &1468444477
@@ -8314,7 +8315,7 @@ SpriteRenderer:
   m_SortingLayerID: -838503753
   m_SortingLayer: 3
   m_SortingOrder: 0
-  m_Sprite: {fileID: 2675662255992217703, guid: 102a65b7aae7f5a46825e34953840b4e, type: 3}
+  m_Sprite: {fileID: 4878639138975288802, guid: 1996ca5ccf284aa4abe2832361ced999, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -8333,7 +8334,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1468444473}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.5, y: 43.8, z: 0}
+  m_LocalPosition: {x: 12, y: 48, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -8696,7 +8697,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkDownSprites:
-  - {fileID: 2675662255992217703, guid: 102a65b7aae7f5a46825e34953840b4e, type: 3}
+  - {fileID: 30837212352558036, guid: 86ab2dc285e0ca34cb77736df8172303, type: 3}
   - {fileID: 291723236092485721, guid: 39e99458827448a40a049e3c63ac09a2, type: 3}
   - {fileID: 895496348376317605, guid: 39e99458827448a40a049e3c63ac09a2, type: 3}
   - {fileID: -3735948742815099075, guid: 39e99458827448a40a049e3c63ac09a2, type: 3}
@@ -8704,7 +8705,7 @@ MonoBehaviour:
   - {fileID: -725458292190873981, guid: 39e99458827448a40a049e3c63ac09a2, type: 3}
   - {fileID: -7442147870571727005, guid: 39e99458827448a40a049e3c63ac09a2, type: 3}
   walkUpSprites:
-  - {fileID: -2649458728819362770, guid: 102a65b7aae7f5a46825e34953840b4e, type: 3}
+  - {fileID: -7559939916243316494, guid: 86ab2dc285e0ca34cb77736df8172303, type: 3}
   - {fileID: 2980513047639476078, guid: 39e99458827448a40a049e3c63ac09a2, type: 3}
   - {fileID: 47130514819806373, guid: 39e99458827448a40a049e3c63ac09a2, type: 3}
   - {fileID: -8926144603376143730, guid: 39e99458827448a40a049e3c63ac09a2, type: 3}
@@ -8712,7 +8713,7 @@ MonoBehaviour:
   - {fileID: -8150464373303846862, guid: 39e99458827448a40a049e3c63ac09a2, type: 3}
   - {fileID: -1925200190140228457, guid: 39e99458827448a40a049e3c63ac09a2, type: 3}
   walkRightSprites:
-  - {fileID: -3876990486210377973, guid: 102a65b7aae7f5a46825e34953840b4e, type: 3}
+  - {fileID: -7979570623399224071, guid: 86ab2dc285e0ca34cb77736df8172303, type: 3}
   - {fileID: -7314119854416619417, guid: 39e99458827448a40a049e3c63ac09a2, type: 3}
   - {fileID: 4733858193226117430, guid: 39e99458827448a40a049e3c63ac09a2, type: 3}
   - {fileID: -4113463875289088921, guid: 39e99458827448a40a049e3c63ac09a2, type: 3}
@@ -8720,7 +8721,7 @@ MonoBehaviour:
   - {fileID: 8196513763231332460, guid: 39e99458827448a40a049e3c63ac09a2, type: 3}
   - {fileID: -5354802255745978037, guid: 39e99458827448a40a049e3c63ac09a2, type: 3}
   walkLeftSprites:
-  - {fileID: -6098694761347750324, guid: 102a65b7aae7f5a46825e34953840b4e, type: 3}
+  - {fileID: 8652600478794188794, guid: 86ab2dc285e0ca34cb77736df8172303, type: 3}
   - {fileID: 7685401640113281884, guid: 39e99458827448a40a049e3c63ac09a2, type: 3}
   - {fileID: 8812876743666679754, guid: 39e99458827448a40a049e3c63ac09a2, type: 3}
   - {fileID: 2436324694224367413, guid: 39e99458827448a40a049e3c63ac09a2, type: 3}
@@ -8742,8 +8743,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialog:
     lines:
-    - Jangan bermain-main disekitar sini
-    - Atau kau akan hancur oleh mesin besar itu
+    - Diversion theft...
+    - Serangan dengan memanipulasi pengiriman sebuah informasi
   movementPattern: []
   timeBetweenPattern: 3
 --- !u!61 &1768144232
@@ -8763,7 +8764,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 2}
+    oldSize: {x: 1.000286, y: 2}
     newSize: {x: 1, y: 2}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -8833,7 +8834,7 @@ SpriteRenderer:
   m_SortingLayerID: -838503753
   m_SortingLayer: 3
   m_SortingOrder: 0
-  m_Sprite: {fileID: 2675662255992217703, guid: 102a65b7aae7f5a46825e34953840b4e, type: 3}
+  m_Sprite: {fileID: 30837212352558036, guid: 86ab2dc285e0ca34cb77736df8172303, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -8852,7 +8853,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1768144228}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.5, y: 43.8, z: 0}
+  m_LocalPosition: {x: 8, y: 35, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -9194,7 +9195,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2040965234}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.5, y: 43.8, z: 0}
+  m_LocalPosition: {x: 6, y: 44, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}

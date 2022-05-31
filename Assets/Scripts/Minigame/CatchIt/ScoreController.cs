@@ -29,13 +29,15 @@ public class ScoreController : MonoBehaviour
             Destroy(target.gameObject);
             npc.WrongAnswer(true);
         }
-    }
-    void OnTriggerExit2D(Collider2D target)
-    {
         if(target.tag == "Officer")
         {
             Destroy(target.gameObject);
             npc.ScoreCount(true);
+            AudioManager.i.PlaySfx(AudioManager.AudioId.Dump, pauseMusic:true);
         }
+    }
+    void OnTriggerExit2D(Collider2D target)
+    {
+        
     }
 }

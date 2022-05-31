@@ -27,5 +27,6 @@ public class TrashCan : MonoBehaviour
             npc.ScoreCount(false, 4);
             Destroy(target.gameObject);
         }
+        AudioManager.i.PlaySfx(AudioManager.AudioId.Dump, pauseMusic:true);
     }
 }
