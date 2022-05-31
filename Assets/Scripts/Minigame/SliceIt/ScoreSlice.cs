@@ -48,6 +48,7 @@ public class ScoreSlice : MonoBehaviour
             npc.ScoreCount(true, 4);
             AudioManager.i.PlaySfx(AudioManager.AudioId.Slice);
         }
+        // AudioManager.i.PlaySfx(AudioManager.AudioId.Slice);
     }
     void OnTriggerExit2D(Collider2D target)
     {

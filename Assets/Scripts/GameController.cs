@@ -53,7 +53,6 @@ public class GameController : MonoBehaviour
       if (state == GameState.Dialog)
         state = GameState.FreeRoam;
     };
-    miniGameDone = 6;
   }
 
   public void PauseGame(bool pause)
