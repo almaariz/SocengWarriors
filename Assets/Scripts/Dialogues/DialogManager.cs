@@ -109,7 +109,7 @@ public class DialogManager : MonoBehaviour
     private IEnumerator ButtonA()
     {
         keyAButton = true;
-        yield return new WaitForSeconds(1f / letterPerSecond);
+        yield return new WaitForSeconds(0.01f);
         keyAButton = false;
     }
 }

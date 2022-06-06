@@ -29,6 +29,7 @@ public class WrongDocument : MonoBehaviour
     {
         if(target.tag == "Blade")
         {
+            AudioManager.i.PlaySfx(AudioManager.AudioId.Dump);
             DestroyWithTag ("Line");
         }
     }

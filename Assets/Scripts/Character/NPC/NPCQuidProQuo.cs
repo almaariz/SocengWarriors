@@ -13,7 +13,7 @@ public class NPCQuidProQuo : NPCController
 
     public void WrongAnswer()
     {
-        AudioManager.i.PlaySfx(AudioManager.AudioId.WrongAnswer, pauseMusic:true);
+        AudioManager.i.PlaySfx(AudioManager.AudioId.CorrectAnswer, pauseMusic:true);
         isPlaying = false;
         isAnswered = true;
         
@@ -33,7 +33,7 @@ public class NPCQuidProQuo : NPCController
 
     public void CorrectAnswer()
     {
-        AudioManager.i.PlaySfx(AudioManager.AudioId.CorrectAnswer, pauseMusic:true);
+        AudioManager.i.PlaySfx(AudioManager.AudioId.Complete, pauseMusic:true);
         isPlaying = false;
         isAnswered = true;
         List<string> lines = new List<string>();
@@ -98,6 +98,7 @@ public class NPCQuidProQuo : NPCController
 
     public void signYes()
     {
+        AudioManager.i.PlaySfx(AudioManager.AudioId.PlayGame, pauseMusic:true);
         canvas2.SetActive(true);
         canvas.SetActive(false);
     }
@@ -106,6 +107,7 @@ public class NPCQuidProQuo : NPCController
     {
         if(noSign < 5)
         {
+            AudioManager.i.PlaySfx(AudioManager.AudioId.WrongAnswer, pauseMusic:true);
             canvas.SetActive(false);
             isPlaying = false;
             isAnswered = true;

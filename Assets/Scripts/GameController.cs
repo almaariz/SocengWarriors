@@ -105,6 +105,10 @@ public class GameController : MonoBehaviour
     else if (state == GameState.Dialog)
     {
       DialogManager.Instance.HandleUpdate();
+      if (!DialogManager.Instance.IsShowing)
+      {
+        state=GameState.FreeRoam;
+      }
     }
     if (miniGameDone == 7)
     {
