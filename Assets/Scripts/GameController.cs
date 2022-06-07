@@ -172,24 +172,23 @@ public class GameController : MonoBehaviour
     waitTime = 0f;
   }
 
-  // public void SaveState()
-  // {
-  //   SavingSystem.i.Save("saveSlot1");
-  //   // state = GameState.FreeRoam;
-  //   StartCoroutine(LoadMainScene());
-  //   MainMenu.i.load = true;
-  //   // Application.Quit();
-  // }
-  // IEnumerator LoadMainScene()
-  // {
-  //   transitionAnim.SetTrigger("end");
-  //   yield return new WaitForSeconds(1.5f);
-  //   SceneManager.LoadSceneAsync(sceneBuildIndex:sceneIndex);
-  // }
+  public void SaveState()
+  {
+    SavingSystem.i.Save("saveSlot1");
+    // state = GameState.FreeRoam;
+    StartCoroutine(LoadMainScene());
+    
+  }
+  IEnumerator LoadMainScene()
+  {
+    transitionAnim.SetTrigger("end");
+    yield return new WaitForSeconds(1.5f);
+    // SceneManager.LoadSceneAsync(sceneBuildIndex:sceneIndex);
+    Application.Quit();
+  }
 
-  // public void LoadState(bool load)
-  // {
-  //   if(load)
-  //     SavingSystem.i.Load("saveSlot1");
-  // }
+  public void LoadState()
+  {
+    SavingSystem.i.Load("saveSlot1");
+  }
 }
