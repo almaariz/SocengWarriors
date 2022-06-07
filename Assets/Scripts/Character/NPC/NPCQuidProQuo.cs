@@ -19,7 +19,7 @@ public class NPCQuidProQuo : NPCController
         
         List<string> lines = new List<string>();
         lines.Add("Oke, terima kasih");
-        lines.Add("Wahaha...");
+        lines.Add("Xixixi...");
         dialog.setLines(lines);
         
 
@@ -29,6 +29,7 @@ public class NPCQuidProQuo : NPCController
         state = NPCState.Idle;
         isAnswered = false;
         isDone = 1;
+        noSign = 0;
     }
 
     public void CorrectAnswer()

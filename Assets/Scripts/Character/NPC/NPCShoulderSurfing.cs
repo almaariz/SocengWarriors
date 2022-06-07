@@ -111,7 +111,7 @@ public class NPCShoulderSurfing : NPCController
     List<string> lines = new List<string>();
     if(done == 1)
     {
-      lines.Add("Lebih hati-hati bre");
+      lines.Add("Lebih hati-hati lagi bre");
       lines.Add("Ayo ke atm lagi");
       dialog.setLines(lines);
     }

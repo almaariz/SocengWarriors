@@ -12,7 +12,7 @@ public class GameController : MonoBehaviour
 
   public int miniGameDone { get; set; }
 
-  // [SerializeField] Text miniGameDonerText;
+  [SerializeField] Text miniGameDonerText;
   public bool badge1status, badge2status, badge3status, badge4status, badge5status, badge6status, badge7status;
   public GameObject badge1, badge2, badge3, badge4, badge5, badge6, badge7;
   public int DTheftDone { get; set; }
@@ -93,11 +93,11 @@ public class GameController : MonoBehaviour
     {
       playerController.HandleUpdate();
       
-      if (Input.GetKeyDown(KeyCode.S))
+      if (Input.GetKeyDown(KeyCode.G))
       {
         SavingSystem.i.Save("saveSlot1");
       }
-      if (Input.GetKeyDown(KeyCode.L))
+      if (Input.GetKeyDown(KeyCode.H))
       {
         SavingSystem.i.Load("saveSlot1");
       }
@@ -116,7 +116,7 @@ public class GameController : MonoBehaviour
       StartCoroutine(LoadScene());
     }
 
-    // miniGameDonerText.text = "Mini Games Completed = " + miniGameDone;
+    // miniGameDonerText.text = "currLine = " + DialogManager.Instance.currentLine + " currDialog length = " + DialogManager.Instance.dialogLine;
     CheckBadgeStatus();
   }
 
@@ -168,7 +168,28 @@ public class GameController : MonoBehaviour
       }
     }
 
-    public void SkipCredit(){
-      waitTime = 0f;
-    }
+  public void SkipCredit(){
+    waitTime = 0f;
+  }
+
+  // public void SaveState()
+  // {
+  //   SavingSystem.i.Save("saveSlot1");
+  //   // state = GameState.FreeRoam;
+  //   StartCoroutine(LoadMainScene());
+  //   MainMenu.i.load = true;
+  //   // Application.Quit();
+  // }
+  // IEnumerator LoadMainScene()
+  // {
+  //   transitionAnim.SetTrigger("end");
+  //   yield return new WaitForSeconds(1.5f);
+  //   SceneManager.LoadSceneAsync(sceneBuildIndex:sceneIndex);
+  // }
+
+  // public void LoadState(bool load)
+  // {
+  //   if(load)
+  //     SavingSystem.i.Load("saveSlot1");
+  // }
 }

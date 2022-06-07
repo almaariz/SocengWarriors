@@ -1498,6 +1498,7 @@ GameObject:
   - component: {fileID: 2712297463415688141}
   - component: {fileID: 2763717574716806525}
   - component: {fileID: 5332030762179550443}
+  - component: {fileID: 1215950462099945587}
   m_Layer: 5
   m_Name: Exit
   m_TagString: Untagged
@@ -1607,6 +1608,34 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1215950462099945587
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3274330668017762106}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e99659678f21354b9cf82773a8b47a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonPressed: 0
+  OnButtonPress:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3775104117606243402}
+        m_TargetAssemblyTypeName: GameController, Assembly-CSharp
+        m_MethodName: SaveState
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &3544460983602657321
 GameObject:
   m_ObjectHideFlags: 0
@@ -1864,6 +1893,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerController: {fileID: 3775104118337544996}
+  miniGameDonerText: {fileID: 0}
   badge1status: 0
   badge2status: 0
   badge3status: 0
@@ -1902,6 +1932,8 @@ MonoBehaviour:
   choiceBox: {fileID: 2727830248847165638}
   dialogText: {fileID: 3775104117397090276}
   letterPerSecond: 45
+  currentLine: 0
+  dialogLine: 0
 --- !u!114 &3775104117606243400
 MonoBehaviour:
   m_ObjectHideFlags: 0

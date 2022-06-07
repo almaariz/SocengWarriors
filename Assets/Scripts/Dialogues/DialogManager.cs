@@ -17,6 +17,8 @@ public class DialogManager : MonoBehaviour
     public event Action OnDialogFinished; 
  
     public static DialogManager Instance { get; private set; } 
+    public int currentLine;
+    public int dialogLine;
  
     private void Awake(){ 
         Instance = this; 
@@ -27,6 +29,9 @@ public class DialogManager : MonoBehaviour
     public IEnumerator ShowDialog(Dialog dialog, List<string> choices=null, Action<int> onChoiceSelected=null, bool getBadge=false) 
     { 
         yield return new WaitForEndOfFrame(); 
+        
+        currentLine = 0;
+        dialogLine = dialog.Lines.Count;
  
         onShowDialog?.Invoke(); 
         IsShowing = true;
@@ -35,6 +40,7 @@ public class DialogManager : MonoBehaviour
 
         foreach (var line in dialog.Lines)
         {
+            currentLine++;
             AudioManager.i.PlaySfx(AudioManager.AudioId.UISelect);
             yield return TypeDialog(line);
             yield return new WaitUntil(() => keyAButton);
@@ -50,6 +56,9 @@ public class DialogManager : MonoBehaviour
         onCloseDialog?.Invoke();
         if(getBadge)
             AudioManager.i.PlaySfx(AudioManager.AudioId.GetBadge);
+        currentLine = 0;
+        dialogLine = 0;
+        keyAButton=false;
     } 
 
     public IEnumerator ShowDialogText(string text, bool WaitForInput=true, bool autoClose=true, List<string> choices=null, Action<int> onChoiceSelected=null)
@@ -103,7 +112,16 @@ public class DialogManager : MonoBehaviour
 
     public void MobileAWrapper()
     {
-        StartCoroutine(ButtonA());
+        if (currentLine!=dialogLine && currentLine<=dialogLine)
+        {
+            StartCoroutine(ButtonA());
+        }
+        else if (currentLine==dialogLine && currentLine!=0)
+        {
+            StartCoroutine(ReverseA());
+            currentLine = 0;
+            dialogLine = 0;
+        }
     }
 
     private IEnumerator ButtonA()
@@ -111,5 +129,11 @@ public class DialogManager : MonoBehaviour
         keyAButton = true;
         yield return new WaitForSeconds(0.01f);
         keyAButton = false;
+    }
+    private IEnumerator ReverseA()
+    {
+        keyAButton = false;
+        yield return new WaitForSeconds(0.01f);
+        keyAButton = true;
     }
 }

@@ -9380,5 +9380,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: EssentialObjectsLoader
       objectReference: {fileID: 0}
+    - target: {fileID: 7570555716942864030, guid: 4d516c298b9b0244db4cc0627ffa0cc3, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4d516c298b9b0244db4cc0627ffa0cc3, type: 3}
