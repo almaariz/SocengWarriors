@@ -48,7 +48,7 @@ public class NPCPretexting : NPCController
     state = NPCState.Idle;
     isDone = 2;
       
-    GameController.Instance.badge6status = true;
+    GameController.Instance.badgeStatus["badge6"] = true;
   }
 
   public override IEnumerator Interact(Transform initiator)

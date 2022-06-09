@@ -14,9 +14,9 @@ public class MainMenu : MonoBehaviour
 
     void Start()
     {
-    //     musicPlayer.clip = audioClip;
-    //     musicPlayer.loop = true;
-    //     musicPlayer.Play();
+        // musicPlayer.clip = audioClip;
+        // musicPlayer.loop = true;
+        // musicPlayer.Play();
         AudioManager.i.PlayMusic(audioClip);
     }
     public void PlayGame()

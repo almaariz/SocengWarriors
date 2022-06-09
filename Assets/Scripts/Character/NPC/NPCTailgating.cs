@@ -65,7 +65,7 @@ public class NPCTailgating : NPCController
         state = NPCState.Idle;
         isDone = 2;
 
-        GameController.Instance.badge7status = true;
+        GameController.Instance.badgeStatus["badge7"] = true;
     }
 
     public override IEnumerator Interact(Transform initiator)

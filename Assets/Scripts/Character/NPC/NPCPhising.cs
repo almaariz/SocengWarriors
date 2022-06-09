@@ -47,7 +47,7 @@ public class NPCPhising : NPCController
     idleTimer = 0f;
     state = NPCState.Idle;
     isDone = 2;
-    GameController.Instance.badge1status = true;
+    GameController.Instance.badgeStatus["badge1"] = true;
   }
 
   public override IEnumerator Interact(Transform initiator)

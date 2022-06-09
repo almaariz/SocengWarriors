@@ -55,7 +55,7 @@ public class NPCDumpsterDiving : NPCController
     state = NPCState.Idle;
     isDone = 2;
 
-    GameController.Instance.badge3status = true;
+    GameController.Instance.badgeStatus["badge3"] = true;
   }
   public override IEnumerator Interact(Transform initiator)
   {

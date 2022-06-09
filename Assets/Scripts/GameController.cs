@@ -6,15 +6,19 @@ using UnityEngine.SceneManagement;
 
 public enum GameState { FreeRoam, Dialog, Cutscene, Paused }
 
-public class GameController : MonoBehaviour
+public class GameController : MonoBehaviour, ISavable
 {
   [SerializeField] PlayerController playerController;
 
   public int miniGameDone { get; set; }
 
-  [SerializeField] Text miniGameDonerText;
-  public bool badge1status, badge2status, badge3status, badge4status, badge5status, badge6status, badge7status;
+  // [SerializeField] Text miniGameDonerText;
+  // public bool badge1status, badge2status, badge3status, badge4status, badge5status, badge6status, badge7status;
   public GameObject badge1, badge2, badge3, badge4, badge5, badge6, badge7;
+  public GameObject loc1, loc2, loc3, loc4, loc5, loc6, loc7, locintro, lochall;
+
+  public Dictionary<string, bool> badgeStatus = new Dictionary<string, bool>();
+
   public int DTheftDone { get; set; }
   public bool DTheftStatus { get; set; }
 
@@ -43,6 +47,14 @@ public class GameController : MonoBehaviour
 
   private void Start()
   {
+    badgeStatus.Add("badge1", false);
+    badgeStatus.Add("badge2", false);
+    badgeStatus.Add("badge3", false);
+    badgeStatus.Add("badge4", false);
+    badgeStatus.Add("badge5", false);
+    badgeStatus.Add("badge6", false);
+    badgeStatus.Add("badge7", false);
+
     DialogManager.Instance.onShowDialog += () =>
     {
       state = GameState.Dialog;
@@ -134,19 +146,19 @@ public class GameController : MonoBehaviour
 
   void CheckBadgeStatus()
   {
-    if (badge1status)
+    if (badgeStatus["badge1"])
       badge1.SetActive(true);
-    if(badge2status)
+    if(badgeStatus["badge2"])
       badge2.SetActive(true);
-    if(badge3status)
+    if(badgeStatus["badge3"])
       badge3.SetActive(true);
-    if(badge4status)
+    if(badgeStatus["badge4"])
       badge4.SetActive(true);
-    if(badge5status)
+    if(badgeStatus["badge5"])
       badge5.SetActive(true);
-    if(badge6status)
+    if(badgeStatus["badge6"])
       badge6.SetActive(true);
-    if(badge7status)
+    if(badgeStatus["badge7"])
       badge7.SetActive(true);
   }
   IEnumerator LoadScene()
@@ -191,4 +203,22 @@ public class GameController : MonoBehaviour
   {
     SavingSystem.i.Load("saveSlot1");
   }
+
+    public object CaptureState()
+    {
+        bool[] savedStatus = new bool[] {badgeStatus["badge1"], badgeStatus["badge2"], badgeStatus["badge3"], badgeStatus["badge4"], badgeStatus["badge5"], badgeStatus["badge6"], badgeStatus["badge7"]};
+        return savedStatus;
+    }
+
+    public void RestoreState(object state)
+    {
+        var savedStatus = (bool[])state;
+        badgeStatus["badge1"] = savedStatus[0];
+        badgeStatus["badge2"] = savedStatus[1];
+        badgeStatus["badge3"] = savedStatus[2];
+        badgeStatus["badge4"] = savedStatus[3];
+        badgeStatus["badge5"] = savedStatus[4];
+        badgeStatus["badge6"] = savedStatus[5];
+        badgeStatus["badge7"] = savedStatus[6];
+    }
 }

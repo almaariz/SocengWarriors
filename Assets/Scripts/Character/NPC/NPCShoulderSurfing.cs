@@ -69,7 +69,7 @@ public class NPCShoulderSurfing : NPCController
     state = NPCState.Idle;
     isDone = 3;
 
-    GameController.Instance.badge2status = true;
+    GameController.Instance.badgeStatus["badge2"] = true;
   }
 
   public override IEnumerator Interact(Transform initiator)

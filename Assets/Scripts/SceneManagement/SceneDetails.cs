@@ -33,6 +33,7 @@ public class SceneDetails : MonoBehaviour
                         scene.UnloadScene();
                 }
             }
+            locDetail();
         }
     }
 
@@ -50,6 +51,118 @@ public class SceneDetails : MonoBehaviour
             SceneManager.UnloadSceneAsync(gameObject.name);
             IsLoaded = false;
         }
+    }
+
+    void locDetail()
+    {
+        if (gameObject.name == "IntroScene")
+            {
+                GameController.Instance.locintro.SetActive(true);
+                GameController.Instance.lochall.SetActive(false);
+                GameController.Instance.loc1.SetActive(false);
+                GameController.Instance.loc2.SetActive(false);
+                GameController.Instance.loc3.SetActive(false);
+                GameController.Instance.loc4.SetActive(false);
+                GameController.Instance.loc5.SetActive(false);
+                GameController.Instance.loc6.SetActive(false);
+                GameController.Instance.loc7.SetActive(false);
+            }
+            else if(gameObject.name == "HallScene")
+            {
+                GameController.Instance.locintro.SetActive(false);
+                GameController.Instance.lochall.SetActive(true);
+                GameController.Instance.loc1.SetActive(false);
+                GameController.Instance.loc2.SetActive(false);
+                GameController.Instance.loc3.SetActive(false);
+                GameController.Instance.loc4.SetActive(false);
+                GameController.Instance.loc5.SetActive(false);
+                GameController.Instance.loc6.SetActive(false);
+                GameController.Instance.loc7.SetActive(false);
+            }
+            else if(gameObject.name == "PhisingPlaza")
+            {
+                GameController.Instance.locintro.SetActive(false);
+                GameController.Instance.lochall.SetActive(false);
+                GameController.Instance.loc1.SetActive(true);
+                GameController.Instance.loc2.SetActive(false);
+                GameController.Instance.loc3.SetActive(false);
+                GameController.Instance.loc4.SetActive(false);
+                GameController.Instance.loc5.SetActive(false);
+                GameController.Instance.loc6.SetActive(false);
+                GameController.Instance.loc7.SetActive(false);
+            }
+            else if(gameObject.name == "SSurfingPlaza")
+            {
+                GameController.Instance.locintro.SetActive(false);
+                GameController.Instance.lochall.SetActive(false);
+                GameController.Instance.loc1.SetActive(false);
+                GameController.Instance.loc2.SetActive(true);
+                GameController.Instance.loc3.SetActive(false);
+                GameController.Instance.loc4.SetActive(false);
+                GameController.Instance.loc5.SetActive(false);
+                GameController.Instance.loc6.SetActive(false);
+                GameController.Instance.loc7.SetActive(false);
+            }
+            else if(gameObject.name == "DumpsterDPlaza")
+            {
+                GameController.Instance.locintro.SetActive(false);
+                GameController.Instance.lochall.SetActive(false);
+                GameController.Instance.loc1.SetActive(false);
+                GameController.Instance.loc2.SetActive(false);
+                GameController.Instance.loc3.SetActive(true);
+                GameController.Instance.loc4.SetActive(false);
+                GameController.Instance.loc5.SetActive(false);
+                GameController.Instance.loc6.SetActive(false);
+                GameController.Instance.loc7.SetActive(false);
+            }
+            else if(gameObject.name == "DTheftPlaza")
+            {
+                GameController.Instance.locintro.SetActive(false);
+                GameController.Instance.lochall.SetActive(false);
+                GameController.Instance.loc1.SetActive(false);
+                GameController.Instance.loc2.SetActive(false);
+                GameController.Instance.loc3.SetActive(false);
+                GameController.Instance.loc4.SetActive(true);
+                GameController.Instance.loc5.SetActive(false);
+                GameController.Instance.loc6.SetActive(false);
+                GameController.Instance.loc7.SetActive(false);
+            }
+            else if(gameObject.name == "QuidProQuoPlaza")
+            {
+                GameController.Instance.locintro.SetActive(false);
+                GameController.Instance.lochall.SetActive(false);
+                GameController.Instance.loc1.SetActive(false);
+                GameController.Instance.loc2.SetActive(false);
+                GameController.Instance.loc3.SetActive(false);
+                GameController.Instance.loc4.SetActive(false);
+                GameController.Instance.loc5.SetActive(true);
+                GameController.Instance.loc6.SetActive(false);
+                GameController.Instance.loc7.SetActive(false);
+            }
+            else if(gameObject.name == "PretextingPlaza")
+                {
+                GameController.Instance.locintro.SetActive(false);
+                GameController.Instance.lochall.SetActive(false);
+                GameController.Instance.loc1.SetActive(false);
+                GameController.Instance.loc2.SetActive(false);
+                GameController.Instance.loc3.SetActive(false);
+                GameController.Instance.loc4.SetActive(false);
+                GameController.Instance.loc5.SetActive(false);
+                GameController.Instance.loc6.SetActive(true);
+                GameController.Instance.loc7.SetActive(false);
+            }
+            else if(gameObject.name == "TailgatingPlaza")
+                {
+                GameController.Instance.locintro.SetActive(false);
+                GameController.Instance.lochall.SetActive(false);
+                GameController.Instance.loc1.SetActive(false);
+                GameController.Instance.loc2.SetActive(false);
+                GameController.Instance.loc3.SetActive(false);
+                GameController.Instance.loc4.SetActive(false);
+                GameController.Instance.loc5.SetActive(false);
+                GameController.Instance.loc6.SetActive(false);
+                GameController.Instance.loc7.SetActive(true);
+            }
     }
 
     // List<SavableEntity> GetSavableEntities()

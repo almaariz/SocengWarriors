@@ -48,7 +48,7 @@ public class NPCQuidProQuo : NPCController
         idleTimer = 0f;
         state = NPCState.Idle;
         isDone = 2;
-        GameController.Instance.badge5status = true;
+        GameController.Instance.badgeStatus["badge5"] = true;
     }
     public override IEnumerator Interact(Transform initiator)
     {

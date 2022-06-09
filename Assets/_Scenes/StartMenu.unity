@@ -1056,8 +1056,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   transitionAnim: {fileID: 60374860}
   sceneIndex: 1
-  audioManager: {fileID: 0}
-  audioClip: {fileID: 0}
+  audioManager: {fileID: 2129457327}
+  audioClip: {fileID: 8300000, guid: 15c4d08f3dfd0b245939bcb56d4e43a8, type: 3}
 --- !u!1 &1201145743
 GameObject:
   m_ObjectHideFlags: 0

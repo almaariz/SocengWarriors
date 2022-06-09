@@ -68,7 +68,7 @@ public class NPCDTheft1 : NPCController
     state = NPCState.Idle;
     isDone = 2;
 
-    GameController.Instance.badge4status = true;
+    GameController.Instance.badgeStatus["badge4"] = true;
     }
 
     public override IEnumerator Interact(Transform initiator)
