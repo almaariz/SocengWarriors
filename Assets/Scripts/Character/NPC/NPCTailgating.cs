@@ -8,7 +8,7 @@ public class NPCTailgating : NPCController
     public GameObject spawnerPrefab;
     GameObject spawner;
     bool isPlaying = false;
-    bool isAnswered = false;
+    // bool isAnswered = false;
     public int score;
     int isDone = 0;
 
@@ -16,7 +16,7 @@ public class NPCTailgating : NPCController
     {
         AudioManager.i.PlaySfx(AudioManager.AudioId.WrongAnswer, pauseMusic:true);
         isPlaying = false;
-        isAnswered = true;
+        GameController.Instance.badgeStatus["badge7"] = true;
         List<string> lines = new List<string>();
 
         if(tailgater)
@@ -38,7 +38,7 @@ public class NPCTailgating : NPCController
 
         idleTimer = 0f;
         state = NPCState.Idle;
-        isAnswered = false;
+        GameController.Instance.badgeStatus["badge7"] = false;
         isDone = 1;
 
         Destroy(spawner);
@@ -49,12 +49,12 @@ public class NPCTailgating : NPCController
     {
         AudioManager.i.PlaySfx(AudioManager.AudioId.CorrectAnswer, pauseMusic:true);
         isPlaying = false;
-        isAnswered = true;
+        GameController.Instance.badgeStatus["badge7"] = true;
         List<string> lines = new List<string>();
         lines.Add("Widih mantap");
         lines.Add("Ga ada orang luar masuk");
 
-        GameController.Instance.miniGameDone += 1;
+        // GameController.Instance.miniGameDone += 1;
 
         dialog.setLines(lines);
         canvas.SetActive(false);
@@ -79,7 +79,7 @@ public class NPCTailgating : NPCController
             character.LookTowards(initiator.position);
 
             yield return DialogManager.Instance.ShowDialog(dialog);
-            if (!isAnswered)
+            if (!GameController.Instance.badgeStatus["badge7"])
             {
                 GameController.Instance.PlayingGame(true);
                 isPlaying = true;
@@ -109,7 +109,7 @@ public class NPCTailgating : NPCController
             lines.Add("C'mon");
             dialog.setLines(lines);
         }
-        else if (done == 2)
+        else if (done == 2 || GameController.Instance.badgeStatus["badge7"])
         {
             lines.Add("Terima kasih banyak");
             lines.Add("Kita harus berhati-hati terhadap orang luar yang mencoba masuk");

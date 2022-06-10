@@ -6,7 +6,7 @@ public class NPCDTheft1 : NPCController
 {
     public GameObject canvas;
     bool isPlaying = false;
-    bool isAnswered = false;
+    // bool isAnswered = false;
     int isDone = 0;
 
     public void CheckStatus()
@@ -34,7 +34,7 @@ public class NPCDTheft1 : NPCController
     public void WrongAnswer()
     {
     isPlaying = false;
-    isAnswered = true;
+    GameController.Instance.badgeStatus["badge4"] = true;
     List<string> lines = new List<string>();
     lines.Add("*diam... memalingkan muka*");
     lines.Add("*kecewa karena paket tidak sampai*");
@@ -45,7 +45,7 @@ public class NPCDTheft1 : NPCController
     StartCoroutine(DialogManager.Instance.ShowDialog(dialog));
     idleTimer = 0f;
     state = NPCState.Idle;
-    isAnswered = false;
+    GameController.Instance.badgeStatus["badge4"] = false;
     isDone = 1;
 
     GameController.Instance.DTheftDone=0;
@@ -54,12 +54,12 @@ public class NPCDTheft1 : NPCController
     public void CorrectAnswer()
     {
     isPlaying = false;
-    isAnswered = true;
+    GameController.Instance.badgeStatus["badge4"] = true;
     List<string> lines = new List<string>();
     lines.Add("Mantap, dengan memastikan orang yang mendapatkan barang");
     lines.Add("Kita bisa terhindar dari serangan diversion theft");
 
-    GameController.Instance.miniGameDone += 1;
+    // GameController.Instance.miniGameDone += 1;
 
     dialog.setLines(lines);
     canvas.SetActive(false);
@@ -85,7 +85,7 @@ public class NPCDTheft1 : NPCController
 
                 yield return DialogManager.Instance.ShowDialog(dialog);
                 
-                if (!isAnswered)
+                if (!GameController.Instance.badgeStatus["badge4"])
                 {
                     GameController.Instance.PlayingGame(true);
                     isPlaying = true;
@@ -107,11 +107,12 @@ public class NPCDTheft1 : NPCController
         lines.Add("*memberikan kertas*");
         dialog.setLines(lines);
         }
-        else if (done == 2)
+        else if (done == 2 || GameController.Instance.badgeStatus["badge4"])
         {
         lines.Add("Terima kasih");
         lines.Add("Selalu berhati-hati saat mengirim ataupun menerima barang");
         dialog.setLines(lines);
+        
         }
     }
 }

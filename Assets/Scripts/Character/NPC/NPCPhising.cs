@@ -7,14 +7,14 @@ public class NPCPhising : NPCController
 {
   public GameObject canvas;
   bool isPlaying = false;
-  bool isAnswered = false;
+  // bool isAnswered = false;
   int isDone = 0;
 
   public void WrongAnswer()
   {
     AudioManager.i.PlaySfx(AudioManager.AudioId.WrongAnswer,pauseMusic:true);
     isPlaying = false;
-    isAnswered = true;
+    GameController.Instance.badgeStatus["badge1"] = true;
     List<string> lines = new List<string>();
     lines.Add("Wah ternyata itu hanya penipuan");
     lines.Add("Huhuhu");
@@ -26,7 +26,7 @@ public class NPCPhising : NPCController
 
     idleTimer = 0f;
     state = NPCState.Idle;
-    isAnswered = false;
+    GameController.Instance.badgeStatus["badge1"] = false;
     isDone = 1;
   }
 
@@ -34,12 +34,12 @@ public class NPCPhising : NPCController
   {
     AudioManager.i.PlaySfx(AudioManager.AudioId.CorrectAnswer, pauseMusic:true);
     isPlaying = false;
-    isAnswered = true;
+    GameController.Instance.badgeStatus["badge1"] = true;
     List<string> lines = new List<string>();
     lines.Add("Wah mantap");
     lines.Add("Jadi dengan mengabaikan pesan tersebut kita bisa terhindar dari serangan phising ya");
 
-    GameController.Instance.miniGameDone += 1;
+    // GameController.Instance.miniGameDone += 1;
 
     dialog.setLines(lines);
     canvas.SetActive(false);
@@ -61,7 +61,7 @@ public class NPCPhising : NPCController
         character.LookTowards(initiator.position);
 
         yield return DialogManager.Instance.ShowDialog(dialog);
-        if (!isAnswered)
+        if (!GameController.Instance.badgeStatus["badge1"])
         {
           GameController.Instance.PlayingGame(true);
           isPlaying = true;
@@ -83,7 +83,7 @@ public class NPCPhising : NPCController
       lines.Add("Apa yang harus kulakukan dengan ini??");
       dialog.setLines(lines);
     }
-    else if (done == 2)
+    else if (done == 2 || GameController.Instance.badgeStatus["badge1"])
     {
       lines.Add("Terima kasih");
       lines.Add("Berkatmu aku tidak tertipu dengan serangan phising");

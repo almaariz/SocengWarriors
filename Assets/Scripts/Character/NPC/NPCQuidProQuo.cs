@@ -6,7 +6,7 @@ public class NPCQuidProQuo : NPCController
 {
     public GameObject canvas, canvas2;
     bool isPlaying = false;
-    bool isAnswered = false;
+    // bool isAnswered = false;
     public bool isSigned;
     int isDone = 0;
     int noSign = 0;
@@ -15,7 +15,7 @@ public class NPCQuidProQuo : NPCController
     {
         AudioManager.i.PlaySfx(AudioManager.AudioId.CorrectAnswer, pauseMusic:true);
         isPlaying = false;
-        isAnswered = true;
+        GameController.Instance.badgeStatus["badge5"] = true;
         
         List<string> lines = new List<string>();
         lines.Add("Oke, terima kasih");
@@ -27,7 +27,7 @@ public class NPCQuidProQuo : NPCController
         StartCoroutine(DialogManager.Instance.ShowDialog(dialog));
         idleTimer = 0f;
         state = NPCState.Idle;
-        isAnswered = false;
+        GameController.Instance.badgeStatus["badge5"] = false;
         isDone = 1;
         noSign = 0;
     }
@@ -36,12 +36,12 @@ public class NPCQuidProQuo : NPCController
     {
         AudioManager.i.PlaySfx(AudioManager.AudioId.Complete, pauseMusic:true);
         isPlaying = false;
-        isAnswered = true;
+        GameController.Instance.badgeStatus["badge5"] = true;
         List<string> lines = new List<string>();
         lines.Add("Aku suka keteguhanmu, jangan sampai kau memberikan informasi untuk sesuatu yang tidak pasti");
         lines.Add("Dengan tidak mudah percaya, kamu bisa terhindar dari serangan quid pro quo");
 
-        GameController.Instance.miniGameDone += 1;
+        // GameController.Instance.miniGameDone += 1;
 
         dialog.setLines(lines);
         StartCoroutine(DialogManager.Instance.ShowDialog(dialog,getBadge:true));
@@ -62,7 +62,7 @@ public class NPCQuidProQuo : NPCController
 
             yield return DialogManager.Instance.ShowDialog(dialog);
 
-            if (!isAnswered)
+            if (!GameController.Instance.badgeStatus["badge5"])
             {
             GameController.Instance.PlayingGame(true);
             isPlaying = true;
@@ -83,7 +83,7 @@ public class NPCQuidProQuo : NPCController
             lines.Add("Nanti aku kasih badge");
             dialog.setLines(lines);
         }
-        else if (done == 2)
+        else if (done == 2 || GameController.Instance.badgeStatus["badge5"])
         {
             lines.Add("Selamat untuk badgemu");
             lines.Add("Selalu berhati-hati dan jangan mudah percaya");
@@ -111,7 +111,7 @@ public class NPCQuidProQuo : NPCController
             AudioManager.i.PlaySfx(AudioManager.AudioId.WrongAnswer, pauseMusic:true);
             canvas.SetActive(false);
             isPlaying = false;
-            isAnswered = true;
+            GameController.Instance.badgeStatus["badge5"] = true;
             List<string> lines = new List<string>();
             lines.Add("Kalau tidak mau tidak apa apa");
             lines.Add("Jangan menyesal ya");
@@ -121,7 +121,7 @@ public class NPCQuidProQuo : NPCController
             canvas.SetActive(false);
             idleTimer = 0f;
             state = NPCState.Idle;
-            isAnswered = false;
+            GameController.Instance.badgeStatus["badge5"] = false;
             isDone = 3;
             noSign++;
         }

@@ -7,14 +7,14 @@ public class NPCPretexting : NPCController
 {
   public GameObject canvas;
   bool isPlaying = false;
-  bool isAnswered = false;
+  // bool isAnswered = false;
   int isDone = 0;
 
   public void WrongAnswer()
   {
     AudioManager.i.PlaySfx(AudioManager.AudioId.WrongAnswer, pauseMusic:true);
     isPlaying = false;
-    isAnswered = true;
+    GameController.Instance.badgeStatus["badge6"] = true;
     List<string> lines = new List<string>();
     lines.Add("Ternyata bukan temanku");
     lines.Add("Bagaimana ini");
@@ -24,7 +24,7 @@ public class NPCPretexting : NPCController
     StartCoroutine(DialogManager.Instance.ShowDialog(dialog));
     idleTimer = 0f;
     state = NPCState.Idle;
-    isAnswered = false;
+    GameController.Instance.badgeStatus["badge6"] = false;
     isDone = 1;
   }
 
@@ -32,12 +32,12 @@ public class NPCPretexting : NPCController
   {
     AudioManager.i.PlaySfx(AudioManager.AudioId.CorrectAnswer, pauseMusic:true);
     isPlaying = false;
-    isAnswered = true;
+    GameController.Instance.badgeStatus["badge6"] = true;
     List<string> lines = new List<string>();
     lines.Add("Wah, kau benar");
     lines.Add("Dia ternyata penipu");
 
-    GameController.Instance.miniGameDone += 1;
+    // GameController.Instance.miniGameDone += 1;
 
     dialog.setLines(lines);
     canvas.SetActive(false);
@@ -63,7 +63,7 @@ public class NPCPretexting : NPCController
 
         yield return DialogManager.Instance.ShowDialog(dialog);
 
-        if (!isAnswered)
+        if (!GameController.Instance.badgeStatus["badge6"])
         {
           GameController.Instance.PlayingGame(true);
           isPlaying = true;
@@ -83,7 +83,7 @@ public class NPCPretexting : NPCController
       lines.Add("Aku tidak yakin dia temanku");
       dialog.setLines(lines);
     }
-    else if (done == 2)
+    else if (done == 2 || GameController.Instance.badgeStatus["badge6"])
     {
       lines.Add("Terima kasih");
       lines.Add("Aku akan berhati-hati jika ada yang menelepon lagi");

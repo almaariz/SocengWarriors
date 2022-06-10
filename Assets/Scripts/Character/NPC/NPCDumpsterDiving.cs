@@ -9,7 +9,7 @@ public class NPCDumpsterDiving : NPCController
   public GameObject spawnerPrefab;
   GameObject spawner;
   bool isPlaying = false;
-  bool isAnswered = false;
+  // bool isAnswered = false;
   public int score;
   int isDone = 0;
 
@@ -17,7 +17,7 @@ public class NPCDumpsterDiving : NPCController
   {
     AudioManager.i.PlaySfx(AudioManager.AudioId.WrongAnswer, pauseMusic:true);
     isPlaying = false;
-    isAnswered = true;
+    GameController.Instance.badgeStatus["badge3"] = true;
     List<string> lines = new List<string>();
 
     lines.Add("Wah, dataku ternyata dicuri orang");
@@ -29,7 +29,7 @@ public class NPCDumpsterDiving : NPCController
     
     idleTimer = 0f;
     state = NPCState.Idle;
-    isAnswered = false;
+    GameController.Instance.badgeStatus["badge3"] = false;
     isDone = 1;
     Destroy(spawner);
     score = 0;
@@ -39,12 +39,12 @@ public class NPCDumpsterDiving : NPCController
   {
     AudioManager.i.PlaySfx(AudioManager.AudioId.CorrectAnswer, pauseMusic:true);
     isPlaying = false;
-    isAnswered = true;
+    GameController.Instance.badgeStatus["badge3"] = true;
     List<string> lines = new List<string>();
     lines.Add("Oh aku harus hancurkan dokumenku terlebih dahulu ya");
     lines.Add("Biar orang gabisa ngambil informasi dari dokumen itu");
 
-    GameController.Instance.miniGameDone += 1;
+    // GameController.Instance.miniGameDone += 1;
 
     dialog.setLines(lines);
     canvas.SetActive(false);
@@ -69,7 +69,7 @@ public class NPCDumpsterDiving : NPCController
 
         yield return DialogManager.Instance.ShowDialog(dialog);
 
-        if (!isAnswered)
+        if (!GameController.Instance.badgeStatus["badge3"])
         {
           GameController.Instance.PlayingGame(true);
           isPlaying = true;

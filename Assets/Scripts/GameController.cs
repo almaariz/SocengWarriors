@@ -16,6 +16,7 @@ public class GameController : MonoBehaviour, ISavable
   // public bool badge1status, badge2status, badge3status, badge4status, badge5status, badge6status, badge7status;
   public GameObject badge1, badge2, badge3, badge4, badge5, badge6, badge7;
   public GameObject loc1, loc2, loc3, loc4, loc5, loc6, loc7, locintro, lochall;
+  int m1, m2, m3, m4, m5, m6, m7;
 
   public Dictionary<string, bool> badgeStatus = new Dictionary<string, bool>();
 
@@ -43,6 +44,7 @@ public class GameController : MonoBehaviour, ISavable
   private void Awake()
   {
     Instance = this;
+    // LoadState();
   }
 
   private void Start()
@@ -54,6 +56,7 @@ public class GameController : MonoBehaviour, ISavable
     badgeStatus.Add("badge5", false);
     badgeStatus.Add("badge6", false);
     badgeStatus.Add("badge7", false);
+    LoadState();
 
     DialogManager.Instance.onShowDialog += () =>
     {
@@ -122,6 +125,7 @@ public class GameController : MonoBehaviour, ISavable
         state=GameState.FreeRoam;
       }
     }
+    miniGameDone = m1+m2+m3+m4+m5+m6+m7;
     if (miniGameDone == 7)
     {
       AudioManager.i.PlayMusic(winningMusic, fade: true);
@@ -147,19 +151,54 @@ public class GameController : MonoBehaviour, ISavable
   void CheckBadgeStatus()
   {
     if (badgeStatus["badge1"])
+    {
       badge1.SetActive(true);
+      m1 = 1;
+    }
+    // else
+    //   badge1.SetActive(false);
     if(badgeStatus["badge2"])
+    {
       badge2.SetActive(true);
+      m2 = 1;
+    }
+    // else
+    //   badge2.SetActive(false);
     if(badgeStatus["badge3"])
+    {
       badge3.SetActive(true);
+      m3 = 1;
+    }
+    // else
+    //   badge3.SetActive(false);
     if(badgeStatus["badge4"])
+    {
       badge4.SetActive(true);
+      m4 = 1;
+    }
+    // else
+    //   badge4.SetActive(false);
     if(badgeStatus["badge5"])
+    {
       badge5.SetActive(true);
+      m5 = 1;
+    }
+    // else
+    //   badge5.SetActive(false);
     if(badgeStatus["badge6"])
+    {
       badge6.SetActive(true);
+      m6 = 1;
+    }
+    // else
+    //   badge6.SetActive(false);
     if(badgeStatus["badge7"])
+    {
       badge7.SetActive(true);
+      m7 = 1;
+    }
+    // else
+    //   badge7.SetActive(false);
   }
   IEnumerator LoadScene()
     {
@@ -167,6 +206,7 @@ public class GameController : MonoBehaviour, ISavable
       {
         transitionAnim.SetTrigger("end");
         yield return new WaitForSeconds(1.5f);
+        SavingSystem.i.Delete("saveSlot1");
         Application.Quit();
         yield break;
       }
@@ -195,8 +235,8 @@ public class GameController : MonoBehaviour, ISavable
   {
     transitionAnim.SetTrigger("end");
     yield return new WaitForSeconds(1.5f);
-    // SceneManager.LoadSceneAsync(sceneBuildIndex:sceneIndex);
-    Application.Quit();
+    SceneManager.LoadSceneAsync(sceneBuildIndex:sceneIndex);
+    // Application.Quit();
   }
 
   public void LoadState()

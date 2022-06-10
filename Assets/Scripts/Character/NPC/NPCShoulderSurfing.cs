@@ -8,7 +8,7 @@ public class NPCShoulderSurfing : NPCController
 {
   public GameObject canvas;
   bool isPlaying = false;
-  bool isAnswered = false;
+  // bool isAnswered = false;
   [SerializeField] Text pinText;
   int isDone = 0;
 
@@ -16,7 +16,7 @@ public class NPCShoulderSurfing : NPCController
   {
     AudioManager.i.PlaySfx(AudioManager.AudioId.WrongAnswer, pauseMusic:true);
     isPlaying = false;
-    isAnswered = true;
+    GameController.Instance.badgeStatus["badge2"] = true;
     List<string> lines = new List<string>();
     if (enter)
     {
@@ -36,7 +36,7 @@ public class NPCShoulderSurfing : NPCController
 
     idleTimer = 0f;
     state = NPCState.Idle;
-    isAnswered = false;
+    GameController.Instance.badgeStatus["badge2"] = false;
 
     if (enter)
     {
@@ -53,12 +53,12 @@ public class NPCShoulderSurfing : NPCController
   {
     AudioManager.i.PlaySfx(AudioManager.AudioId.CorrectAnswer, pauseMusic:true);
     isPlaying = false;
-    isAnswered = true;
+    GameController.Instance.badgeStatus["badge2"] = true;
     List<string> lines = new List<string>();
     lines.Add("Benar sekali");
     lines.Add("Orang lain jadi tidak bisa melihat apa yang kita masukkan");
 
-    GameController.Instance.miniGameDone += 1;
+    // GameController.Instance.miniGameDone += 1;
 
     dialog.setLines(lines);
     canvas.SetActive(false);
@@ -83,7 +83,7 @@ public class NPCShoulderSurfing : NPCController
         character.LookTowards(initiator.position);
 
         yield return DialogManager.Instance.ShowDialog(dialog);
-        if (!isAnswered)
+        if (!GameController.Instance.badgeStatus["badge2"])
         {
           GameController.Instance.PlayingGame(true);
           isPlaying = true;
@@ -121,7 +121,7 @@ public class NPCShoulderSurfing : NPCController
       lines.Add("177013");
       dialog.setLines(lines);
     }
-    else if (done == 3)
+    else if (done == 3 || GameController.Instance.badgeStatus["badge2"])
     {
       lines.Add("Terima kasih");
       lines.Add("Berkatmu saldoku aman");
