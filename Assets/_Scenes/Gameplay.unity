@@ -265,8 +265,12 @@ PrefabInstance:
       value: QuidProQuoPlaza
       objectReference: {fileID: 0}
     - target: {fileID: 1698901728127316910, guid: ddc0475d168f2354cb8ac66a6ba56fcc, type: 3}
+      propertyPath: m_Size.x
+      value: 34
+      objectReference: {fileID: 0}
+    - target: {fileID: 1698901728127316910, guid: ddc0475d168f2354cb8ac66a6ba56fcc, type: 3}
       propertyPath: m_Size.y
-      value: 18
+      value: 24
       objectReference: {fileID: 0}
     - target: {fileID: 1698901728127316910, guid: ddc0475d168f2354cb8ac66a6ba56fcc, type: 3}
       propertyPath: m_Offset.y
@@ -381,8 +385,12 @@ PrefabInstance:
       value: TailgatingPlaza
       objectReference: {fileID: 0}
     - target: {fileID: 1698901728127316910, guid: ddc0475d168f2354cb8ac66a6ba56fcc, type: 3}
+      propertyPath: m_Size.x
+      value: 34
+      objectReference: {fileID: 0}
+    - target: {fileID: 1698901728127316910, guid: ddc0475d168f2354cb8ac66a6ba56fcc, type: 3}
       propertyPath: m_Size.y
-      value: 18
+      value: 24
       objectReference: {fileID: 0}
     - target: {fileID: 1698901728127316910, guid: ddc0475d168f2354cb8ac66a6ba56fcc, type: 3}
       propertyPath: m_Offset.y
@@ -592,8 +600,12 @@ PrefabInstance:
       value: PretextingPlaza
       objectReference: {fileID: 0}
     - target: {fileID: 1698901728127316910, guid: ddc0475d168f2354cb8ac66a6ba56fcc, type: 3}
+      propertyPath: m_Size.x
+      value: 34
+      objectReference: {fileID: 0}
+    - target: {fileID: 1698901728127316910, guid: ddc0475d168f2354cb8ac66a6ba56fcc, type: 3}
       propertyPath: m_Size.y
-      value: 18
+      value: 24
       objectReference: {fileID: 0}
     - target: {fileID: 1698901728127316910, guid: ddc0475d168f2354cb8ac66a6ba56fcc, type: 3}
       propertyPath: m_Offset.y
@@ -826,15 +838,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1698901728127316910, guid: ddc0475d168f2354cb8ac66a6ba56fcc, type: 3}
       propertyPath: m_Size.x
-      value: 39
+      value: 34
       objectReference: {fileID: 0}
     - target: {fileID: 1698901728127316910, guid: ddc0475d168f2354cb8ac66a6ba56fcc, type: 3}
       propertyPath: m_Size.y
-      value: 23
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 1698901728127316910, guid: ddc0475d168f2354cb8ac66a6ba56fcc, type: 3}
+      propertyPath: m_Offset.x
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1698901728127316910, guid: ddc0475d168f2354cb8ac66a6ba56fcc, type: 3}
       propertyPath: m_Offset.y
-      value: 20.5
+      value: 19
       objectReference: {fileID: 0}
     - target: {fileID: 1698901728127316911, guid: ddc0475d168f2354cb8ac66a6ba56fcc, type: 3}
       propertyPath: sceneMusic
@@ -934,8 +950,12 @@ PrefabInstance:
       value: DTheftPlaza
       objectReference: {fileID: 0}
     - target: {fileID: 1698901728127316910, guid: ddc0475d168f2354cb8ac66a6ba56fcc, type: 3}
+      propertyPath: m_Size.x
+      value: 34
+      objectReference: {fileID: 0}
+    - target: {fileID: 1698901728127316910, guid: ddc0475d168f2354cb8ac66a6ba56fcc, type: 3}
       propertyPath: m_Size.y
-      value: 18
+      value: 24
       objectReference: {fileID: 0}
     - target: {fileID: 1698901728127316910, guid: ddc0475d168f2354cb8ac66a6ba56fcc, type: 3}
       propertyPath: m_Offset.y
@@ -1039,8 +1059,12 @@ PrefabInstance:
       value: PhisingPlaza
       objectReference: {fileID: 0}
     - target: {fileID: 1698901728127316910, guid: ddc0475d168f2354cb8ac66a6ba56fcc, type: 3}
+      propertyPath: m_Size.x
+      value: 34
+      objectReference: {fileID: 0}
+    - target: {fileID: 1698901728127316910, guid: ddc0475d168f2354cb8ac66a6ba56fcc, type: 3}
       propertyPath: m_Size.y
-      value: 18
+      value: 24
       objectReference: {fileID: 0}
     - target: {fileID: 1698901728127316910, guid: ddc0475d168f2354cb8ac66a6ba56fcc, type: 3}
       propertyPath: m_Offset.y
@@ -1227,8 +1251,12 @@ PrefabInstance:
       value: SSurfingPlaza
       objectReference: {fileID: 0}
     - target: {fileID: 1698901728127316910, guid: ddc0475d168f2354cb8ac66a6ba56fcc, type: 3}
+      propertyPath: m_Size.x
+      value: 34
+      objectReference: {fileID: 0}
+    - target: {fileID: 1698901728127316910, guid: ddc0475d168f2354cb8ac66a6ba56fcc, type: 3}
       propertyPath: m_Size.y
-      value: 18
+      value: 24
       objectReference: {fileID: 0}
     - target: {fileID: 1698901728127316910, guid: ddc0475d168f2354cb8ac66a6ba56fcc, type: 3}
       propertyPath: m_Offset.y
@@ -1365,8 +1393,12 @@ PrefabInstance:
       value: DumpsterDPlaza
       objectReference: {fileID: 0}
     - target: {fileID: 1698901728127316910, guid: ddc0475d168f2354cb8ac66a6ba56fcc, type: 3}
+      propertyPath: m_Size.x
+      value: 34
+      objectReference: {fileID: 0}
+    - target: {fileID: 1698901728127316910, guid: ddc0475d168f2354cb8ac66a6ba56fcc, type: 3}
       propertyPath: m_Size.y
-      value: 18
+      value: 24
       objectReference: {fileID: 0}
     - target: {fileID: 1698901728127316910, guid: ddc0475d168f2354cb8ac66a6ba56fcc, type: 3}
       propertyPath: m_Offset.y
@@ -1479,6 +1511,18 @@ PrefabInstance:
     - target: {fileID: 1698901728127316908, guid: ddc0475d168f2354cb8ac66a6ba56fcc, type: 3}
       propertyPath: m_Name
       value: IntroScene
+      objectReference: {fileID: 0}
+    - target: {fileID: 1698901728127316910, guid: ddc0475d168f2354cb8ac66a6ba56fcc, type: 3}
+      propertyPath: m_Size.x
+      value: 34
+      objectReference: {fileID: 0}
+    - target: {fileID: 1698901728127316910, guid: ddc0475d168f2354cb8ac66a6ba56fcc, type: 3}
+      propertyPath: m_Size.y
+      value: 28
+      objectReference: {fileID: 0}
+    - target: {fileID: 1698901728127316910, guid: ddc0475d168f2354cb8ac66a6ba56fcc, type: 3}
+      propertyPath: m_Offset.y
+      value: -5
       objectReference: {fileID: 0}
     - target: {fileID: 1698901728127316911, guid: ddc0475d168f2354cb8ac66a6ba56fcc, type: 3}
       propertyPath: sceneMusic

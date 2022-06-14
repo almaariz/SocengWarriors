@@ -202,7 +202,7 @@ MonoBehaviour:
   - {fileID: -4914342960481881183, guid: 39e99458827448a40a049e3c63ac09a2, type: 3}
   - {fileID: -5993824070865039255, guid: 39e99458827448a40a049e3c63ac09a2, type: 3}
   - {fileID: 2401646200319893344, guid: 39e99458827448a40a049e3c63ac09a2, type: 3}
-  defaultDirection: 1
+  defaultDirection: 3
 --- !u!114 &277309109
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4287,7 +4287,7 @@ MonoBehaviour:
   - {fileID: -4914342960481881183, guid: 39e99458827448a40a049e3c63ac09a2, type: 3}
   - {fileID: -5993824070865039255, guid: 39e99458827448a40a049e3c63ac09a2, type: 3}
   - {fileID: 2401646200319893344, guid: 39e99458827448a40a049e3c63ac09a2, type: 3}
-  defaultDirection: 1
+  defaultDirection: 2
 --- !u!114 &1210309136
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9918,7 +9918,7 @@ MonoBehaviour:
   - {fileID: -4914342960481881183, guid: 39e99458827448a40a049e3c63ac09a2, type: 3}
   - {fileID: -5993824070865039255, guid: 39e99458827448a40a049e3c63ac09a2, type: 3}
   - {fileID: 2401646200319893344, guid: 39e99458827448a40a049e3c63ac09a2, type: 3}
-  defaultDirection: 1
+  defaultDirection: 0
 --- !u!114 &1554532587
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10222,7 +10222,7 @@ MonoBehaviour:
   - {fileID: -4914342960481881183, guid: 39e99458827448a40a049e3c63ac09a2, type: 3}
   - {fileID: -5993824070865039255, guid: 39e99458827448a40a049e3c63ac09a2, type: 3}
   - {fileID: 2401646200319893344, guid: 39e99458827448a40a049e3c63ac09a2, type: 3}
-  defaultDirection: 1
+  defaultDirection: 3
 --- !u!114 &1867462158
 MonoBehaviour:
   m_ObjectHideFlags: 0

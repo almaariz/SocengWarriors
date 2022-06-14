@@ -875,7 +875,7 @@ MonoBehaviour:
   dialog:
     lines:
     - Aku mendapatkan uang wohoho
-    - Jika kau mau, kau bisa berbicara dengan orang di sebelah rumah biru
+    - Jika kau mau, kau bisa berbicara dengan orang di sebelahku
   movementPattern: []
   timeBetweenPattern: 3
 --- !u!61 &703311962

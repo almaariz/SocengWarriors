@@ -1058,7 +1058,6 @@ MonoBehaviour:
   sceneIndex: 1
   audioManager: {fileID: 2129457327}
   audioClip: {fileID: 8300000, guid: 15c4d08f3dfd0b245939bcb56d4e43a8, type: 3}
-  mb: {fileID: 1374784773}
 --- !u!1 &1201145743
 GameObject:
   m_ObjectHideFlags: 0
@@ -1363,6 +1362,7 @@ GameObject:
   - component: {fileID: 1374784771}
   - component: {fileID: 1374784770}
   - component: {fileID: 1374784773}
+  - component: {fileID: 1374784774}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1448,9 +1448,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc89f1d519af91545b6519d71c3455e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
-  title: 1
-  startPosition: {x: 0, y: 0, z: 0}
+  rb: {fileID: 1374784774}
+  initSpeed: 200
+--- !u!50 &1374784774
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1374784769}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &1892280738
 GameObject:
   m_ObjectHideFlags: 0
@@ -1717,6 +1737,18 @@ MonoBehaviour:
       - m_Target: {fileID: 1162019448}
         m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
         m_MethodName: PlayGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1374784773}
+        m_TargetAssemblyTypeName: MovingBackground, Assembly-CSharp
+        m_MethodName: SetPlay
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

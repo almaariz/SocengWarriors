@@ -526,7 +526,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -2.8}
+  m_Offset: {x: 0, y: -12.8}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -537,7 +537,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 30, y: 4}
+  m_Size: {x: 1, y: 24}
   m_EdgeRadius: 0
 --- !u!4 &622517969
 Transform:
@@ -632,7 +632,7 @@ MonoBehaviour:
   - {fileID: -4914342960481881183, guid: 39e99458827448a40a049e3c63ac09a2, type: 3}
   - {fileID: -5993824070865039255, guid: 39e99458827448a40a049e3c63ac09a2, type: 3}
   - {fileID: 2401646200319893344, guid: 39e99458827448a40a049e3c63ac09a2, type: 3}
-  defaultDirection: 0
+  defaultDirection: 3
 --- !u!114 &813131020
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -842,7 +842,7 @@ MonoBehaviour:
   - {fileID: -4914342960481881183, guid: 39e99458827448a40a049e3c63ac09a2, type: 3}
   - {fileID: -5993824070865039255, guid: 39e99458827448a40a049e3c63ac09a2, type: 3}
   - {fileID: 2401646200319893344, guid: 39e99458827448a40a049e3c63ac09a2, type: 3}
-  defaultDirection: 1
+  defaultDirection: 0
 --- !u!114 &845753477
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7178,7 +7178,7 @@ MonoBehaviour:
   - {fileID: -7360718930075927385, guid: f16ced69fda2c4e499711d9ed2fd7d0b, type: 3}
   - {fileID: 2667659339050000464, guid: f16ced69fda2c4e499711d9ed2fd7d0b, type: 3}
   - {fileID: -7808598729135433682, guid: f16ced69fda2c4e499711d9ed2fd7d0b, type: 3}
-  defaultDirection: 0
+  defaultDirection: 2
 --- !u!61 &1600204153
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7285,7 +7285,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1600204149}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 30.5, y: -5, z: 0}
+  m_LocalPosition: {x: 38, y: -7, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 622517969}
