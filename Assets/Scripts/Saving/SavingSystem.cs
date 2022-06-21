@@ -74,7 +74,7 @@ public class SavingSystem : MonoBehaviour
     void SaveFile(string saveFile, Dictionary<string, object> state)
     {
         string path = GetPath(saveFile);
-        print($"saving to {path}");
+        // print($"saving to {path}");
 
         using (FileStream fs = File.Open(path, FileMode.Create))
         {
