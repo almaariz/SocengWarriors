@@ -904,8 +904,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialog:
     lines:
-    - Kau lihat orang tua disana
-    - Mungkin dia butuh bantuan
+    - Kemarin aku mau mengambil uang
+    - Tapi aku merasa sedang diawasi
   movementPattern: []
   timeBetweenPattern: 3
 --- !u!61 &475945826
@@ -9917,8 +9917,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialog:
     lines:
-    - Apa yang kau mau??
-    - Diam disana, geser sedikit kau menghalangiku
+    - Hey, aku kesulitan melihat
+    - Geser sedikit kau menghalangiku
   movementPattern: []
   timeBetweenPattern: 3
 --- !u!61 &1685149902

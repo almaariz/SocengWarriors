@@ -11,6 +11,7 @@ public class NPCShoulderSurfing : NPCController
   // bool isAnswered = false;
   [SerializeField] Text pinText;
   int isDone = 0;
+  
 
   public void WrongAnswer(bool enter)
   {
@@ -21,7 +22,7 @@ public class NPCShoulderSurfing : NPCController
     if (enter)
     {
       lines.Add("Tidaaak");
-      lines.Add("Pin atm ku hilang");
+      lines.Add("Pin atm ku dicuri");
       dialog.setLines(lines);
     }
     else
@@ -108,17 +109,19 @@ public class NPCShoulderSurfing : NPCController
   }
   public void CheckDialog(int done)
   {
+    var x = Random.Range(0, 1000000);
+    string s = x.ToString("000000");
     List<string> lines = new List<string>();
     if(done == 1)
     {
       lines.Add("Lebih hati-hati lagi bre");
-      lines.Add("Ayo ke atm lagi");
+      lines.Add("Ini pin baruku " + s);
       dialog.setLines(lines);
     }
     else if (done == 2)
     {
       lines.Add("Ayo kau masih ingatkan?");
-      lines.Add("177013");
+      lines.Add(s);
       dialog.setLines(lines);
     }
     else if (done == 3 || GameController.Instance.badgeStatus["badge2"])

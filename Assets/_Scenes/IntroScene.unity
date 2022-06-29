@@ -9906,15 +9906,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 2040965234}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 90c17a96d277ed349a4e6241738f602a, type: 3}
+  m_Script: {fileID: 11500000, guid: 4c3f856daa171954286ecfac99350196, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   dialog:
     lines:
-    - Hello!! warriors
-    - Selamat datang, sudah lama kami menantikanmu
-    - Sebentar lagi, data-data kami akan dicuri
-    - Tolong kamii...
+    - Hello!! warriors. Selamat datang...
+    - Sudah lama kami menantikanmu, sebentar lagi data-data kami akan dicuri. Tolong
+      kami...
     - Jika kau bingung apa yang kau harus lakukan, cobalah mengobrol dengan orang-orang
   movementPattern: []
   timeBetweenPattern: 3

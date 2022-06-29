@@ -483,8 +483,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialog:
     lines:
-    - Apa yang kau mau??
-    - Jangan kesini, kembali
+    - Apa yang kau mau?? Jangan kesini,
+    - Kembali
   movementPattern: []
   timeBetweenPattern: 3
 --- !u!61 &550409454

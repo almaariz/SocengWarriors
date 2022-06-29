@@ -939,8 +939,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialog:
     lines:
-    - Kau tidak akan percaya
-    - Kemarin aku dicegat oleh orang aneh
+    - Kau tidak akan percaya kemarin aku dicegat oleh orang aneh
+    - Mungkin lain kali aku akan coba jalan memutar
   movementPattern: []
   timeBetweenPattern: 3
 --- !u!61 &925872389

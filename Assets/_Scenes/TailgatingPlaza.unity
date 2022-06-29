@@ -857,8 +857,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialog:
     lines:
-    - Aku sedang menunggu bis disini
-    - Kau mau ikut??
+    - Aku sedang menunggu bis disini. Kau mau ikut??
+    - Jangan sampai tertangkap oleh bosku
   movementPattern: []
   timeBetweenPattern: 3
 --- !u!61 &845753478
@@ -7621,7 +7621,6 @@ MonoBehaviour:
     lines:
     - Kemarin kau dibuntuti oleh seseorang
     - Aku langsung lari sekuat tenagaku
-    - Tampangnya sangar
   movementPattern: []
   timeBetweenPattern: 3
 --- !u!61 &1984156989

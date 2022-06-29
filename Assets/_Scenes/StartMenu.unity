@@ -159,7 +159,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 250, y: -215}
+  m_AnchoredPosition: {x: 300, y: -215}
   m_SizeDelta: {x: 400, y: 136}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &7737259
@@ -326,9 +326,11 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Terdapat tujuh minigame yang merepresentasikan mengenai contoh serangan
-    social engineering. Setiap minigame mendapatkan satu buah badge. Kumpulkan ketujuh
-    badge tersebut dan lihat apa yang terjadi.
+  m_Text: 'Terdapat tujuh minigame yang merepresentasikan mengenai contoh serangan
+    social engineering. Pecahkan teka-teki di setiap minigame untuk mendapatkan satu
+    buah badge.
+
+    Kumpulkan ketujuh badge tersebut dan lihat apa yang terjadi.'
 --- !u!222 &29177232
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1643,7 +1645,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -250, y: -215}
+  m_AnchoredPosition: {x: -300, y: -215}
   m_SizeDelta: {x: 400, y: 136}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &572746485

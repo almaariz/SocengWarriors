@@ -8068,7 +8068,7 @@ MonoBehaviour:
   dialog:
     lines:
     - Aku diabaikan begitu saja
-    - T.T
+    - Huhuhu T_T
   movementPattern: []
   timeBetweenPattern: 3
 --- !u!61 &1831082553
@@ -8278,6 +8278,7 @@ MonoBehaviour:
   dialog:
     lines:
     - Tetap teguh pada pendirianmu kawan
+    - Orang yang teguh akan mendapatkan hasil yang bagus
   movementPattern: []
   timeBetweenPattern: 3
 --- !u!61 &1842184725

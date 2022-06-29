@@ -186,6 +186,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: EssentialObjects
       objectReference: {fileID: 0}
+    - target: {fileID: 5797680461034758069, guid: 71490aa8a1fd4be42821d101c98d1152, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 1480
+      objectReference: {fileID: 0}
+    - target: {fileID: 5797680461034758069, guid: 71490aa8a1fd4be42821d101c98d1152, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 400
+      objectReference: {fileID: 0}
+    - target: {fileID: 6810183419984327646, guid: 71490aa8a1fd4be42821d101c98d1152, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 1480
+      objectReference: {fileID: 0}
+    - target: {fileID: 6810183419984327646, guid: 71490aa8a1fd4be42821d101c98d1152, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 400
+      objectReference: {fileID: 0}
     - target: {fileID: 8174278939436752072, guid: 71490aa8a1fd4be42821d101c98d1152, type: 3}
       propertyPath: uniqueId
       value: 81012089-cbee-4d75-917d-4c4619912204
@@ -700,6 +716,8 @@ MonoBehaviour:
   sceneIndex: 1
   audioManager: {fileID: 0}
   audioClip: {fileID: 8300000, guid: 15c4d08f3dfd0b245939bcb56d4e43a8, type: 3}
+  mainMenu: {fileID: 0}
+  aboutGame: {fileID: 0}
 --- !u!114 &717541765
 MonoBehaviour:
   m_ObjectHideFlags: 0

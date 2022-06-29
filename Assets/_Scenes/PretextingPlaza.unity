@@ -11433,8 +11433,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialog:
     lines:
-    - Berhati-hati mungkin dia terlihat mirip
-    - Namun mereka tidaklah sama
+    - Berhati-hati mungkin dia terlihat mirip. Namun mereka tidaklah sama
+    - Mungkin dia bisa bersembunyi di balik bayang-bayang orang
   movementPattern: []
   timeBetweenPattern: 3
 --- !u!61 &1598445941
