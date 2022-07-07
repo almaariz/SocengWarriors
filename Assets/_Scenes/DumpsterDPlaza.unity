@@ -919,7 +919,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialog:
     lines:
-    - ...
+    - ... 50 ...
     - '*Mengorek tempat sampah*'
   movementPattern: []
   timeBetweenPattern: 0
@@ -9952,8 +9952,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialog:
     lines:
-    - Kau lihat orang di samping kerangka gedung
-    - Mungkin dia butuh bantuan
+    - Hitam itu 4 Biru itu 3 Terbuka itu 1 Tertutup itu -1
+    - Atau mungkin Hitam itu -8 Biru itu -6 Terbuka itu -1
   movementPattern: []
   timeBetweenPattern: 3
 --- !u!61 &1554532588
